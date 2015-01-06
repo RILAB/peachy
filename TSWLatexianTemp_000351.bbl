@@ -1,0 +1,27 @@
+\begin{thebibliography}{}
+
+\bibitem[Gazave et~al., 2013]{Gazave2013}
+Gazave, E., Chang, D., Clark, A.~G., and Keinan, A. (2013).
+\newblock Population growth inflates the per-individual number of deleterious
+  mutations and reduces their mean effect.
+\newblock {\em Genetics}, 195(3):969--978.
+
+\bibitem[Lohmueller, 2014]{Lohmueller2014}
+Lohmueller, K.~E. (2014).
+\newblock The impact of population demography and selection on the genetic
+  architecture of complex traits.
+\newblock {\em PLoS Genetics}, 10(5):e1004379.
+
+\bibitem[Thornton, 2014]{Thornton2014}
+Thornton, K.~R. (2014).
+\newblock A c++ template library for efficient forward-time population genetic
+  simulation of large populations.
+\newblock {\em Genetics}, 198:157--166.
+
+\bibitem[Thornton et~al., 2013]{Thornton2013}
+Thornton, K.~R., Foran, A.~J., and Long, A.~D. (2013).
+\newblock Properties and modeling of gwas when complex disease risk is due to
+  non-complementing, deleterious mutations in genes of large effect.
+\newblock {\em PLoS genetics}, 9(2):e1003258.
+
+\end{thebibliography}
