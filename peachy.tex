@@ -19,15 +19,15 @@
      \small\sf $^{\ddag}$Center for Population Biology and Genome Center, University of California, Davis, California 95616, USA}
 
 \date{\today}
-
 \maketitle
 
 \section*{Introduction}
+%BACKGROUND ON SPECIES
+%
 With approximately four hundred species, including multiple domesticated crop species, \emph{Prunus} is the largest genus in the family Rosaceae.
 %reference to number of approximate number of species, number depends on reference
 %
 Almond, apricot, cherry, peach, and plum are the crop types found in three of the five \emph{Prunus} subgenera, subgenus \emph{Amygdalus} has the most morphologically distinct crops, sibling species \emph{P. persica} (Mill.) D. A. Webb (peach) and \emph{P. dulcis} (L.) Batsch (almond).
-%NOTE: somehow want to include that the species are interfertile, or somehow indicate how similar they are
 %
 Domestication of almond and peach occurred approximately 5000 years ago in the Fertile Crescent and China \citep{zohary2012domestication}, respectively, followed by global dissemination \citep{hedrick1917peaches, edwards1975almond, gradziel2011origin, zheng2014archaeological}.
 %
@@ -38,8 +38,7 @@ Both domestication and mating system have been shown to significantly impact gen
 However, the impacts of domestication and mating system on the genome evolution in tree species remains poorly understood \citep{mckey2010evolutionary, miller2011forest}.
 \\
 \\
-%BACKGROUND ON SPECIES
-%
+% DOMESTICATION & PROGENITOR IDENTIFICATION
 Peach and almond have similar lengths of domestication, early fruit development, perenniality, precocity, genome organization \citep{arus2012peach}, and genome size \citep{arumuganathan1991nuclear, dickson1992nuclear, baird1994estimating, loureiro2007two}.
 %
 The most striking differences are mature fruit morphology and mating systems, but almond and peach also generally differ in life span (longer v. shorter), chilling requirements (lower v. higher) and adventitious root generation (poor v. good).
@@ -51,74 +50,57 @@ However, traits not typically associated with domestication but common to both, 
 Unfortunately, efforts to identify wild progenitors of almond and peach \citep{verde2013high, aradhya2004molecular, zeinalabedini2010origin, mowrey1990isozyme, browicz1996genus, ladizinsky1999origin, bassi20081} by examining species relationships within the subgenus \emph{Amygdalus} have had mixed results. 
 %
 Given the uncertainty in identifying wild progenitors of almond and peach, domestication studies using crossing experiments are not suitable and are generally impractical in perennial crops.
-%citation for crossing experiments doesn't quite seem to fit, perhaps one of Doebley's papers or others using domesticated x wild cross to identify loci
+%crossing experiment citation, perhaps one of Doebley's papers or others using domesticated x wild cross to identify domestication locus/loci (maize, tomato, etc.)
 %
-Using a genomic approach is therefore a more practical way to gain insight into domestication of these perennial crops and the genome-wide data will also provide distinction between domestication effects and mating system.
-%
-\\
-\\
-%
-% ALL BELOW HERE NEEDS TO BE EDITED
-%%%%%
-% How/where does below fit?
-Peach and almond are both diploid, as are all species within the subgenus \emph{Amygdalus}, and genetic mapping from an almond x peach F2 population suggests they have a similar genomic structure \citep{dirlewanger2004comparative}. 
-%
-At an estimated 220-230 Megabases (Mb) spanning eight chromosomes, the recently sequenced peach genome \citep{verde2013high} is less than double the genome size of model plant \emph{Arabidopsis thaliana}.
-%
-The genome size of almond is estimated to be approximately 300 Mb, similar to pre-sequencing estimates of peach \citep{arumuganathan1991nuclear}. 
-%
-The small genome size and chromosome number of peach and almond support their use as a model to investigate the effects of domestication and mating system in trees.
+With the recent cost reductions in high throughput sequencing, using genomic resequencing is a practical approach to gain insights into domestication of perennial crops and its genome-wide nature also enables distinguishing between mating system and domestication effects.
 %
 \\
 \\
 %DOMESTICATION VERSUS SI/SC IN GENOME
-Domestication reduces diversity at multiple loci throughout the genome \citep{glemin2006impact, doebley2006molecular, slotte2013capsella} while self-fertilization reduces diversity across the entire genome.
+In closely related species pairs with alternate mating systems, such as \emph{Arabidopsis thaliana} and \emph{A. lyrata} and \emph{Capsella rubella} and \emph{C. grandiflora} \citep{slotte2013capsella} mating system is shown to significantly affect genome evolution, such as nucleotide diversity, linkage disequilibrium (LD), heterozygosity, genome size, repeat content, and genetic load.
 %
-The mating system of a species affects its genome evolution, and studies in closely related species pairs with alternate mating systems, such as \emph{Arabidopsis thaliana} and \emph{A. lyrata} and \emph{Capsella rubella} and \emph{C. grandiflora} \citep{slotte2013capsella}, have enabled investigation of this phenomenon. 
+Expectation for the perennial species pair of peach (\emph{P. persica}) and almond (\emph{P. dulcis}) is that self-compatible peach has a lower genome-wide diversity than self-incompatible almond.
 %
-These analyses reveal that mating system has a significant effect on nucleotide diversity, linkage disequilibrium (LD), heterozygosity, genome size, repeat content, and genetic load. 
+However, domestication also reduces genomic diversity, but in localized regions important to domestication \citep{glemin2006impact, doebley2006molecular, slotte2013capsella}.
 %
-As both species have undergone domestication bottlenecks, the expectation is that localized reductions in genomic diversity are due to selection, but widespread differences in genomic diversity are likely due to alternate mating systems \citep{glemin2006impact, charlesworth2001breeding}. 
-%
-Loci selected during or subsequent to domestication should be evidenced by reduced localized genomic diversity.
-%
-lower genome-wide diversity in the self-compatible peach compared to the self-incompatible almond.
+Peach and almond have also undergone domestication, but the expectation is that localized reductions in genomic diversity are due to domestication while overall differences are due to alternate mating systems \citep{glemin2006impact, charlesworth2001breeding}. 
 %
 %Domestication in plants is associated with changes in many traits, such as increased size and morphological diversity of the harvested organ (seed, fruit, leaves, etc.), reduced seed dispersal, adaptation to disturbed environments, reduced toxicity, selfing, photoperiod insensitivity, etc. \citep{doebley2006molecular}, but a relative few of these changes are striking in almond or peach. 
 %seed size in almond, fruit size & color in peach
 %range of bloom/maturity dates for peach
 %sweet kernels in almond
-%what about other tree crops?
+%what about other tree crops? (Review Miller & Gross paper)
 %
 \\
 \\
 %STUDY PURPOSE AND SUMMARY
-Resequencing several diverse almond genomes and publicly available resequenced peach genomes for comparative analysis. 
 %
-Seek to understand how domestication and mating system affect the genome evolution of closely related species with alternate mating compatibility
+Like all species within the subgenus \emph{Amygdalus}, peach and almond are both diploid, , and genetic mapping from an almond x peach $F_2$ population suggests they have a similar genomic structure \citep{dirlewanger2004comparative}. 
 %
-Almond and peach are both highly valued crops, but peach serves as a model system for Prunus and tree crops in general due to its small genome (230 Mb), short generation time (2-3 years), and self-compatibility \citep{arus2012peach}.
+At an estimated 230 Megabases (Mb) spanning eight chromosomes, the recently sequenced peach genome \citep{verde2013high} is less than double the genome size of model plant \emph{Arabidopsis thaliana} while at 300 Mb the cytologically estimated almond genome size of almond is similar to pre-sequencing estimates of peach \citep{arumuganathan1991nuclear}. 
+% efficient species
 %
-The recently sequenced peach genome \citep{verde2013high}serves as a reference genome for the genus, but the primary peach genetic map is based on an almond x peach F2 population \citep{arus2012peach, joobeur1998construction, aranzana2003set, dirlewanger2004comparative, dominguez2003plant}.
+%Peach already serves as a model system for \emph{Prunus} and other tree crops due to its small genome (230 Mb), short generation time (2-3 years), and self-compatibility \citep{arus2012peach}.
 %
-However, genomic sequence data provides a way to begin investigating domestication with a lower difficulty threshold.
+%Small genome sizes, chromosome numbers, and relatively short juvenility, peach and almond support their use as a model to investigate the effects of domestication and mating system in trees.
 %
-Recent analysis of resequenced peach genomes indicates low genetic diversity and higher LD across the genome compared to wild peach species \citep{verde2013high}. 
+Recent analysis of resequenced peach genomes indicates low genetic diversity and higher LD across the genome compared to wild peach species \citep{verde2013high}, but the few resequenced almond genomes have not been similarly assessed. 
 %
-%However, without sequenced almond genomes, the same information is not known for almond, and expectations are that due to self-incompatibility it will have higher levels of heterozygosity and lower LD compared to peach.
+%This is not unexpected considering the primary peach genetic map is based on an almond x peach $F_2$ population due to poor resolution in peach $F_2$ genetic maps \citep{arus2012peach, joobeur1998construction, aranzana2003set, dirlewanger2004comparative, dominguez2003plant}.
 %
-Understanding how domestication and mating systems may have contributed to genome evolution in almond and peach expands the understanding of these processes beyond annual species. 
+%However, due to self-incompatibility almond is expected to have higher levels of heterozygosity and lower LD compared to peach.
 %
-By identifying candidate domestication loci this study also provides an opportunity to determine which loci in almond and peach were under selection and whether common loci have similar or differing haplotypes. 
+Understanding the impact of mating system on almond and peach evolutionary genomics expands the basic understanding of genome evolution in a perennial species pair with alternate mating systems. 
+%is this a first for perennial species?
 %
-It also allows us to investigate if there are loci not typically found in domestication studies of annual crops. 
+Identification of candidate domestication loci will provide an opportunity to determine which loci in almond and peach were under selection, if any are in common and whether they have similar haplotypes, and to identify similarities or differences when compared to annual crops. 
 %
-Mating system analysis of almond and peach expands the basic understanding of genome evolution in perennial species. 
+%Knowledge gained from these analyses provides valuable information regarding domestication loci and haplotypes, an important resource for tree breeding programs.
 %
-Knowledge gained from these analyses provides valuable information regarding domestication loci and haplotypes, an important resource for tree breeding programs.
+%Understanding the contributions of domestication and mating systems to genome evolution in almond and peach expands the understanding of these processes beyond annual species. 
 %
-The peach and almond will provide a model for evolution and domestication in tree species.
-%%%%%
+Public resequenced peach genomes and almond genomes resequenced in this study provide the raw material for an evolutionary genomics investigation into the patterns of domestication and mating system in closely related perennial crop species and provide a model for evolution and domestication in tree species.
+%
 \\
 \section*{Materials and Methods}
 %
