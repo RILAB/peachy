@@ -8,6 +8,13 @@
 \usepackage{longtable}
 \usepackage{color}
 \bibliographystyle{apalike}
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
+
 
 \begin{document}
 
@@ -256,6 +263,7 @@ PopBAM analysis: SAMtools was used to merge bams and add new header \citep{li200
 \end{figure}
 %
 \pagebreak
+\beginsupplement
 \section*{Supplementary Data}
 %somehow change table number also maker table width match full width of text
 \begin{center}
@@ -341,11 +349,12 @@ PopBAM analysis: SAMtools was used to merge bams and add new header \citep{li200
                  \\
                  PP11 &Bolero &Italy &SRR501836 &\citealt{verde2013high}\\
                  PP12 &F8,1-42 &USA &SRR068361 &\citealt{ahmad2011whole} \\
-                 PP13 &Georgia Belle &USA &SRR068359 &\citealt{ahmad2011whole} \\
+                 % Nonpareil almond in pedigree
+		 PP13 &Georgia Belle &USA &SRR068359 &\citealt{ahmad2011whole} \\
                  PP14 &Dr. Davis &USA &SRR068360 &\citealt{ahmad2011whole} \\
                  PP15 &Lovell &USA &UCD &this study\\
                  % originally a canning variety selected ~1882
-		% currently used as rootstock and/or control for disease screening
+		 % currently used as rootstock and/or control for disease screening
                  % FPS, ABC
                  % duplicate cultivar, BGI sequenced at higher depth
                  PP16 &DPRU 1190, Admiral Dewey&USA &RosBREED &URL \\
@@ -353,14 +362,14 @@ PopBAM analysis: SAMtools was used to merge bams and add new header \citep{li200
                  PP17 &Babcock &USA &RosBREED &URL \\
                  %introduced 1897
                  PP18 &Bolinha &Brazil &RosBREED &URL \\
-		% released 1985
-		% parentage: prob OP Aldrighi (Raseira et al. 1992; http://hortsci.ashspublications.org/content/27/11/1154.full.pdf)
-		%considered resistant to brown rot (Monilinia fructicola); low chill
+		 % released 1985
+		 % parentage: prob OP Aldrighi (Raseira et al. 1992; http://hortsci.ashspublications.org/content/27/11/1154.full.pdf)
+		 %considered resistant to brown rot (Monilinia fructicola); low chill
                  PP19 &DPRU 2142, Carman &USA &RosBREED &URL \\
-		%Planted 1889 from OP seed (unknown variety) by J. W. Stubenrauch, Mexia, TX
-		% data entry error listed as Carmen in GRIN; PI book has Carman
-		% http://sun.ars-grin.gov:8080/npgs_public/prodweb.pdf0?in_vol=33&in_suffix=&in_page=052
-                 %PI 673586; cultivar original PI 34673 assigned 1912
+		 %Planted 1889 from OP seed (unknown variety) by J. W. Stubenrauch, Mexia, TX
+		 % data entry error listed as Carmen in GRIN; PI book has Carman
+		 % http://sun.ars-grin.gov:8080/npgs_public/prodweb.pdf0?in_vol=33&in_suffix=&in_page=052
+                 % PI 673586; cultivar original PI 34673 assigned 1912
                  PP20 &Chinese Cling&China &RosBREED &URL \\
                  %introduced 1850; founder several cultivars
                  PP21 &Diamante&Brazil &RosBREED &URL \\
@@ -428,5 +437,5 @@ PopBAM analysis: SAMtools was used to merge bams and add new header \citep{li200
 
 \end{longtable}
 \end{center}
-
+\endsupplement
 \end{document}
