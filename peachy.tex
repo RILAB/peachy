@@ -151,13 +151,19 @@ Trimmed reads were then aligned to the peach v 1.0 reference using BWA-MEM using
 % provide explanation of parameters
 %
 Depth and alignment from SAMtools using depth and flagstat subprograms \citep{li2009sequence} 
-determined a mean mapped sequence depth of 21.759, which ranged from 4.715 to 41.105 (supp. Figure \ref{fig:depth}).\\
-%BQ20: mean 27.212, range 7.169 to 48.039 \\
-%BQ20MQ20: mean 22.29, range 4.948 to 41.552\\
-%BQ20MQ30: mean 21.759, range 4.715 to 41.105\\
-%Should this be in Results section instead?
+determined a mean mapped sequence depth of 10.710, which ranged from 1.138 to 37.358 (supp. Figure \ref{fig:depth}).\\
+% with outgroup and "progenitor" sequences
+% mean mapped sequence depth of 11.719, which ranged from 1.138 to 37.358
+% mean mapped persica was 8.917, ranged from 1.138 to 35.358
+% mean mapped dulcis was 14.808, ranged from 2.196 to 34.593
 %
-%several custom scripts (deposit to github repo, add URL) were used for initial processing of data or to extract data for downstream use\\
+% below are for all sequenced samples, which includes those not in the study set
+% BQ20: mean 27.212, range 7.169 to 48.039 \\
+% BQ20MQ20: mean 22.29, range 4.948 to 41.552\\
+% BQ20MQ30: mean 21.759, range 4.715 to 41.105\\
+% Should this be in Results section instead?
+%
+% several custom scripts (deposit to github repo, add URL) were used for initial processing of data or to extract data for downstream use\\
 \\
 \emph{SNP calling}\\ %If going this route
 %
@@ -389,14 +395,12 @@ PopBAM analysis: SAMtools was used to merge bams and add new header \citep{li200
                  %PP27 &Georgia Bell&USA &RosBREED &URL \\
                  %(aka ‘Georgia Belle’ and ‘Belle of Georgia’
 		% introduced ~1875; OP sdlg of Chinese Cling)
-                 %not downloaded
                  %duplicate cultivar
                  PP28 &JH Hale&USA &RosBREED &URL \\
                  %male sterile; introduced 1912
                  %PP29 &Lovell &USA &RosBREED &URL \\
                  PP30 &Mayflower&USA &RosBREED &URL \\
                  %introduced 1909
-                 %not yet downloaded
                  PP31 &Nemaguard &USA &RosBREED &URL \\
                  %rootstock; rumored to have P. davidiana in pedigree
                  PP32 &O'Henry &USA &RosBREED &URL \\
@@ -411,7 +415,6 @@ PopBAM analysis: SAMtools was used to merge bams and add new header \citep{li200
 		% used in hybrid combination with Harrow's Blood (F2s) as rootstock
                  PP34 &Oldmixon Free &USA &RosBREED &URL \\
                  % introduced 1832
-                 %not yet downloaded
                  PP35 &Rio Oso Gem &USA &RosBREED &URL \\
                  % introduced 1933
 		% developed in Rio Oso, California, Sierra Nevada foothills
