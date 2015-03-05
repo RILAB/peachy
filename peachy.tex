@@ -7,6 +7,7 @@
 \usepackage{multirow}
 \usepackage{longtable}
 \usepackage{color}
+\usepackage{hyperref}
 \bibliographystyle{apalike}
 \newcommand{\beginsupplement}{%
         \setcounter{table}{0}
@@ -300,139 +301,145 @@ PopBAM analysis: SAMtools was used to merge bams and add new header \citep{li200
 %		 PD01 &DPRU 2578.2 & &NCGR &this study\\
 		%Almond Board resequencing (BGI)
 		% Not included because it appears to be possible F1 of peach x almond (or reverse)
-                 PD02 &‘Tardy Nonpareil’ &USA &UCD &this study\\
+                 PD02 &‘Tardy Nonpareil’ &USA &UCD &1\\
 		%Almond Board resequencing (BGI)
-                 PD03 &DPRU 1791.3, BE-1609 &Turkey &NCGR &this study\\
+                 PD03 &DPRU 1791.3, BE-1609 &Turkey &NCGR &1\\
 		%Jastro resequencing (performed at UC Berkeley)
-                 PD04 &DPRU 2374.12 &Iran &NCGR &this study\\
+                 PD04 &DPRU 2374.12 &Iran &NCGR &1\\
 		%Jastro resequencing (performed at UC Berkeley)
-                 PD05 &DPRU 1456.4, Badam &Pakistan &NCGR &this study\\
+                 PD05 &DPRU 1456.4, Badam &Pakistan &NCGR &1\\
 		%Jastro resequencing (performed at UC Berkeley)
-                 PD06 &DPRU 2301, Tuono &Italy &NCGR &this study\\
+                 PD06 &DPRU 2301, Tuono &Italy &NCGR &1\\
 		%Jastro resequencing (performed at UC Berkeley)
-                 PD07 &DPRU 1462.2 &Pakistan &NCGR &this study\\
+                 PD07 &DPRU 1462.2 &Pakistan &NCGR &1\\
 		%Jastro resequencing (performed at UC Berkeley)
-                 PD08 &DPRU 1207.2 &Uzbekistan &NCGR &this study\\
+                 PD08 &DPRU 1207.2 &Uzbekistan &NCGR &1\\
 		%Jastro resequencing (performed at UC Berkeley)
-                 PD09 &DPRU 2331.9 &China &NCGR &this study\\
+                 PD09 &DPRU 2331.9 &China &NCGR &1\\
 		%Jastro resequencing (performed at UC Berkeley)
-                 PD10 &DPRU 0210, Languedoc &France &NCGR &this study\\ %Jastro resequencing (performed at UC Berkeley)
-                 PD11 &S3067 &Spain &SRR765861 &\citealt{koepke2013comparative}?\\
+                 PD10 &DPRU 0210, Languedoc &France &NCGR &1\\ %Jastro resequencing (performed at UC Berkeley)
+                 PD11 &S3067 &Spain &SRR765861 &2\\
 		% resequenced at WSU by Amit Dhingra
-                 PD12 &D05-187 &Spain &SRR765850 &\citealt{koepke2013comparative}?\\
+                 PD12 &D05-187 &Spain &SRR765850 &2\\
 		% resequenced at WSU by Amit Dhingra
-                 PD13 &Lauranne &Spain &SRR765838 &\citealt{koepke2013comparative}?\\
+                 PD13 &Lauranne &Spain &SRR765838 &2\\
 		% resequenced at WSU by Amit Dhingra
-                 PD14 &Ramillete &Spain &SRR765679 &\citealt{koepke2013comparative}?\\
+                 PD14 &Ramillete &Spain &SRR765679 &2\\
 		% resequenced at WSU by Amit Dhingra
-                 PD15 &Nonpareil & USA&RosBREED &URL \\
+                 PD15 &Nonpareil & USA&RosBREED &5\\
                  \\
                  \multicolumn{5}{l}{\emph{P. persica}}  \\ % format italics
-                 %PP01 &Lovell &USA &SRR502985 &\citealt{verde2013high}\\
+                 %PP01 &Lovell &USA &SRR502985 &3\\
                  % resequenced doubled haploid
-                 PP02 &Yumyeong &Korea &SRR502994 &\citealt{verde2013high}\\
+                 PP02 &Yumyeong &Korea &SRR502994 &3\\
                  PP03 &Shenzhou Mitao&N China &
-		\multirow{2}{1cm}{SRR502993, SRR502992} &\citealt{verde2013high}\\
+		\multirow{2}{1cm}{SRR502993, SRR502992} &3\\
                  %honey peach
                  \\
                  PP04 &Sahua Hong Pantao &S China &
-		\multirow{2}{1cm}{SRR502991, SRR502990} &\citealt{verde2013high}\\
+		\multirow{2}{1cm}{SRR502991, SRR502990} &3\\
                  %flat peach
                  \\
                  PP05 &Quetta &Pakistan &
-		\multirow{2}{1cm}{SRR502989, SRR502987} &\citealt{verde2013high}\\
+		\multirow{2}{1cm}{SRR502989, SRR502987} &3\\
                  \\
-                 PP06 &Oro A &Brazil &SRR502986 &\citealt{verde2013high}\\
+                 PP06 &Oro A &Brazil &SRR502986 &3\\
 		%
                  PP07 &IF7310828 &Italy &
-		\multirow{2}{1cm}{SRR503001, SRR503000} &\citealt{verde2013high}\\
+		\multirow{2}{1cm}{SRR503001, SRR503000} &3\\
                  \\
-                 PP08 &GF305 &France &SRR502983 &\citealt{verde2013high}\\
-                 PP09 &$F_1$ Contender $\times$ Ambra &Italy &SRR502997 &\citealt{verde2013high}\\
+                 PP08 &GF305 &France &SRR502983 &3\\
+                 %
+		 PP09 &F$_{1}$ Contender $\times$ Ambra &Italy &SRR502997 &3\\
                  % peach x nectarine both P. persica
                  PP10 &Earligold &USA &
-		\multirow{2}{1cm}{SRR502996, SRR502995} &\citealt{verde2013high}\\
-                 \\
-                 PP11 &Bolero &Italy &SRR501836 &\citealt{verde2013high}\\
-                 PP12 &F8,1-42 &USA &SRR068361 &\citealt{ahmad2011whole} \\
+		\multirow{2}{1cm}{SRR502996, SRR502995} &3\\
+                %  
+		\\
+                 PP11 &Bolero &Italy &SRR501836 &3\\
+		 %
+                 %PP12 &F8,1-42 &USA &SRR068361 &4\\
                  % Nonpareil almond in pedigree
-		 PP13 &Georgia Belle &USA &SRR068359 &\citealt{ahmad2011whole} \\
-                 PP14 &Dr. Davis &USA &SRR068360 &\citealt{ahmad2011whole} \\
-                 PP15 &Lovell &USA &UCD &this study\\
+		 % use for introgression investigation
+		 PP13 &Georgia Belle &USA &SRR068359 &4\\
+		 %
+                 PP14 &Dr. Davis &USA &SRR068360 &4\\
+		 % 
+                 PP15 &Lovell &USA &UCD &1\\
                  % originally a canning variety selected ~1882
 		 % currently used as rootstock and/or control for disease screening
                  % FPS, ABC
                  % duplicate cultivar, BGI sequenced at higher depth
-                 PP16 &DPRU 1190, Admiral Dewey&USA &RosBREED &URL \\
+                 PP16 &DPRU 1190, Admiral Dewey&USA &RosBREED &5\\
                  %aka PI 673525; introduced 1899
-                 PP17 &Babcock &USA &RosBREED &URL \\
+                 PP17 &Babcock &USA &RosBREED &5\\
                  %introduced 1897
-                 PP18 &Bolinha &Brazil &RosBREED &URL \\
+                 PP18 &Bolinha &Brazil &RosBREED &5\\
 		 % released 1985
 		 % parentage: prob OP Aldrighi (Raseira et al. 1992; http://hortsci.ashspublications.org/content/27/11/1154.full.pdf)
 		 %considered resistant to brown rot (Monilinia fructicola); low chill
-                 PP19 &DPRU 2142, Carman &USA &RosBREED &URL \\
+                 PP19 &DPRU 2142, Carman &USA &RosBREED &5\\
 		 %Planted 1889 from OP seed (unknown variety) by J. W. Stubenrauch, Mexia, TX
 		 % data entry error listed as Carmen in GRIN; PI book has Carman
 		 % http://sun.ars-grin.gov:8080/npgs_public/prodweb.pdf0?in_vol=33&in_suffix=&in_page=052
                  % PI 673586; cultivar original PI 34673 assigned 1912
-                 PP20 &Chinese Cling&China &RosBREED &URL \\
+                 PP20 &Chinese Cling&China &RosBREED &5\\
                  %introduced 1850; founder several cultivars
-                 PP21 &Diamante&Brazil &RosBREED &URL \\
+                 PP21 &Diamante&Brazil &RosBREED &5\\
                  %predominant canning cultivar in Brazil per Okie (year & pub TBD)
-                 PP22 &Dixon&USA &RosBREED &URL \\
+                 PP22 &Dixon&USA &RosBREED &5\\
 		% Introduced in 1956
 		% http://www.google.com/patents/USPP13911
 		% early cling peach
-                 %PP23 &Dr. Davis& &RosBREED &URL \\
+                 %PP23 &Dr. Davis& &RosBREED &5\\
                  % duplicate cultivar
-                 PP24 &DPRU 0589, Early Crawford &USA &RosBREED &URL \\
+                 PP24 &DPRU 0589, Early Crawford &USA &RosBREED &5\\
                  %introduced before 1832
-                 PP25 &Elberta&USA &RosBREED &URL \\
+                 PP25 &Elberta&USA &RosBREED &5\\
                  %introduced ~1889; OP sdlg of 'Chinese Cling’
-                 PP26 &Florida Prince P138&USA &RosBREED &URL \\
+                 PP26 &Florida Prince P138&USA &RosBREED &5\\
                  %low chill cultivar; introduced in 2009
-                 %PP27 &Georgia Bell&USA &RosBREED &URL \\
+                 %PP27 &Georgia Bell&USA &RosBREED &5\\
                  %(aka ‘Georgia Belle’ and ‘Belle of Georgia’
 		% introduced ~1875; OP sdlg of Chinese Cling)
                  %duplicate cultivar
-                 PP28 &JH Hale&USA &RosBREED &URL \\
+                 PP28 &JH Hale&USA &RosBREED &5\\
                  %male sterile; introduced 1912
-                 %PP29 &Lovell &USA &RosBREED &URL \\
-                 PP30 &Mayflower&USA &RosBREED &URL \\
+                 %PP29 &Lovell &USA &RosBREED &5\\
+                 PP30 &Mayflower&USA &RosBREED &5\\
                  %introduced 1909
-                 PP31 &Nemaguard &USA &RosBREED &URL \\
+                 PP31 &Nemaguard &USA &RosBREED &5\\
                  %rootstock; rumored to have P. davidiana in pedigree
-                 PP32 &O'Henry &USA &RosBREED &URL \\
+                 PP32 &O'Henry &USA &RosBREED &5\\
                %CODE FOR APOSTROPHE
                  %plant patent 2.964 1/27/1970; OP sdlg Merrill Bonanza; discovered 1960
-                 PP33 &Okinawa &Japan &RosBREED &URL \\
+                 PP33 &Okinawa &Japan &RosBREED &5\\
 		% Sharpe 1957
 		% http://fshs.org/proceedings-o/1957-vol-70/320-322%20%28SHARPE%29.pdf
 		% from 1953 seed lot, different seedlings
 		%unsure if only one of these is what is now called 'Okinawa'
 		% has nematode resistance
 		% used in hybrid combination with Harrow's Blood (F2s) as rootstock
-                 PP34 &Oldmixon Free &USA &RosBREED &URL \\
+                 PP34 &Oldmixon Free &USA &RosBREED &5\\
                  % introduced 1832
-                 PP35 &Rio Oso Gem &USA &RosBREED &URL \\
+                 PP35 &Rio Oso Gem &USA &RosBREED &5\\
                  % introduced 1933
 		% developed in Rio Oso, California, Sierra Nevada foothills
 		% https://www.slowfoodusa.org/ark-item/rio-oso-gem-peach
-                 PP36 &DPRU 2179, Slappey &USA &RosBREED &URL \\
+                 PP36 &DPRU 2179, Slappey &USA &RosBREED &5\\
                  %aka ‘Slappy’ in GRIN; introduced 1903
-                 PP37 &DPRU 0941, St. John Yellow &USA &RosBREED &URL \\
+                 PP37 &DPRU 0941, St. John Yellow &USA &RosBREED &5\\
                  %introduced 1860s
                  %some variety history at http://gapeaches.org/about-us/father-of-the-ga-peach-industry/
 		\\
                  \multicolumn{5}{l}{Other \emph{Prunus} species}  \\
                  %Almond Board resequencing (performed at BGI)
-                 PF01 &\emph{P. fenzliana} &? &UCD &this study\\
+                 PF01 &\emph{P. fenzliana} &? &UCD &1\\
                  %UCD,ABC
                  PG01 &\emph{P. ferganensis} &Fergana Valley &
-		\multirow{2}{1cm}{SRR502999, SRR502998} &\citealt{verde2013high}\\
+		\multirow{2}{1cm}{SRR502999, SRR502998} &3\\
                  \\
-                 PC01 &\emph{P. cerasifera} DPRU 0579, Myrobalan &USA &NCGR &this study\\ \hline
+                 PC01 &\emph{P. cerasifera} DPRU 0579, Myrobalan &USA &NCGR &1\\ \hline
                  %outgroup
                  %NCBI SRA
                %note that the SRR IDs are from NCBI SRA
@@ -440,5 +447,10 @@ PopBAM analysis: SAMtools was used to merge bams and add new header \citep{li200
 
 \end{longtable}
 \end{center}
+$^{1}$ this study\\
+$^{2}$ \citealt{koepke2013comparative}?\\
+$^{3}$ \citealt{verde2013high}\\
+$^{4}$ \citealt{ahmad2011whole}\\
+$^{5}$ \url{ftp://ftp.bioinfo.wsu.edu/www.rosbreed.org/resequencing/Prunus_persica/}\\
 \endsupplement
 \end{document}
