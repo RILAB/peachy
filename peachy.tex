@@ -168,15 +168,57 @@ determined a mean mapped sequence depth of 10.710, which ranged from 1.138 to 37
 \\
 \emph{SNP calling}\\ %If going this route
 %
-SNP calling using SAMtools pileup and BCFtools \citep{li2009sequence} \\
+%SNP calling using SAMtools pileup and BCFtools \citep{li2009sequence} \\
 % may change to ANGSD
 %
-PopBAM analysis: SAMtools was used to merge bams and add new header \citep{li2009sequence} with appropriate sample and population information for use in PopBAM \citep{garrigan2013popbam}. SNPs called in PopBAM were output in the SweepFinder \citep{nielsen2005genomic} format and then analyzed.\\
+%PopBAM analysis: SAMtools was used to merge bams and add new header \citep{li2009sequence} with appropriate sample and population information for use in PopBAM \citep{garrigan2013popbam}. 
+%SNPs called in PopBAM were output in the SweepFinder \citep{nielsen2005genomic} format and then analyzed.\\
 % if not switching to ANGSD
 %
+Genotype likelihoods were first called using ANGSD \citep{korneliussen2014angsd}. Inbreeding coefficients were estimated using \emph{ngsF} from the \emph{ngsTools} \citep{fumagalli2014ngstools} suite. \\
 \\
 \emph{Locating/Identifying Sweeps}\\
-%
+Genome-wide popgen statistics were called using \emph{ngsTools} \citep{fumagalli2014ngstools} suite 
+1000 bp windows with 50 bp step
+Zeng's E statistic used to identify regions of interest 
+bedtools to extract loci - chose 5th quantile of E values and intersect with GFF3 file of gene regions, 
+total genes on all chromosomes \& scaffolds: 27864
+total genes on chromosomes 1-8: 27256
+
+selected genes
+dulcis: 11463 =\textgreater 11463/27864, 41.14\%
+persica: 11811 =\textgreater 11811/27864, 42.39\%
+
+shared selected genes: 7787 =\textgreater 7787/27864, 27.95\%
+agriGO Job ID 130964689
+most appear to be housekeeping-like; classed as cellular/metabolic process, binding, catalytic activity, cell, or cell part
+
+unique selected genes
+dulcis: 3676 =\textgreater 3676/27864, 13.19\%; 3676/11463, 32.07\%
+agriGO Job ID 726414975
+few GO terms with low FDR; nothing that seems immediately interesting, includes tRNA, organelle parts/functions, ribosome
+
+persica: 4024 =\textgreater 4024/27864, 14.44\%; 4024/11811, 34.07\%
+agriGO Job ID 447454595
+few GO terms with low FDR; not surprisingly recognition of pollen was a big one, the broad category of oxidoreductase activity also had a low FDR in particular monooxygenase activity
+
+
+when nSites\textgreater 100 selected
+5\%: dulcis 11176, persica 11604
+
+when nSites not filtered
+shared at 1 percent: 1896
+shared at 5 percent: 7787
+unique dulcis at 1 percent: 2648
+unique dulcis at 5 percent: 3676
+unique persica at 1 percent: 2504
+unique persica at 5 percent: 4024
+total genes on chromosomes 1-8: 27256
+
+total selected at 1\%: dulcis \textgreater 4544, 16.7\%; persica \textgreater 4400, 16.1\%
+shared selected at 1\%: 6.9\%
+unique selected at 1\%: dulcis \textgreater 9.2\%; persica > 14\%
+\\ %
 %\citep{li2009sequence} %SAM format and SAMtools
 %R
 \\
@@ -411,7 +453,6 @@ PopBAM analysis: SAMtools was used to merge bams and add new header \citep{li200
                  PP31 &Nemaguard &USA &RosBREED &5\\
                  %rootstock; rumored to have P. davidiana in pedigree
                  PP32 &O'Henry &USA &RosBREED &5\\
-               %CODE FOR APOSTROPHE
                  %plant patent 2.964 1/27/1970; OP sdlg Merrill Bonanza; discovered 1960
                  PP33 &Okinawa &Japan &RosBREED &5\\
 		% Sharpe 1957
