@@ -83,9 +83,11 @@ Peach and almond have also undergone domestication, but the expectation is that 
 \\
 %STUDY PURPOSE AND SUMMARY
 %
-Like all species within the subgenus \emph{Amygdalus}, peach and almond are both diploid, , and genetic mapping from an almond x peach $F_2$ population suggests they have a similar genomic structure \citep{dirlewanger2004comparative}. 
+Like all species within the subgenus \emph{Amygdalus}, peach and almond are both diploid, and genetic mapping from an almond x peach $F_2$ population suggests they have a similar genomic structure \citep{dirlewanger2004comparative}. 
 %
-At an estimated 230 Megabases (Mb) spanning eight chromosomes, the recently sequenced peach genome \citep{verde2013high} is less than double the genome size of model plant \emph{Arabidopsis thaliana} while at 300 Mb the cytologically estimated almond genome size of almond is similar to pre-sequencing estimates of peach \citep{arumuganathan1991nuclear}. 
+At an estimated 230 Megabases (Mb) spanning eight chromosomes, the recently sequenced peach genome \citep{verde2013high} is less than double the genome size of model plant \emph{Arabidopsis thaliana}. 
+%
+At 300 Mb the cytologically estimated almond genome size is similar to pre-sequencing estimates of peach \citep{arumuganathan1991nuclear}. 
 % efficient species
 %
 %Peach already serves as a model system for \emph{Prunus} and other tree crops due to its small genome (230 Mb), short generation time (2-3 years), and self-compatibility \citep{arus2012peach}.
@@ -137,7 +139,7 @@ Regardless of source all FASTQ files were trimmed of remnant adapter sequences u
 % Buffalo V: Scythe. [https://github.com/vsbuffalo/scythe]
 % figure out citation for Scythe; include version
 %
-% Najoshi :Sickle [github.com/najoshi/sickle]
+% Najoshi :Sickle [https://github.com/najoshi/sickle]
 % same as for Scythe
 %
 Trimmed reads were then aligned to the peach v 1.0 reference using BWA-MEM using a minimum seed length of 10 and internal seed length of 28.5.
@@ -184,12 +186,13 @@ SNPs and genotype likelihoods were called utilizing the estimated inbreeding coe
 \emph{Locating/Identifying Sweeps}\\
 Genome-wide population genetics statistics (thetaPi, thetaW, Fay \& Wu's H, Zeng's E) were calculated in 1000 bp windows with 50 bp steps using the \emph{ngsTools} \citep{fumagalli2014ngstools} suite.
 %
-The Zeng's E statistic was used to identify regions of possible selection interest from windows with more than 100 sites per window.
+Zeng's E statistic \citep{} was used to identify regions of possible selection interest from windows with more than 100 sites per window.
 %
 Utilized all windows and the bottom 5\% Zeng values to intersect with the \emph{Prunus persica} v1.0 GFF3.\\
 %
-total genes on all chromosomes \& scaffolds: 27864\\
-total genes on chromosomes 1-8: 27256\\
+
+%total genes on all chromosomes \& scaffolds: 27864\\
+total genes on chromosomes 1-8: 27256
 
 5\%: dulcis 11176, persica 11604
 \\
@@ -222,6 +225,14 @@ total genes on chromosomes 1-8: 27256\\
 \\
 \emph{Species Comparisons}\\
 %
+\emph{Gene Ontology}\\
+Gene ontology (GO) terms were determined with the singular enrichment analysis analysis tool and \emph{P. persica} protein IDs at the AgriGO website (http://bioinfo.cau.edu.cn/agriGO/).
+%
+Genes with low Z scores were divided into three categories, shared in both almond and peach, and genes unique to either almond or peach. 
+%
+Each of the three identified gene categories were analyzed independently. 
+%
+Genes with significant scores were identified by both p-value and FDR.
 %
 \begin{center}
 \begin{longtable}{lllll}
@@ -277,7 +288,7 @@ total genes on chromosomes 1-8: 27256\\
 \section*{Results}
 \emph{Diversity}
 
-diversity was higher/lower in \emph{dulcis} as compared to \emph{persica}
+diversity was higher/lower in almond as compared to peach
 
 bottom 5\% window genes: %these were from selecting bottom 5% windows then finding genes
 
@@ -288,25 +299,25 @@ genome-wide:
 \\
 %
 \emph{GO term analysis}
-%
+
 shared:
 %not filtered for nSites > 100
 %shared selected genes: 7787 =\textgreater 7787/27864, 27.95\%
 %agriGO Job ID 130964689
 %most appear to be housekeeping-like; classed as cellular/metabolic process, binding, catalytic activity, cell, or cell part
 
-\emph{persica}:
-%not filtered for nSites > 100
-%persica: 4024 =\textgreater 4024/27864, 14.44\%; 4024/11811, 34.07\%
-%agriGO Job ID 447454595
-%few GO terms with low FDR; not surprisingly recognition of pollen was a big one, the broad category of oxidoreductase activity also had a low FDR in particular monooxygenase activity
-
-\emph{dulcis}:
+almond:
 %not filtered for nSites > 100
 %unique selected genes
 %dulcis: 3676 =\textgreater 3676/27864, 13.19\%; 3676/11463, 32.07\%
 %agriGO Job ID 726414975
 %few GO terms with low FDR; nothing that seems immediately interesting, includes tRNA, organelle parts/functions, ribosome
+
+peach:
+%not filtered for nSites > 100
+%persica: 4024 =\textgreater 4024/27864, 14.44\%; 4024/11811, 34.07\%
+%agriGO Job ID 447454595
+%few GO terms with low FDR; not surprisingly recognition of pollen was a big one, the broad category of oxidoreductase activity also had a low FDR in particular monooxygenase activity
 
 \section*{Discussion}
 
@@ -442,7 +453,8 @@ shared:
                  %introduced 1897
                  PP18 &Bolinha &Brazil &RosBREED &5\\
 		 % released 1985
-		 % parentage: prob OP Aldrighi (Raseira et al. 1992; http://hortsci.ashspublications.org/content/27/11/1154.full.pdf)
+		 % parentage: prob OP Aldrighi
+		 %(Raseira et al. 1992; http://hortsci.ashspublications.org/content/27/11/1154.full.pdf)
 		 %considered resistant to brown rot (Monilinia fructicola); low chill
                  PP19 &DPRU 2142, Carman &USA &RosBREED &5\\
 		 %Planted 1889 from OP seed (unknown variety) by J. W. Stubenrauch, Mexia, TX
