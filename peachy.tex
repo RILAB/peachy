@@ -183,10 +183,10 @@ Inbreeding coefficients were estimated using \emph{ngsF} from the \emph{ngsTools
 %
 SNPs and genotype likelihoods were called utilizing the estimated inbreeding coefficients.\\
 \\
-\emph{Locating/Identifying Sweeps}\\
+\emph{Identifying Selected Loci}\\
 Genome-wide population genetics statistics (thetaPi, thetaW, Fay \& Wu's H, Zeng's E) were calculated in 1000 bp windows with 50 bp steps using the \emph{ngsTools} \citep{fumagalli2014ngstools} suite.
 %
-Zeng's E statistic \citep{} was used to identify regions of possible selection interest from windows with more than 100 sites per window.
+Zeng's E statistic \citep{zeng2006statistical} was used to identify regions of possible selection interest from windows with more than 100 sites per window.
 %
 Utilized all windows and the bottom 5\% Zeng values to intersect with the \emph{Prunus persica} v1.0 GFF3.\\
 %
@@ -198,6 +198,7 @@ total genes on chromosomes 1-8: 27256
 \\
 %
 % PREVIOUS ANALYSIS: SITES NOT FILTERED
+% Likely for most to hold up but replace with results using filtered data
 %selected genes
 %dulcis: 11463 =\textgreater 11463/27864, 41.14\%
 %persica: 11811 =\textgreater 11811/27864, 42.39\%
@@ -220,11 +221,6 @@ total genes on chromosomes 1-8: 27256
 \\
 %
 \\
-\emph{Loci of Interest}\\
-%
-\\
-\emph{Species Comparisons}\\
-%
 \emph{Gene Ontology}\\
 Gene ontology (GO) terms were determined with the singular enrichment analysis analysis tool and \emph{P. persica} protein IDs at the AgriGO website (http://bioinfo.cau.edu.cn/agriGO/).
 %
