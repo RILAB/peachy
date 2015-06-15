@@ -28,29 +28,35 @@
      \small\sf $^{\ddag}$Center for Population Biology and Genome Center, University of California, Davis, California 95616, USA}
 
 \date{\today}
-\maketitle
-
+%\maketitle
 \section*{Introduction}
 %BACKGROUND ON SPECIES
 %
-With approximately four hundred species, including multiple domesticated crop species, \emph{Prunus} is the largest genus in the family Rosaceae \cite{}, and includes important tree crops such as apricot, cherry, peach, and almond.
+With approximately four hundred species, including multiple domesticated crop species, \emph{Prunus} is the largest genus in the family Rosaceae \citex, and includes important tree crops such as apricot, cherry, peach, and almond.
 %
 Peach \emph{P. persica} (Mill.) D. A. Webb and almond \emph{P. dulcis} (L.) Batsch are sibling species found within the subgenus \emph{Amygdalus}.
 %
 Peach and almond are similar in many ways, including early fruit development, perenniality, precocity, genome organization \citep{arus2012peach}, and genome size \citep{arumuganathan1991nuclear, dickson1992nuclear, baird1994estimating, loureiro2007two}. 
 %probably dont need so many cites on genome size.
 %
-The most striking between the species are mature fruit morphology and mating systems: peaches are harvested for their indehiscent fleshy mesocarp while almonds are the stony endocarp and seeds from within the leathery dehiscent mesocarp and exocarp. 
+The most striking between the species are mature fruit morphology and mating systems: peaches are harvested for their indehiscent fleshy mesocarp while almonds are harvested for the seeds encased in stony endocarps obtained from within the leathery dehiscent mesocarp and exocarp. 
 %worth explaining how fruits are related (almond is seed part peach is fleshy mesocarp etc.
 %
-But almond and peach also differ at other traits, with almonds having a natural life span up to or exceeding 100 years,
+But almond and peach also differ for other traits, such as life span, chilling requirement, and adventitious root generation.
+%
+Almonds may have a natural life span up to or exceeding 100 years \citex,
 %http://www.european-trees.com/almond.html ; literature sources not easy to locate, will continue to look
 %commercial life span of 20-25 years, but this may be mostly due to peach or peach-derived rootstocks and peak bearing period
-400-600 hours chilling requirements \citep{alonso2005determination}, 
+only 400-600 hours chilling requirements \citep{alonso2005determination}, 
 % versus peach <650-1050 /citep{dozier1990hydrogen}
-and less adventitious root generation. 
+and less adventitious root generation compared to peach with a 25-30 year life \citex, 
+%is this primarily commercial production life span?
+%how are they "in the wild"?
+600-1000 hours of chilling required \citex, 
+%have maybe seen a bit lower
+and good adventitious rooting ability \citex. 
 %
-Additionally, while \emph{Prunus} species are generally exhibit gametophytic self-incompatibility, peach is fully self-compatible.
+Additionally, while \emph{Prunus} species generally exhibit gametophytic self-incompatibility, peach is fully self-compatible.
 
 %each sentence on different line is helpful, but no need to put % between each sentence
 % I found that I could find lines faster/easier this way
@@ -78,7 +84,7 @@ Given the uncertainty in identifying wild progenitors of almond and peach, domes
 With the recent cost reductions in high throughput sequencing, using genomic resequencing is a practical approach to gain insights into domestication of perennial crops and its genome-wide nature also enables distinguishing between mating system and domestication effects. 
 %
 Both domestication and mating system have been shown to shape genome diversity in annual species \citep{glemin2006impact, doebley2006molecular, slotte2013capsella}, but the impacts of these forces on tree remains poorly understood \citep{mckey2010evolutionary, miller2011forest}.
-\\
+
 
 %DOMESTICATION VERSUS SI/SC IN GENOME
 In closely related species pairs with alternate mating systems, such as \emph{Arabidopsis thaliana} and \emph{A. lyrata} and \emph{Capsella rubella} and \emph{C. grandiflora} \citep{slotte2013capsella}, mating system is shown to significantly affect genome evolution, such as nucleotide diversity, linkage disequilibrium (LD), heterozygosity, genome size, repeat content, and genetic load.
@@ -199,7 +205,27 @@ Inbreeding coefficients were estimated using \emph{ngsF} from the \emph{ngsTools
 %
 SNPs and genotype likelihoods were called utilizing the estimated inbreeding coefficients.\\
 \\
-\emph{Identifying Selected Loci}\\
+%
+\\
+\emph{Diversity Evaluation}\\
+\\
+%
+\\
+\emph{Population Comparisons}\\
+We treated peach and almond samples as two populations to understand population structure, assign population proportions to samples, and determine population differentiation using ANGSD and ngsTools' ngsPopGen programs.
+%
+First we performed a principal component analysis (PCA) to determine any underlying population structure.
+%might show clear distinction between groups, possibly some overlap
+Next we used ANGSD Admixture (\emph{K} = 2) to assign peach and/or almond population proportions to individuals. 
+%
+Proportion assignment accuracy was evaluated using the sequence of a likely F1 peach-almond hybrid and a peach variety of known pedigree containing almond three generations prior.
+%
+Finally, we examined population differentiation using F$_{ST}$ as determined by ANGSD.
+% has yet to work for me...
+\\
+%
+\\
+\emph{Identification of Selected Loci}\\
 Genome-wide population genetics statistics (thetaPi, thetaW, Fay \& Wu's H, Zeng's E) were calculated in 1000 bp windows with 50 bp steps using the \emph{ngsTools} \citep{fumagalli2014ngstools} suite.
 %
 Regions of possible selection interest determined using Zeng's E statistic \citep{zeng2006statistical} from windows with more than 100 sites per window.
@@ -210,7 +236,7 @@ Separation and merging of genic windows by gene ID allowed the calculation of me
 \\
 %
 \\
-\emph{Gene Ontology}\\
+\emph{Gene Ontology Analysis}\\
 Gene ontology (GO) term analysis using singular enrichment analysis analysis tool and \emph{P. persica} protein IDs at the AgriGO website (http://bioinfo.cau.edu.cn/agriGO/) identified.
 %
 Genes with low Zeng's E scores were divided into three categories, shared in both almond and peach, and genes unique to either almond or peach. 
@@ -221,12 +247,6 @@ Genes with significant scores were identified by both p-value and FDR.
 \\
 %
 \\
-\emph{Peach and Almond Comparisons}\\
-Analysis of peach and almond samples, treated as two populations, to understand population structure, population proportion assignment, and differentiation using ANGSD and ngsTools' ngsPopGen programs.\\
-Principal component analysis (PCA) - covariate correlation to determine underlying population structure. \\ %might shows clear distinction between groups, possibly some overlap
-Assignment of individuals as a proportion of peach and almond populations (\emph{K} = 2) using the ANGSD Admixture.\\ %
-Examined population differentiation using F$_{ST}$ as determined by ANGSD.\\ 
-%
 \begin{center}
 \begin{longtable}{lllll}
 \caption[P. dulcis, P. persica and related species used in analysis.]{\emph{P. dulcis}, \emph{P. persica} and related species used in analysis.} \label{my-label} \\
@@ -276,14 +296,19 @@ Examined population differentiation using F$_{ST}$ as determined by ANGSD.\\
 %add indicator whether sample was plant material or public sequence (reference does give some indication or possibly just put indication that when "this study" is the reference that it indicates that plant material was used)
 
 \section*{Results}
-\emph{Diversity}
-
-Nucleotide diversity (pi) was higher in almond than peach, with genome-wide means of 0.0186 and 0.0035, respectively. Mean per chromosome pi ranged from 0.0163 to 0.0219 in dulcis, and from 0.0028 to 0.0047 in persica.
-\\
+\emph{Quality Control and SNP Calling}\\
 \\
 %
-\emph{GO term analysis}
-
+\\
+\emph{Peach and Almond Diversity and Population Comparisons}\\
+Nucleotide diversity (pi) was higher in almond than peach, with genome-wide means of 0.0186 and 0.0035, respectively. Mean per chromosome pi ranged from 0.0163 to 0.0219 in dulcis, and from 0.0028 to 0.0047 in persica.
+\\
+Admixture - The individuals were clearly assigned to either peach or almond. 
+%Probably save this for the results.
+\\
+%
+\\
+\emph{Selected Loci and Gene Ontology}\\
 Of the 27256 genes on chromosomes one through eight, dulcis and persica had 265 and 268 genes, respectively, in the 1\% quantile. 
 %total genes on all chromosomes \& scaffolds: 27864\\
 %
@@ -291,6 +316,7 @@ Twenty-nine of those genes are shared between dulcis and persica.
 %
 In the 5\% quantile dulcis and persica had 1325 and 1340 genes of interest, respectively, with 286 shared.
 \\
+
 
 \section*{Discussion}
 The genome-wide mean nucleotide diversity in peach is has lower nucleotide diversity than almond - BAM!
@@ -327,7 +353,7 @@ peach and almond share more genes of interest in common than expected - BAM!
 \pagebreak
 \beginsupplement
 \section*{Aknowledgements}
-Support for DV provided by the McDonald Endowment for UC Davis Plant Sciences for Graduate Student Research Assistantships and the Almond Board of California (ABC; grant HORT16-Aradhya/Ledbetter). Resequencing funded by the ABC (grant HORT16-Aradhya/Ledbetter) and a Henry A. Jastro Research Fellowship. This work used the Vincent J. Coates Genomics Sequencing Laboratory at UC Berkeley, supported by NIH S10 Instrumentation Grants S10RR029668 and S10RR027303.
+Support for DV provided by the McDonald Endowment for UC Davis Plant Sciences Graduate Student Research Assistantships and the Almond Board of California (ABC; grant HORT16-Aradhya/Ledbetter). Resequencing funded by the ABC (grant HORT16-Aradhya/Ledbetter) and a Henry A. Jastro Research Fellowship. Resequencing funded by the Henry A. Jastro Research Fellowship used the Vincent J. Coates Genomics Sequencing Laboratory at UC Berkeley, supported by NIH S10 Instrumentation Grants S10RR029668 and S10RR027303.
 \section*{Supplementary Data}
 %somehow change table number also maker table width match full width of text
 \begin{center}
@@ -337,7 +363,7 @@ Support for DV provided by the McDonald Endowment for UC Davis Plant Sciences fo
 \multicolumn{1}{l}{\textbf{Accession and/or Cultivar}} &
 \multicolumn{1}{l}{\textbf{Origin}} &
 \multicolumn{1}{l}{\textbf{Source}}  &
-\multicolumn{1}{l}{\textbf{Reference}} \\ \hline 
+\multicolumn{1}{c}{\textbf{Reference}} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{r}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
@@ -345,7 +371,7 @@ Support for DV provided by the McDonald Endowment for UC Davis Plant Sciences fo
 \multicolumn{1}{l}{\textbf{Accession and/or Cultivar}} &
 \multicolumn{1}{l}{\textbf{Origin}} &
 \multicolumn{1}{l}{\textbf{Source}} &
-\multicolumn{1}{}{\textbf{Reference}} \\ \hline 
+\multicolumn{1}{c}{\textbf{Reference}} \\ \hline 
 \endhead
 
 \hline \multicolumn{5}{r}{{Continued on next page}} \\ \hline
@@ -510,5 +536,5 @@ $^{2}$ \citealt{koepke2013comparative}?\\
 $^{3}$ \citealt{verde2013high}\\
 $^{4}$ \citealt{ahmad2011whole}\\
 $^{5}$ \url{ftp://ftp.bioinfo.wsu.edu/www.rosbreed.org/resequencing/Prunus_persica/}\\
-\endsupplement
+%\endsupplement
 \end{document}
