@@ -132,20 +132,25 @@ Here we present an evolutionary genomic analysis of the effects of domestication
 \section*{Materials and Methods}
 %
 \subsection*{Samples}
-We resequenced nine \emph{P. dulcis}, one \emph{P. persica}, one closely related species, \emph{P. fenzliana}, and one plum outgroup species, \emph{P. cerasifera} for analysis.
+We resequenced nine \emph{P. dulcis}, one \emph{P. persica}, one closely related species, \emph{P. fenzliana}, and one plum outgroup species, \emph{P. cerasifera}, for analysis.
 %
-Eight Samples \emph{P. dulcis} samples were paired end sequenced to 100 bp length at the Vincent J. Coates Genomics Sequencing Laboratory at UC Berkeley from libraries prepared in our laboratory. 
-%Anne's library prep
+All were paired end 100 bp sequenced with Illumina HiSeq 2000. 
 %
-% What about QC, such as BioAnalyzer and qPCR, or pooling? 
+Of these samples, eight \emph{P. dulcis} were sequenced at the Vincent J. Coates Genomics Sequencing Laboratory at UC Berkeley from libraries prepared in our laboratory. 
+%Anne's library prep <- need reference or details
+%sheared X cycles for X seconds per cycle with a Bioruptor; end repair, adapter ligation, amplification; plus clean up and size selection along the way
+% QC with a BioAnalyzer and qPCR for pooling 
 %
-BGI sequenced the four remaining samples, also paired end to 100 bp length, from libraries prepared at their facility.
-% State things clearly and briefly in active tense starting with the new data, e.g., "We sequenced...", and then add a paragraph on public samples added. In the we sequenced paragraph you need to provide PE 100, where they were sequenced, what average depth, and a citation for library prep (or if we paid someone to prep libraries)
+DNA of the remaining four samples was submitted to BGI (Shenzen, China) 
+% is Shenzen correct??
+for library preparation and sequencing at their facility.
+% In the we sequenced paragraph you need to provide PE 100, where they were sequenced, what average depth, and a citation for library prep (or if we paid someone to prep libraries)
 %
-Additionally, we utilized five resequenced \emph{P. dulcis} genomes from public sources,  four from \citealt{koepke2013comparative} 
+
+Additionally, we utilized five resequenced \emph{P. dulcis} genomes from public sources, four from \citealt{koepke2013comparative} 
 %(?)
 the NCBI Sequence Read Archive (SRA) and one from the RosBREED group FTP site.
-% include URL or something
+% include URL or something?
 %
 We downloaded thirty-one resequenced \emph{P. persica}, thirteen from the NCBI SRA (ten from \citealt{verde2013high} and three from \citealt{ahmad2011whole}) and eighteen from RosBREED.
 %
@@ -153,7 +158,8 @@ One wild peach species, \emph{P. ferganensis}, was publicly available from NCBI 
 %
 %
 \subsection*{Analysis}
-\emph{Sequencing, Quality Control, and Mapping}\\
+\emph{Sequencing, Quality Control, and Mapping}
+
 All publicly available resequenced samples were paired end but varied in length from 80 to 100 bp in read length. 
 % recheck this range
 %
@@ -190,7 +196,9 @@ Depth and alignment from SAMtools using depth and flagstat subprograms \citep{li
 %
 % several custom scripts (deposit to github repo, add URL) were used for initial processing of data or to extract data for downstream use\\
 \\
-\emph{SNP calling}\\ %If going this route
+\emph{SNP calling}
+
+%If going this route
 %
 %SNP calling using SAMtools pileup and BCFtools \citep{li2009sequence} \\
 % may change to ANGSD
@@ -203,29 +211,42 @@ Genotype likelihoods were first called using ANGSD \citep{korneliussen2014angsd}
 %
 Inbreeding coefficients were estimated using \emph{ngsF} from the \emph{ngsTools} \citep{fumagalli2014ngstools} suite.
 %
-SNPs and genotype likelihoods were called utilizing the estimated inbreeding coefficients.\\
+SNPs and genotype likelihoods were called utilizing the estimated inbreeding coefficients.
 \\
 %
 \\
-\emph{Diversity Evaluation}\\
+\emph{Diversity Evaluation}
+
+ANGSD genotype likelihoods, posterior probabilities, called lots o'thetas and other stuff such as zeng
+Watterson's theta ($\theta_{W}$)
+theta pi ($\theta_{\pi}$)
+Tajima's D
+Fay's H (Fay and Wu's H, right
+zeng
 \\
 %
 \\
-\emph{Population Comparisons}\\
-We treated peach and almond samples as two populations to understand population structure, assign population proportions to samples, and determine population differentiation using ANGSD and ngsTools' ngsPopGen programs.
+\emph{Population Comparisons}
+
+We treated peach and almond samples as belonging to two populations to understand population structure, assign population proportions, and determine population differentiation.
+% covar with ngsPopGen, admixture with NGSadmix, Fst with ANGSD
+% perhaps put the software with the specific analysis instead of intro sentence
 %
-First we performed a principal component analysis (PCA) to determine any underlying population structure.
+First we performed a principal component analysis (PCA) with \emph{ngsPopGen} \citex to determine any underlying population structure.
 %might show clear distinction between groups, possibly some overlap
-Next we used ANGSD Admixture (\emph{K} = 2) to assign peach and/or almond population proportions to individuals. 
 %
-Proportion assignment accuracy was evaluated using the sequence of a likely F1 peach-almond hybrid and a peach variety of known pedigree containing almond three generations prior.
+Next we used \emph{NGSadmix} \citex to assign almond and peach population admixture proportions (\emph{K} = 2) to individuals. 
+%
+Proportion assignment accuracy was evaluated utilizing the sequence of a previously identified F1 peach-almond hybrid and a peach variety with known almond ancestry three generations prior in its pedigree.
+% still need to perform witht the peach containing introgressed almond
 %
 Finally, we examined population differentiation using F$_{ST}$ as determined by ANGSD.
-% has yet to work for me...
+% has yet to work for me... 6/17 seems to be working, uses a lot of memory
 \\
 %
 \\
-\emph{Identification of Selected Loci}\\
+\emph{Identification of Selected Loci}
+
 Genome-wide population genetics statistics (thetaPi, thetaW, Fay \& Wu's H, Zeng's E) were calculated in 1000 bp windows with 50 bp steps using the \emph{ngsTools} \citep{fumagalli2014ngstools} suite.
 %
 Regions of possible selection interest determined using Zeng's E statistic \citep{zeng2006statistical} from windows with more than 100 sites per window.
@@ -236,7 +257,8 @@ Separation and merging of genic windows by gene ID allowed the calculation of me
 \\
 %
 \\
-\emph{Gene Ontology Analysis}\\
+\emph{Gene Ontology Analysis}
+
 Gene ontology (GO) term analysis using singular enrichment analysis analysis tool and \emph{P. persica} protein IDs at the AgriGO website (http://bioinfo.cau.edu.cn/agriGO/) identified.
 %
 Genes with low Zeng's E scores were divided into three categories, shared in both almond and peach, and genes unique to either almond or peach. 
@@ -296,15 +318,25 @@ Genes with significant scores were identified by both p-value and FDR.
 %add indicator whether sample was plant material or public sequence (reference does give some indication or possibly just put indication that when "this study" is the reference that it indicates that plant material was used)
 
 \section*{Results}
-\emph{Quality Control and SNP Calling}\\
+\emph{Quality Control and Mapping}\\
+Depth etc.\\
+%
+\\
+\emph{SNP calling}\\
+%hmmm what to say
 \\
 %
 \\
-\emph{Peach and Almond Diversity and Population Comparisons}\\
-Nucleotide diversity (pi) was higher in almond than peach, with genome-wide means of 0.0186 and 0.0035, respectively. Mean per chromosome pi ranged from 0.0163 to 0.0219 in dulcis, and from 0.0028 to 0.0047 in persica.
-\\
-Admixture - The individuals were clearly assigned to either peach or almond. 
-%Probably save this for the results.
+\emph{Peach and Almond Diversity and Population Comparisons}
+
+Nucleotide diversity ($\theta_{\pi}$) was higher in almond than peach, with genome-wide means of 0.0186 and 0.0035, respectively. 
+%
+Mean per chromosome ($\theta_{\pi}$) ranged from 0.0163 to 0.0219 in dulcis, and from 0.0028 to 0.0047 in persica.
+
+Individuals were clearly assigned to either peach or almond populations. 
+%
+The previously identified peach-almond F1 hybrid was assigned as 0.4758 dulcis and 0.5242 persica, while the peach with introgressed almond ancestry was assigned as X dulcis and Y persica.
+%TBD
 \\
 %
 \\
