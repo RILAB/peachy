@@ -17,6 +17,7 @@
      }
 \newcommand{\citex}{\textcolor{red}{\bf CITE}}
 \newcommand{\X}{\textcolor{red}{\bf X}}
+\newcommand{\jri}[1]{\textcolor{red}{ \emph{ #1}} }
 
 \begin{document}
 
@@ -37,9 +38,8 @@
 Peach [\emph{P. persica} (Mill.) D. A. Webb] and almond [\emph{P. dulcis} (L.) Batsch] are sibling species found within the subgenus \emph{Amygdalus}.
 %
 Peach and almond are similar in many ways, including early fruit development, perenniality, precocity, genome organization \citep{arus2012peach}, and genome size \citep{baird1994estimating}. 
-%probably dont need so many cites on genome size.
 %
-The most striking between the species are mature fruit morphology and mating systems: peaches are harvested for their indehiscent fleshy mesocarp while almonds are harvested for the stony endocarp encased seeds obtained from within the leathery dehiscent mesocarp and exocarp. 
+The most striking differences between the species are mature fruit morphology and mating systems: peaches are harvested for their indehiscent fleshy mesocarp while almonds are harvested for the stony endocarp encased seeds obtained from within the leathery dehiscent mesocarp and exocarp. 
 %
 But almond and peach also differ for other traits, such as life span, chilling requirement, and adventitious root generation.
 %
@@ -57,9 +57,6 @@ and good adventitious rooting ability \citex.
 %
 Additionally, while \emph{Prunus} species generally exhibit gametophytic self-incompatibility, peach is fully self-compatible.
 
-%each sentence on different line is helpful, but no need to put % between each sentence
-% I found that I could find lines faster/easier this way
-
 Domestication of almond and peach occurred approximately 5000 BP in the Fertile Crescent and China \citep{zohary2012domestication}, respectively, followed by global dissemination beginning before 2300 BP \citep{hedrick1917peaches, edwards1975almond, gradziel2011origin, zheng2014archaeological}. 
 %peach recorded dissemination to Persia by 332 BC, Rome by 79 AD, France from 530 to 784 AD, and the Americas by the 16th century
 %Nice peach generation time description: "a peach falling to the ground brings a peach tree that shall bear in three years, or sometimes sooner" Hedrick p45 quoting John Lawson (1700)
@@ -75,12 +72,11 @@ The few obvious traits associated with almond domestication are reduced toxicity
 %
 However, traits not typically associated with domestication but common to both, such as precocity, or solely with peach, such as relative ease of adventitious rooting, may have also been targeted or incidentally selected during domestication. 
 %
-Unfortunately, efforts to identify wild progenitors of almond and peach \citep{verde2013high, aradhya2004molecular, zeinalabedini2010origin, mowrey1990isozyme, browicz1996genus, ladizinsky1999origin, bassi20081} by examining species relationships within the subgenus \emph{Amygdalus} have had mixed results. 
+Unfortunately, efforts to identify wild progenitors of almond and peach by examining species relationships within the subgenus \emph{Amygdalus} have had mixed results \citep{verde2013high, aradhya2004molecular, zeinalabedini2010origin, mowrey1990isozyme, browicz1996genus, ladizinsky1999origin, bassi20081}. 
 %
-Given the uncertainty in identifying wild progenitors of almond and peach, domestication studies using crossing experiments are not suitable and are generally impractical in perennial crops.
-%crossing experiment citation, perhaps one of Doebley's papers or others using domesticated x wild cross to identify domestication locus/loci (maize, tomato, etc.)
+Given the uncertainty in identifying wild progenitors and the difficulties associated with long generation times, investigation of domestication using crossing experiments is impractical for almond and peach.
 %
-With the recent cost reductions in high throughput sequencing, using genomic resequencing is a practical approach to gain insights into domestication of perennial crops and its genome-wide nature also enables distinguishing between mating system and domestication effects. 
+In contrast, inexpensive sequencing makes population genetic approaches \citep[c.f.][]{ross2007plant} are an attractive option, enabling the identification of domestication loci and the genome-wide impacts of changes in mating system.   
 %
 Both domestication and mating system have been shown to shape genome diversity in annual species \citep{glemin2006impact, doebley2006molecular, slotte2013capsella}, but the impacts of these forces on tree species remains poorly understood \citep{mckey2010evolutionary, miller2011forest}.
 
@@ -103,82 +99,72 @@ However, domestication also reduces genomic diversity genome-wide due to reduced
 %
 %STUDY PURPOSE AND SUMMARY
 %
-Like all species within the subgenus \emph{Amygdalus}, peach and almond are both diploid, and genetic mapping from an almond x peach $F_{2}$ population suggests they have a similar genomic structure \citep{dirlewanger2004comparative}. 
+%Like all species within the subgenus \emph{Amygdalus}, peach and almond are both diploid, and genetic mapping from an almond x peach $F_{2}$ population suggests they have a similar genomic structure \citep{dirlewanger2004comparative}. 
 %
-At an estimated 230 Megabases (Mb) spanning eight chromosomes, the recently sequenced peach genome \citep{verde2013high} is less than double the genome size of model plant \emph{Arabidopsis thaliana}. 
+%At an estimated 230 Megabases (Mb) spanning eight chromosomes, the recently sequenced peach genome \citep{verde2013high} is less than double the genome size of model plant \emph{Arabidopsis thaliana}. 
 %
-At 300 Mb the cytologically estimated almond genome size is similar to pre-sequencing estimates of peach \citep{arumuganathan1991nuclear}. 
+%At 300 Mb the cytologically estimated almond genome size is similar to pre-sequencing estimates of peach \citep{arumuganathan1991nuclear}. 
 % efficient species
 %
 %Peach already serves as a model system for \emph{Prunus} and other tree crops due to its small genome (230 Mb), short generation time (2-3 years), and self-compatibility \citep{arus2012peach}.
 %
 %Small genome sizes, chromosome numbers, and relatively short juvenility, peach and almond support their use as a model to investigate the effects of domestication and mating system in trees.
 %
-Recent analysis of resequenced peach genomes indicates low genetic diversity and higher LD across the genome compared to wild peach species \citep{verde2013high}, but the few resequenced almond genomes have not been similarly assessed. 
+Recent analysis of resequenced peach genomes indicates lower genetic diversity and higher LD across the genome compared to wild peach species \citep{verde2013high}, but the few resequenced almond genomes have not been similarly assessed. 
 %
 %This is not unexpected considering the primary peach genetic map is based on an almond x peach $F_2$ population due to poor resolution in peach $F_2$ genetic maps \citep{arus2012peach, joobeur1998construction, aranzana2003set, dirlewanger2004comparative, dominguez2003plant}.
 %
 %However, due to self-incompatibility almond is expected to have higher levels of heterozygosity and lower LD compared to peach.
 %
+Here we present an evolutionary genomic analysis of the effects of domestication and mating system on genomic diversity in peach and almond, providing a model for  future analysis of evolution and domestication in other tree species.
 Understanding the impact of mating system on almond and peach evolutionary genomics expands the basic understanding of genome evolution in a perennial species pair with alternate mating systems. 
 %is this a first for perennial species? <-- DUNNO, THAT WOULD BE COOL!
 %
 Identification of candidate domestication loci will provide an opportunity to determine which loci in almond and peach were under selection, if any are in common, and to identify similarities or differences when compared to annual crops. 
 %Knowledge gained from these analyses provides valuable information regarding domestication loci and haplotypes, an important resource for tree breeding programs.
 %Understanding the contributions of domestication and mating systems to genome evolution in almond and peach expands the understanding of these processes beyond annual species. 
-Here we present an evolutionary genomic analysis of the effects of domestication and mating system on genomic diversity in peach and almond, providing a model for  future analysis of evolution and domestication in other tree species.
 %
 \\
 \section*{Materials and Methods}
 %
 \subsection*{Samples}
-We resequenced nine \emph{P. dulcis}, one \emph{P. persica}, one closely related species, \emph{P. fenzliana}, and one plum outgroup species, \emph{P. cerasifera}, for analysis.
+We analyzed a total of \X almond and \X peach genomes, including both public and newly resequenced data (Table \ref{samples}). We resequenced nine \emph{P. dulcis}, one \emph{P. persica}, one closely related species, \emph{P. fenzliana}, and one plum outgroup species, \emph{P. cerasifera}, for analysis.
 %
-All were paired end 100 bp sequenced with Illumina HiSeq 2000. 
+Paired-end 100bp sequences were generated for all samples on an Illumina HiSeq 2000. 
 %
-Of these samples, eight \emph{P. dulcis} were sequenced at the Vincent J. Coates Genomics Sequencing Laboratory at UC Berkeley from libraries prepared in our laboratory. 
+Of these samples, eight \emph{P. dulcis} were sequenced at the Vincent J. Coates Genomics Sequencing Laboratory at UC Berkeley from libraries prepared in our laboratory following \citex. 
 %Anne's library prep <- need reference or details
 %sheared X cycles for X seconds per cycle with a Bioruptor; end repair, adapter ligation, amplification; plus clean up and size selection along the way
 % QC with a BioAnalyzer and qPCR for pooling 
-%
-DNA of the remaining four samples was submitted to BGI (Shenzen, China) 
-% Shenzen correct??
-for library preparation and sequencing at their facility.
+DNA of the remaining four samples was submitted to BGI (Shenzen, China) for library preparation and sequencing at their facility.
 % In the we sequenced paragraph you need to provide PE 100, where they were sequenced, what average depth, and a citation for library prep (or if we paid someone to prep libraries)
 %
 
 Additionally, we utilized five resequenced \emph{P. dulcis} genomes from public sources, four from \citealt{koepke2013comparative} 
 %(?)
-the NCBI Sequence Read Archive (SRA) and one from the RosBREED group FTP site.
+the NCBI Sequence Read Archive (SRA) and one from the RosBREED group \url{https://www.rosbreed.org}.
 % include URL or something?
 %
-We downloaded thirty-one resequenced \emph{P. persica}, thirteen from the NCBI SRA (ten from \citealt{verde2013high} and three from \citealt{ahmad2011whole}) and eighteen from RosBREED.
+We further downloaded thirty-one resequenced \emph{P. persica}, thirteen from the NCBI SRA (ten from \citealt{verde2013high} and three from \citealt{ahmad2011whole}) and eighteen from RosBREED.
 %
-One wild peach species, \emph{P. ferganensis}, was publicly available from NCBI SRA \citep{verde2013high}.\\
+One wild peach species, \emph{P. ferganensis}, was publicly available from NCBI SRA \citep{verde2013high}. \jri{are we using this guy?}\\
 %
 %
 \subsection*{Analysis}
 \emph{Sequencing, Quality Control, and Mapping}
 
-All publicly available resequenced samples were paired end but varied in length from 80 to 100 bp in read length. 
 % recheck this range
 %
-Regardless of source all FASTQ files were trimmed of remnant adapter sequences using Scythe and then further trimmed using base quality with Sickle. 
+All FASTQ files were trimmed of remnant adapter sequences using Scythe \url{https://github.com/vsbuffalo/scythe} and then further trimmed using base quality with Sickle \url{https://github.com/najoshi/sickle}. 
 %
-% Buffalo V: Scythe. [https://github.com/vsbuffalo/scythe]
-% figure out citation for Scythe; include version
-%
-% Najoshi :Sickle [https://github.com/najoshi/sickle]
-% same as for Scythe
-%
-Trimmed reads were then aligned to the peach v 1.0 reference using BWA-MEM using a minimum seed length of 10 and internal seed length of 28.5.
+Trimmed reads were then aligned to the peach v 1.0 reference \jri{give url} using BWA-MEM  \citep{li2013aligning} using a minimum seed length of 10 and internal seed length of 28.5.
 % using -k 10 -r 2.85 parameters
 % -k INT		minimum seed length [19]
 % -r FLOAT	look for internal seeds inside a seed longer than {-k} * FLOAT [1.5]
 % internal seed length remains the same as default parameters
 % picked this up from P. Morrell
 %
- \citep{li2013aligning}. 
+. 
 % bwa mem -k 10 -r 2.85
 % provide explanation of parameters
 %
@@ -198,13 +184,13 @@ Genotype likelihoods were first called using ANGSD \citep{korneliussen2014angsd}
 %
 Inbreeding coefficients were estimated using \emph{ngsF} from the \emph{ngsTools} \citep{fumagalli2014ngstools} suite.
 %
-SNPs and genotype likelihoods were called utilizing the estimated inbreeding coefficients.
+SNPs and genotype likelihoods were called utilizing the estimated inbreeding coefficients. \jri{did we call SNPs for anything??}
 \\
 %
 \\
 \emph{Diversity Evaluation}
 
-Using ANGSD genotype likelihoods and posterior probabilities we calculated several population genetics statistics, such as Watterson's theta ($\theta_{W}$) \citex and pairwise nucleotide diversity ($\theta_{\pi}$) \citex, and neutrality deviation tests, such as Tajima's D \citex, Fay's H (Fay and Wu's H, right?) \citex, and Zeng's E \citex.
+Using ANGSD genotype likelihoods and posterior probabilities we calculated several population genetics statistics, such as Watterson's theta ($\theta_{W}$) \citex and pairwise nucleotide diversity ($\theta_{\pi}$) \citex, and neutrality deviation tests, such as Tajima's D \citex, Fay's H (Fay and Wu's H, right?) \jri{yes} \citex, and Zeng's E \citex.
 \\
 %
 \\
@@ -219,7 +205,7 @@ First we performed a principal component analysis (PCA) with \emph{ngsPopGen} \c
 %
 Next we used \emph{NGSadmix} \citep{skotte2013estimating} to assign almond and peach population proportions (\emph{K} = 2) to individuals. 
 %
-Proportion assignment accuracy was evaluated utilizing the sequence of a previously identified F1 peach-almond hybrid and a peach variety with known almond ancestry three generations prior in its pedigree.
+Proportion assignment accuracy was evaluated utilizing the sequence of a previously identified F1 peach-almond hybrid and a peach variety with known almond ancestry three generations prior in its pedigree. \jri{cool yes do that}
 % still need to perform witht the peach containing introgressed almond
 %
 Finally, we examined population differentiation using F$_{ST}$ as determined by ANGSD.
@@ -230,31 +216,18 @@ Finally, we examined population differentiation using F$_{ST}$ as determined by 
 \\
 \emph{Identification of Selected Loci}
 
-Genome-wide population genetics statistics (thetaPi, thetaW, Fay \& Wu's H, Zeng's E) were calculated in 1000 bp windows with 50 bp steps using the \emph{ngsTools} \citep{fumagalli2014ngstools} suite.
+Genome-wide population genetics statistics (thetaPi, thetaW, Fay \& Wu's H, Zeng's E) were calculated in 1000 bp windows with 50 bp steps using the \emph{ngsTools} \citep{fumagalli2014ngstools} suite. 
+Only windows with $>100$bp were used for analysis; average values over particular annotations (e.g. genes) were calculated using bedtools \citep{quinlan2010bedtools}.
 %
-Regions of possible selection interest determined using Zeng's E statistic \citep{zeng2006statistical} from windows with more than 100 sites per window.
+Putatively selected genes were identified by finding the 1\% and 5\% empirical quantiles of Zeng's E statistic \citep{zeng2006statistical}.
 %
-Intersections of windows with the Prunus persica v 1.0 genes GFF3 file using bedtools \citep{quinlan2010bedtools} identified genic and non-genic windows.
+Gene ontology (GO) analysis of these loci was performed using  the singular enrichment analysis tool and \emph{P. persica} protein IDs at the AgriGO website (http://bioinfo.cau.edu.cn/agriGO/) identified.
 %
-Separation and merging of genic windows by gene ID allowed the calculation of mean genic Zeng's E and identification of genes of interest in the 1\% and 5\% quantiles.
-\\
-%
-\\
-\emph{Gene Ontology Analysis}
-
-Gene ontology (GO) term analysis using singular enrichment analysis analysis tool and \emph{P. persica} protein IDs at the AgriGO website (http://bioinfo.cau.edu.cn/agriGO/) identified.
-%
-Genes with low Zeng's E scores were divided into three categories, shared in both almond and peach, and genes unique to either almond or peach. 
-%
-Each of the three identified gene categories were analyzed independently. 
-%
-Genes with significant scores were identified by both p-value and FDR.
-\\
 %
 \\
 \begin{center}
 \begin{longtable}{lllll}
-\caption[P. dulcis, P. persica and related species used in analysis.]{\emph{P. dulcis}, \emph{P. persica} and related species used in analysis.} \label{my-label} \\
+\caption{\emph{P. dulcis}, \emph{P. persica} and related species used in analysis. \jri{are we using these related dudes? i would drop the source column in favor of maybe X-fold depth?} \label{samples} \\
 \hline \hline \multicolumn{1}{l}{\textbf{Species}} &
 \multicolumn{1}{l}{\textbf{Number}} &
 \multicolumn{1}{l}{\textbf{Source}} &
@@ -301,7 +274,7 @@ Genes with significant scores were identified by both p-value and FDR.
 %add indicator whether sample was plant material or public sequence (reference does give some indication or possibly just put indication that when "this study" is the reference that it indicates that plant material was used)
 
 \section*{Results}
-\emph{Quality Control and Mapping}\\
+\subsection*{Quality Control and Mapping}\\
 
 Depth and alignment from SAMtools using depth and flagstat subprograms \citep{li2009sequence} determined a mean mapped sequence depth of 10.710, which ranged from 1.138 to 37.358 (supp. Figure \ref{fig:depth}).
 %should separate out for our sequenced stuff and all else
@@ -320,12 +293,10 @@ Depth and alignment from SAMtools using depth and flagstat subprograms \citep{li
 Depth etc.\\
 %
 \\
-\emph{SNP calling}\\
-%hmmm what to say
 \\
 %
 \\
-\emph{Peach and Almond Diversity and Population Comparisons}
+\subsection*{Peach and Almond Diversity and Population Comparisons}
 
 Nucleotide diversity ($\theta_{\pi}$) was higher in almond than peach, with genome-wide means of 0.0186 and 0.0035, respectively. 
 %
@@ -338,7 +309,7 @@ The previously identified peach-almond F1 hybrid was assigned as 0.4758 dulcis a
 %TBD
 %
 
-F$_{ST}$: unweighted 0.029449; weighted 0.668699
+F$_{ST}$: unweighted 0.029449; weighted 0.668699 \jri{wait what? that big a difference just due to weighting?}
 \\
 %
 \\
@@ -353,7 +324,7 @@ In the 5\% quantile dulcis and persica had 1325 and 1340 genes of interest, resp
 
 
 \section*{Discussion}
-As expected, given its self-compatibility, the genome-wide mean nucleotide diversity in peach is lower than almond.
+As expected, given its self-compatibility, the genome-wide mean nucleotide diversity in peach is lower than almond. \jri{are there candidates for the S locus? can we at least zoom in on the arm to see if there are obvious sweeps (low diversity, negative E, high Fst between species)?}
 %
 \\
 Peach and almond also share more genes of interest in common than expected.
