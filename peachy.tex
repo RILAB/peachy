@@ -15,9 +15,10 @@
         \setcounter{figure}{0}
         \renewcommand{\thefigure}{S\arabic{figure}}%
      }
-\newcommand{\citex}{\textcolor{red}{\bf CITE}}
-\newcommand{\X}{\textcolor{red}{\bf X}}
-\newcommand{\jri}[1]{\textcolor{red}{ \emph{ #1}} }
+\newcommand{\citex}{\textcolor{red}{\bf CITE }}
+\newcommand{\X}{\textcolor{red}{\bf X }}
+\newcommand{\jri}[1]{\textcolor{red}{\emph{#1}}}
+\newcommand{\dv}[1]{\textcolor{blue}{\emph{#1}}}
 
 \begin{document}
 
@@ -32,7 +33,7 @@
 \maketitle
 \section*{Introduction}
 %BACKGROUND ON SPECIES
-%
+
 \emph{Prunus} is the largest genus in the family Rosaceae \citex with approximately four hundred species, including multiple domesticated crops, such as almond, apricot, cherry, cherry, peach, and plum.
 %
 Peach [\emph{P. persica} (Mill.) D. A. Webb] and almond [\emph{P. dulcis} (L.) Batsch] are sibling species found within the subgenus \emph{Amygdalus}.
@@ -45,10 +46,10 @@ But almond and peach also differ for other traits, such as life span, chilling r
 %
 The natural life span of almonds may exceed 100 years \citex,
 %http://www.european-trees.com/almond.html ; literature sources not easy to locate, will continue to look
-%commercial life span of 20-25 years, but this may be mostly due to peach or peach-derived rootstocks and peak bearing period
+%commercial life span of 20-25 years, but this may be due to use of peach/peach-derived rootstocks and/or almond bearing decline and replacement as a management practice
 flowering initiation requires only 400-600 hours chilling \citep{alonso2005determination}, 
 % versus peach <650-1050 /citep{dozier1990hydrogen}
-and less adventitious root generation \citex when compared to the peach life span of 25-30 years\citex, 
+and less adventitious root generation \citex when compared to the peach life span of 25-30 years \citex, 
 %is this primarily commercial production life span?
 %how are they "in the wild"?
 600-1000 hours of required chilling \citex, 
@@ -79,7 +80,6 @@ Given the uncertainty in identifying wild progenitors and the difficulties assoc
 In contrast, inexpensive sequencing makes population genetic approaches \citep[c.f.][]{ross2007plant} are an attractive option, enabling the identification of domestication loci and the genome-wide impacts of changes in mating system.   
 %
 Both domestication and mating system have been shown to shape genome diversity in annual species \citep{glemin2006impact, doebley2006molecular, slotte2013capsella}, but the impacts of these forces on tree species remains poorly understood \citep{mckey2010evolutionary, miller2011forest}.
-
 
 %DOMESTICATION VERSUS SI/SC IN GENOME
 In closely related species pairs with alternate mating systems, such as \emph{Arabidopsis thaliana} and \emph{A. lyrata} and \emph{Capsella rubella} and \emph{C. grandiflora} \citep{slotte2013capsella}, mating system is shown to significantly affect genome evolution, as evidenced by nucleotide diversity, linkage disequilibrium (LD), heterozygosity, genome size, repeat content, and genetic load.
@@ -124,11 +124,10 @@ Identification of candidate domestication loci will provide an opportunity to de
 %Knowledge gained from these analyses provides valuable information regarding domestication loci and haplotypes, an important resource for tree breeding programs.
 %Understanding the contributions of domestication and mating systems to genome evolution in almond and peach expands the understanding of these processes beyond annual species. 
 %
-\\
 \section*{Materials and Methods}
 %
 \subsection*{Samples}
-We analyzed a total of \X almond and \X peach genomes, including both public and newly resequenced data (Table \ref{samples}). We resequenced nine \emph{P. dulcis}, one \emph{P. persica}, one closely related species, \emph{P. fenzliana}, and one plum outgroup species, \emph{P. cerasifera}, for analysis.
+We analyzed a total of 14 almond and 32 peach genomes, including both public and newly resequenced data (Table \ref{samples}). We resequenced nine \emph{P. dulcis}, one \emph{P. persica}, one closely related species, \emph{P. fenzliana}, and one plum outgroup species, \emph{P. cerasifera}, for analysis.
 %
 Paired-end 100bp sequences were generated for all samples on an Illumina HiSeq 2000. 
 %
@@ -139,7 +138,7 @@ Of these samples, eight \emph{P. dulcis} were sequenced at the Vincent J. Coates
 DNA of the remaining four samples was submitted to BGI (Shenzen, China) for library preparation and sequencing at their facility.
 % In the we sequenced paragraph you need to provide PE 100, where they were sequenced, what average depth, and a citation for library prep (or if we paid someone to prep libraries)
 %
-
+%
 Additionally, we utilized five resequenced \emph{P. dulcis} genomes from public sources, four from \citealt{koepke2013comparative} 
 %(?)
 the NCBI Sequence Read Archive (SRA) and one from the RosBREED group \url{https://www.rosbreed.org}.
@@ -147,30 +146,28 @@ the NCBI Sequence Read Archive (SRA) and one from the RosBREED group \url{https:
 %
 We further downloaded thirty-one resequenced \emph{P. persica}, thirteen from the NCBI SRA (ten from \citealt{verde2013high} and three from \citealt{ahmad2011whole}) and eighteen from RosBREED.
 %
-One wild peach species, \emph{P. ferganensis}, was publicly available from NCBI SRA \citep{verde2013high}. \jri{are we using this guy?}\\
-%
+One wild peach species, \emph{P. ferganensis}, was publicly available from NCBI SRA \citep{verde2013high}. \jri{are we using this guy?} \dv{your suggestion was to keep it in, but doesn't seem likely it will be used}
 %
 \subsection*{Analysis}
 \emph{Sequencing, Quality Control, and Mapping}
-
+%
 % recheck this range
 %
 All FASTQ files were trimmed of remnant adapter sequences using Scythe \url{https://github.com/vsbuffalo/scythe} and then further trimmed using base quality with Sickle \url{https://github.com/najoshi/sickle}. 
 %
-Trimmed reads were then aligned to the peach v 1.0 reference \jri{give url} using BWA-MEM  \citep{li2013aligning} using a minimum seed length of 10 and internal seed length of 28.5.
+Trimmed reads were then aligned to the peach v1.0 reference \url{https://www.rosaceae.org/species/prunus_persica/genome_v1.0} using BWA-MEM  \citep{li2013aligning} using a minimum seed length of 10 and internal seed length of 28.5.
 % using -k 10 -r 2.85 parameters
 % -k INT		minimum seed length [19]
 % -r FLOAT	look for internal seeds inside a seed longer than {-k} * FLOAT [1.5]
 % internal seed length remains the same as default parameters
 % picked this up from P. Morrell
 %
-. 
 % bwa mem -k 10 -r 2.85
 % provide explanation of parameters
 %
 \\
 \emph{SNP calling}
-
+%
 %If going this route
 %
 %SNP calling using SAMtools pileup and BCFtools \citep{li2009sequence} \\
@@ -189,13 +186,13 @@ SNPs and genotype likelihoods were called utilizing the estimated inbreeding coe
 %
 \\
 \emph{Diversity Evaluation}
-
+%
 Using ANGSD genotype likelihoods and posterior probabilities we calculated several population genetics statistics, such as Watterson's theta ($\theta_{W}$) \citex and pairwise nucleotide diversity ($\theta_{\pi}$) \citex, and neutrality deviation tests, such as Tajima's D \citex, Fay's H (Fay and Wu's H, right?) \jri{yes} \citex, and Zeng's E \citex.
 \\
 %
 \\
 \emph{Population Comparisons}
-
+%
 We treated peach and almond samples as belonging to two populations to understand population structure, assign population proportions, and determine population differentiation.
 % covar with ngsPopGen, admixture with NGSadmix, Fst with ANGSD
 % perhaps put the software with the specific analysis instead of intro sentence
@@ -206,39 +203,40 @@ First we performed a principal component analysis (PCA) with \emph{ngsPopGen} \c
 Next we used \emph{NGSadmix} \citep{skotte2013estimating} to assign almond and peach population proportions (\emph{K} = 2) to individuals. 
 %
 Proportion assignment accuracy was evaluated utilizing the sequence of a previously identified F1 peach-almond hybrid and a peach variety with known almond ancestry three generations prior in its pedigree. \jri{cool yes do that}
-% still need to perform witht the peach containing introgressed almond
+% still need to perform using the peach with introgressed almond
 %
 Finally, we examined population differentiation using F$_{ST}$ as determined by ANGSD.
-% 6/17 worked, uses a lot of memory - probably want to change the windows and step parameters, which were 50000 and 10000, to something like 1000 and 200
 %
 \\
 %
 \\
 \emph{Identification of Selected Loci}
-
+%
 Genome-wide population genetics statistics (thetaPi, thetaW, Fay \& Wu's H, Zeng's E) were calculated in 1000 bp windows with 50 bp steps using the \emph{ngsTools} \citep{fumagalli2014ngstools} suite. 
-Only windows with $>100$bp were used for analysis; average values over particular annotations (e.g. genes) were calculated using bedtools \citep{quinlan2010bedtools}.
+%
+Only windows with $>100$ bp were used for analysis; average values over particular annotations (e.g. genes) were calculated using bedtools \citep{quinlan2010bedtools}.
 %
 Putatively selected genes were identified by finding the 1\% and 5\% empirical quantiles of Zeng's E statistic \citep{zeng2006statistical}.
 %
-Gene ontology (GO) analysis of these loci was performed using  the singular enrichment analysis tool and \emph{P. persica} protein IDs at the AgriGO website (http://bioinfo.cau.edu.cn/agriGO/) identified.
+Gene ontology (GO) analysis of these loci was performed using  the singular enrichment analysis tool and \emph{P. persica} protein IDs at the AgriGO website (http://bioinfo.cau.edu.cn/agriGO/) identified.\\
 %
 %
-\\
+\jri{are we using these related dudes? i would drop the source column in favor of maybe X-fold depth?} \dv{prob not using related dudes. had also thought about adding depth}\\
 \begin{center}
-\begin{longtable}{lllll}
-\caption{\emph{P. dulcis}, \emph{P. persica} and related species used in analysis. \jri{are we using these related dudes? i would drop the source column in favor of maybe X-fold depth?} \label{samples} \\
+\begin{longtable}{llll}
+\label{samples} 
+\caption{\emph{P. dulcis}, \emph{P. persica} and related species used in analyses.}
 \hline \hline \multicolumn{1}{l}{\textbf{Species}} &
 \multicolumn{1}{l}{\textbf{Number}} &
 \multicolumn{1}{l}{\textbf{Source}} &
-\multicolumn{1}{l}{\textbf{Reference}}\\ \hline 
+\multicolumn{1}{l}{\textbf{Ref}}\\ \hline 
 \endfirsthead
 
 \multicolumn{4}{r}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
 \hline \multicolumn{1}{l}{\textbf{Species}} &
 \multicolumn{1}{l}{\textbf{Number}} &
 \multicolumn{1}{l}{\textbf{Source}} &
-\multicolumn{1}{}{\textbf{Reference}} \\ \hline 
+\multicolumn{1}{}{\textbf{Ref}} \\ \hline 
 \endhead
 
 \hline \multicolumn{4}{r}{{Continued on next page}} \\ \hline
@@ -369,7 +367,7 @@ Support for DV provided by the McDonald Endowment for UC Davis Plant Sciences Gr
 \multicolumn{1}{l}{\textbf{Accession and/or Cultivar}} &
 \multicolumn{1}{l}{\textbf{Origin}} &
 \multicolumn{1}{l}{\textbf{Source}}  &
-\multicolumn{1}{c}{\textbf{Reference}} \\ \hline 
+\multicolumn{1}{c}{\textbf{Ref}} \\ \hline 
 \endfirsthead
 
 \multicolumn{5}{r}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
@@ -377,7 +375,7 @@ Support for DV provided by the McDonald Endowment for UC Davis Plant Sciences Gr
 \multicolumn{1}{l}{\textbf{Accession and/or Cultivar}} &
 \multicolumn{1}{l}{\textbf{Origin}} &
 \multicolumn{1}{l}{\textbf{Source}} &
-\multicolumn{1}{c}{\textbf{Reference}} \\ \hline 
+\multicolumn{1}{c}{\textbf{Ref}} \\ \hline 
 \endhead
 
 \hline \multicolumn{5}{r}{{Continued on next page}} \\ \hline
@@ -524,7 +522,7 @@ Support for DV provided by the McDonald Endowment for UC Davis Plant Sciences Gr
 		\\
                  \multicolumn{5}{l}{Other \emph{Prunus} species}  \\
                  %Almond Board resequencing (performed at BGI)
-                 PF01 &\emph{P. fenzliana} &? &UCD &1\\
+                 PF01 &\emph{P. fenzliana} &\emph{unk.} &UCD &1\\
                  %UCD,ABC
                  PG01 &\emph{P. ferganensis} &Fergana Valley &
 		\multirow{2}{1cm}{SRR502999, SRR502998} &3\\
