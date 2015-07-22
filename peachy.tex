@@ -24,7 +24,7 @@
 
 \title{Evolutionary genomics of peach \\and almond domestication}
 
-\author{\small\sfbf{Dianne Velasco$^{\S}$, Mallikarjuna Aradhya$^{\dag}$, Jeffrey Ross-Ibarra$^{\S\ddag}$}\thanks{Corresponding author: Department of Plant Sciences, University of California, Davis, California 95616, USA. E-mail: \mbox{rossibarra@ucdavis.edu}} \\[0.3cm]
+\author{\small\sfbf{Dianne Velasco$^{\S\dag}$, Mallikarjuna Aradhya$^{\dag}$, Jeffrey Ross-Ibarra$^{\S\ddag}$}\thanks{Corresponding author: Department of Plant Sciences, University of California, Davis, California 95616, USA. E-mail: \mbox{rossibarra@ucdavis.edu}} \\[0.3cm]
      \small\sf $^{\S}$Department of Plant Sciences, University of California, Davis, California 95616, USA,\\
      \small\sf $^{\dag}$USDA-ARS National Clonal Germplasm Repository, Davis, California 95616, USA,\\
      \small\sf $^{\ddag}$Center for Population Biology and Genome Center, University of California, Davis, California 95616, USA}
@@ -150,7 +150,7 @@ One wild peach species, \emph{P. ferganensis}, was publicly available from NCBI 
 %
 \subsection*{Analysis}
 \emph{Sequencing, Quality Control, and Mapping}
-%
+
 % recheck this range
 %
 All FASTQ files were trimmed of remnant adapter sequences using Scythe \url{https://github.com/vsbuffalo/scythe} and then further trimmed using base quality with Sickle \url{https://github.com/najoshi/sickle}. 
@@ -162,12 +162,9 @@ Trimmed reads were then aligned to the peach v1.0 reference \url{https://www.ros
 % internal seed length remains the same as default parameters
 % picked this up from P. Morrell
 %
-% bwa mem -k 10 -r 2.85
-% provide explanation of parameters
-%
 \\
 \emph{SNP calling}
-%
+
 %If going this route
 %
 %SNP calling using SAMtools pileup and BCFtools \citep{li2009sequence} \\
@@ -186,13 +183,13 @@ SNPs and genotype likelihoods were called utilizing the estimated inbreeding coe
 %
 \\
 \emph{Diversity Evaluation}
-%
+
 Using ANGSD genotype likelihoods and posterior probabilities we calculated several population genetics statistics, such as Watterson's theta ($\theta_{W}$) \citex and pairwise nucleotide diversity ($\theta_{\pi}$) \citex, and neutrality deviation tests, such as Tajima's D \citex, Fay's H (Fay and Wu's H, right?) \jri{yes} \citex, and Zeng's E \citex.
 \\
 %
 \\
 \emph{Population Comparisons}
-%
+
 We treated peach and almond samples as belonging to two populations to understand population structure, assign population proportions, and determine population differentiation.
 % covar with ngsPopGen, admixture with NGSadmix, Fst with ANGSD
 % perhaps put the software with the specific analysis instead of intro sentence
@@ -211,7 +208,7 @@ Finally, we examined population differentiation using F$_{ST}$ as determined by 
 %
 \\
 \emph{Identification of Selected Loci}
-%
+
 Genome-wide population genetics statistics (thetaPi, thetaW, Fay \& Wu's H, Zeng's E) were calculated in 1000 bp windows with 50 bp steps using the \emph{ngsTools} \citep{fumagalli2014ngstools} suite. 
 %
 Only windows with $>100$ bp were used for analysis; average values over particular annotations (e.g. genes) were calculated using bedtools \citep{quinlan2010bedtools}.
@@ -287,13 +284,9 @@ Depth and alignment from SAMtools using depth and flagstat subprograms \citep{li
 % BQ20MQ30: mean 21.759, range 4.715 to 41.105\\
 % Should this be in Results section instead?
 %
-% several custom scripts (deposit to github repo, add URL) were used for initial processing of data or to extract data for downstream use\\
-Depth etc.\\
+% several custom scripts (deposit to github repo, add URL) were used for initial processing of data or to extract data for downstream use
+Depth etc.
 %
-\\
-\\
-%
-\\
 \subsection*{Peach and Almond Diversity and Population Comparisons}
 
 Nucleotide diversity ($\theta_{\pi}$) was higher in almond than peach, with genome-wide means of 0.0186 and 0.0035, respectively. 
@@ -301,21 +294,21 @@ Nucleotide diversity ($\theta_{\pi}$) was higher in almond than peach, with geno
 Mean per chromosome $\theta_{\pi}$ ranged from 0.0163 to 0.0219 in dulcis, and from 0.0028 to 0.0047 in persica.
 Additional statistics: Watterson's theta ($\theta_{W}$)
 Neutrality tests: Tajima's D, Fay's H (=Fay and Wu's H, right?), and Zeng's E
+%
 For the admixture results individuals were clearly assigned to either peach or almond populations. 
 %
-The previously identified peach-almond F1 hybrid was assigned as 0.4758 dulcis and 0.5242 persica, while the peach with introgressed almond ancestry was assigned as X dulcis and Y persica.
+The previously identified peach-almond F1 hybrid was assigned as 0.4758 dulcis and 0.5242 persica, while the peach with introgressed almond ancestry was assigned as \X dulcis and \X persica.
 %TBD
 %
 
-F$_{ST}$: unweighted 0.029449; weighted 0.668699 \jri{wait what? that big a difference just due to weighting?}
-\\
+F$_{ST}$: unweighted 0.029449; weighted 0.668699 \jri{wait what? that big a difference just due to weighting?} \dv{yup, as we've discussed in meetings; naive estimation based on pi was approximately 0.4}
 %
-\\
-\emph{Selected Loci and Gene Ontology}\\
+\subsection*{Selected Loci and Gene Ontology}
+
 Of the 27256 genes on chromosomes one through eight, dulcis and persica had 265 and 268 genes, respectively, in the 1\% quantile. 
 %total genes on all chromosomes \& scaffolds: 27864\\
 %
-Twenty-nine of those genes are shared between dulcis and persica.
+Twenty-nine of those genes, or approximately 11\%, are shared between dulcis and persica.
 %
 In the 5\% quantile dulcis and persica had 1325 and 1340 genes of interest, respectively, with 286 shared.
 \\
@@ -323,6 +316,13 @@ In the 5\% quantile dulcis and persica had 1325 and 1340 genes of interest, resp
 
 \section*{Discussion}
 As expected, given its self-compatibility, the genome-wide mean nucleotide diversity in peach is lower than almond. \jri{are there candidates for the S locus? can we at least zoom in on the arm to see if there are obvious sweeps (low diversity, negative E, high Fst between species)?}
+
+One of the questions regarding domestication of perennial crops, particularly tree crops is ...
+
+Prior genome scan of peach found low levels of genetic diversity \citep{verde2013high, cao2014comparative} supporting previous studies \citex.
+%
+While it is well known that almond is more diverse than peach \citex, this first comparative genome scan clearly supports this.
+% not so interesting
 %
 \\
 Peach and almond also share more genes of interest in common than expected.
@@ -357,7 +357,7 @@ Peach and almond also share more genes of interest in common than expected.
 \pagebreak
 \beginsupplement
 \section*{Aknowledgements}
-Support for DV provided by the McDonald Endowment for UC Davis Plant Sciences Graduate Student Research Assistantships and the Almond Board of California (ABC; grant HORT16-Aradhya/Ledbetter). Resequencing funded by the ABC (grant HORT16-Aradhya/Ledbetter) and a Henry A. Jastro Research Fellowship. Resequencing funded by the Henry A. Jastro Research Fellowship used the Vincent J. Coates Genomics Sequencing Laboratory at UC Berkeley, supported by NIH S10 Instrumentation Grants S10RR029668 and S10RR027303.
+Support for DV provided by the McDonald Endowment for UC Davis Plant Sciences Graduate Student Research Assistantships and the Almond Board of California (ABC; grant HORT16-Aradhya/Ledbetter). Resequencing funded by the ABC (grant HORT16-Aradhya/Ledbetter) and a Henry A. Jastro Research Fellowship. Resequencing funded by the Henry A. Jastro Research Fellowship was used the Vincent J. Coates Genomics Sequencing Laboratory at UC Berkeley, supported by NIH S10 Instrumentation Grants S10RR029668 and S10RR027303.
 \section*{Supplementary Data}
 %somehow change table number also maker table width match full width of text
 \begin{center}
@@ -419,7 +419,7 @@ Support for DV provided by the McDonald Endowment for UC Davis Plant Sciences Gr
                  %PP01 &Lovell &USA &SRR502985 &3\\
                  % resequenced doubled haploid
                  PP02 &Yumyeong &Korea &SRR502994 &3\\
-                 PP03 &Shenzhou Mitao&N China &
+                 PP03 &Shenzhou Mitao &N China &
 		\multirow{2}{1cm}{SRR502993, SRR502992} &3\\
                  %honey peach
                  \\
