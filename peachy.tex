@@ -109,7 +109,8 @@ Paired-end 100bp sequences were generated for all samples on an Illumina HiSeq 2
 Of these samples, eight \emph{P. dulcis} were sequenced at the Vincent J. Coates Genomics Sequencing Laboratory at UC Berkeley from libraries prepared in our laboratory following \citex. 
 %Anne's library prep <- need reference or details
 %sheared X cycles for X seconds per cycle with a Bioruptor; end repair, adapter ligation (with TruSeq barcodes), amplification; plus clean up and size selection along the way
-% QC: BioAnalyzer at UCD and qPCR at UCB for pooling 
+% The resulting libraries were initially quantified with Qubit and sized with BioAnalyzer on a DNA HiSensitivity chip at UCD. 
+%They libraries were then sent to UCB for qPCR quantification, pooling, and sequencing on a single lane of Illumina HiSeq 2000. 
 DNA of the remaining four samples was submitted to BGI (Shenzen, China) for library preparation and sequencing at their facility.
 % In the 'we sequenced' paragraph you need to provide PE 100, where they were sequenced, what average depth, and a citation for library prep (or if we paid someone to prep libraries)
 %
@@ -118,7 +119,7 @@ the NCBI Sequence Read Archive (SRA) and one from the RosBREED group (\url{www.r
 %
 We further downloaded thirty-one resequenced \emph{P. persica}, thirteen from the NCBI SRA (ten from \citealt{verde2013high} and three from \citealt{ahmad2011whole}) and eighteen from RosBREED.
 %
-One wild peach species, \emph{P. ferganensis}, was publicly available from NCBI SRA \citep{verde2013high}. \jri{are we using this guy?} \dv{you suggested including it, but doesn't seem likely that it will be used}
+%One wild peach species, \emph{P. ferganensis}, was publicly available from NCBI SRA \citep{verde2013high}. \jri{are we using this guy?} \dv{you suggested including it, but doesn't seem likely that it will be used}
 %
 \subsection*{Analysis}
 \emph{Sequencing, Quality Control, and Mapping}
@@ -159,13 +160,13 @@ We treated peach and almond samples as belonging to two populations to understan
 % covar with ngsPopGen, admixture with NGSadmix, Fst with ANGSD
 % perhaps put the software with the specific analysis instead of intro sentence
 %
-First we performed a principal component analysis (PCA) with \emph{ngsPopGen} \citex to determine any underlying population structure.
+First we performed a principal component analysis (PCA) with \emph{ngsPopGen} \citex to determine whether there was any underlying population structure.
 %might show clear distinction between groups, possibly some overlap
 %
 Next we used \emph{NGSadmix} \citep{skotte2013estimating} to assign almond and peach population proportions (\emph{K} = 2) to individuals. 
 %
-Utilizing the sequence of a previously identified F1 peach-almond hybrid and a peach variety with known almond ancestry in its pedigree three generations prior we evaluated proportion assignment accuracy. \jri{cool yes do that}
-% RUNNING
+Utilizing the sequence of a previously identified F1 peach-almond hybrid and a peach variety with known almond ancestry in its pedigree three generations prior we evaluated proportion assignment accuracy. 
+%\jri{cool yes do that} - RUNNING
 %
 Finally, we examined population differentiation using F$_{ST}$ as determined by ANGSD.
 \\
@@ -178,7 +179,7 @@ Only windows with $>100$ bp were used for analysis; average values over particul
 %
 Putatively selected genes were identified by finding the 1\% and 5\% empirical quantiles of Zeng's E statistic \citep{zeng2006statistical}.
 %
-Gene ontology (GO) analysis of these loci was performed using  the singular enrichment analysis tool and \emph{P. persica} protein IDs at the AgriGO website (http://bioinfo.cau.edu.cn/agriGO/) identified.
+Gene ontology (GO) analysis of these loci was performed using  the singular enrichment analysis tool and \emph{P. persica} protein IDs at the AgriGO website (\url{http://bioinfo.cau.edu.cn/agriGO/}).
 %
 %BEGIN TABLE
 \begin{center}
@@ -224,9 +225,8 @@ Gene ontology (GO) analysis of these loci was performed using  the singular enri
 %	\emph{P. ferganensis} &1 & &NCBI SRA &\citealt{verde2013high}\\
 	\emph{P. cerasifera} &1 &35.02 &BGI &this study\\ \hline \hline
 	% outgroup
-	\multicolumn{5}{l}{$^{1}$ \url{ftp://ftp.bioinfo.wsu.edu/www.rosbreed.org/resequencing/Prunus_persica/}}
+	\multicolumn{5}{l}{$^{1}$ \url{ftp://ftp.bioinfo.wsu.edu/www.rosbreed.org/resequencing/Prunus_persica/}}\\
 	\multicolumn{5}{l}{$^{2}$ newly resequenced}
-
 	% OR ftp://ftp.bioinfo.wsu.edu/species/Prunus_persica/RosBREED_Illumina/
 \end{longtable}
 \end{center}
@@ -239,29 +239,31 @@ Gene ontology (GO) analysis of these loci was performed using  the singular enri
 
 Depth and alignment from SAMtools using depth and flagstat subprograms \citep{li2009sequence} determined a mean mapped sequence depth of 10.71, which ranged from 1.14 to 37.36 (Table \ref{sampledetails}, Figure \ref{fig:depth}). 
 %
-Genomes resequenced in this study had an average depth of 22.40, ranging from 14.47 to 37.36, while public sequence depths averaged 7.92 and ranged from 1.14 to 35.40.
+Genomes resequenced in this study had an average depth of 22.40, ranging from 14.47 to 37.36, while the depth of public sequence was lower at an average depth of 7.92 that ranged from 1.14 to 35.40.
 % only domesticates and outgroup
 % mean mapped persica was 8.917, ranged from 1.138 to 35.358
 % mean mapped dulcis was 14.808, ranged from 2.196 to 34.593
-%
 % deposit scripts for data processing or extraction - deposit to github repo, add URL
 %
 %
 \subsection*{Diversity and Population Comparisons}
 
-Nucleotide diversity ($\theta_{\pi}$) was higher in almond than peach, with genome-wide means of 0.0186 and 0.0035, respectively. 
+Both diversity statistics indicated that almond was more diverse than peach, with genome-wide average $\theta_{\pi}$ of 0.0186 and 0.0035, respectively, and $\theta_{W}$ of \X and \X, respectively.
 %
 Mean per chromosome $\theta_{\pi}$ ranged from 0.0163 to 0.0219 in dulcis, and from 0.0028 to 0.0047 in persica.
-Additional statistics: Watterson's theta ($\theta_{W}$)
-Neutrality tests: Tajima's D, Fay and Wu's H, and Zeng's E
 %
+% Where were there interesting signals? many? few? What overlaps with departures from neutrality?
+%
+Neutrality tests: Tajima's D, Fay and Wu's H, and Zeng's E
+% genome average, overlapping regions?
+
 For the admixture results individuals were clearly assigned to either peach or almond populations (Figure \ref{fig:admix}). 
 %
 The previously identified peach-almond F1 hybrid was assigned as 0.4758 dulcis and 0.5242 persica, while the peach with introgressed almond ancestry was assigned as \X dulcis and \X persica.
 %TBD - RUNNING...
 %
 
-F$_{ST}$: unweighted 0.029449; weighted 0.668699 \jri{wait what? that big a difference just due to weighting?} \dv{yup, as we've discussed in meetings; naive estimation based on pi was approximately 0.4}
+F$_{ST}$: unweighted 0.029449; weighted 0.668699 \jri{wait what? that big a difference just due to weighting?} \dv{yup, as we've discussed in meetings; your naive estimation based on pi was approximately 0.4, Malli's Fst for almond/peach based on AFLP was 0.446 \citep{aradhya2004molecular}}
 %
 \subsection*{Selected Loci and Gene Ontology}
 Of the 27256 genes on chromosomes one through eight, dulcis and persica had 265 and 268 genes, respectively, in the 1\% quantile. 
@@ -286,32 +288,26 @@ Prior genome scans of peach found low levels of genetic diversity \citep{verde20
 % davidiana 0.0048 (allogamous)
 % mira 0.0013 (autogamous)
 % N.B. only single samples of each species used
-The only outcrossing wild peach species, \emph{P. davidiana} is also considered closely affiliated %poor wording, more like an intermediate between persica and dulcis
-with P. dulcis, but has approximately 3X the nucleotide diversity of P. persica 
-% how phylogenetically close?
-\citep{verde2013high} or half of dulcis compared to persica. 
-% has highest pi of the wild peaches but is lower than dulcis
+The only outcrossing wild peach species, \emph{P. davidiana}, is also considered closely affiliated %poor wording, more like an intermediate between persica and dulcis
+with P. dulcis. However, it had approximately 3X the nucleotide diversity of P. persica \citep{verde2013high} or half of the diversity of dulcis compared to persica that we found. 
+% davidiana has highest pi of the wild peaches but is lower than dulcis
 % supposedly only SI wild peach
-%
-However, we found that almond has ~6X the nucleotide diversity of peach, suggesting that mating system has had a far greater impact on the reduction of peach genetic diversity than domestication.
-% considering their similar lengths of domestication
+Considering their similar lengths of domestication, this finding suggests that mating system has a greater impact on the reduction of peach genetic diversity than domestication.
 % except the possible life span difference, except P. mira has been reported to live ~100 years \citep{bassi20081} or chapter 2 of same book, seem to recall there was no citation for the number
 %
-While this difference between peach and almond has been known analyses of multiple marker systems [e.g., isozyme \citep{mowrey1990isozyme}, microsatellite \citex, and AFLP \citex markers], this is the first genomic evaluation.
+While this difference between peach and almond has been known from analyses using multiple marker systems [e.g., isozyme \citep{mowrey1990isozyme}, microsatellite \citex, and AFLP \citep{aradhya2004molecular} markers], this study marks the first whole genome comparison.
 %
 Shows that previous studies were good estimations. 
 %Almonds genomes are cooler than peaches:
 As expected, given its self-compatibility, the genome-wide mean nucleotide diversity in peach is lower than almond. \jri{are there candidates for the S locus? can we at least zoom in on the arm to see if there are obvious sweeps (low diversity, negative E, high Fst between species)?}
 
-One of the questions regarding domestication of perennial crops, particularly tree crops is ...
-
-While it is well known that almond is more diverse than peach \citex, this first comparative genome scan clearly supports this.
-% not so interesting
-%
-
 Peach and almond also share more genes of interest in common than expected due to random chance.\\
 % Simple Chi-square puts probability near zero
 
+One of the main questions regarding domestication of perennial crops, particularly tree crops, is what is its genetic basis /citep{miller2011forest}.
+%
+Here we have examined two closely related domesticated tree species with alternate mating systems in an attempt to tease apart the genomic signatures of domestication and mating system in order to better understand these processes in perennial species.
+%
 Potential uses of information: identify diversity in loci within germplasm collection(s), MAS (particularly juvenile selection), further investigate non-annotated loci of interest to determine function (if any)
 %
 %
