@@ -27,18 +27,19 @@
 \author{\small\sfbf{Dianne Velasco$^{\S\dag}$, Mallikarjuna Aradhya$^{\dag}$, Jeffrey Ross-Ibarra$^{\S\ddag}$}\thanks{Corresponding author: Department of Plant Sciences, University of California, Davis, California 95616, USA. E-mail: \mbox{rossibarra@ucdavis.edu}} \\[0.3cm]
      \small\sf $^{\S}$Department of Plant Sciences, University of California, Davis, California 95616, USA,\\
      \small\sf $^{\dag}$USDA-ARS National Clonal Germplasm Repository, Davis, California 95616, USA,\\
-     \small\sf $^{\ddag}$Center for Population Biology and Genome Center, University of California, Davis, California 95616, USA}
+     \small\sf $^{\ddag}$Center for Population Biology and Genome Center, University of California, Davis, \\ \small\sf California 95616, USA}
 
 \date{\today}
 \maketitle
+
 \section*{Introduction}
 %BACKGROUND ON SPECIES
 
-\emph{Prunus} is the largest genus in the family Rosaceae \citex with approximately four hundred species, including multiple domesticated crops, such as almond, apricot, cherry, cherry, peach, and plum.
+\emph{Prunus} is a large genus in the family Rosaceae with approximately two hundred species, including multiple domesticated crops, such as almond, apricot, cherry, peach, and plum \citep{rehder1940manual}.
+% approx 200 species shi2013phylogeny, citing rehder1940manual <- check out
+% non-referenced 430 species in Wikipedia
 %
-Peach [\emph{P. persica} (Mill.) D. A. Webb] and almond [\emph{P. dulcis} (L.) Batsch] are sibling species found within the subgenus \emph{Amygdalus}.
-%
-Peach and almond are similar in many ways, including early fruit development, perenniality, precocity, genome organization \citep{arus2012peach}, and genome size \citep{baird1994estimating}. 
+Peach [\emph{P. persica} (Mill.) D. A. Webb] and almond [\emph{P. dulcis} (L.) Batsch] are sibling species found within the subgenus \emph{Amygdalus} with many similarities, including early fruit development, perenniality, precocity, genome organization \citep{arus2012peach}, and genome size \citep{baird1994estimating}. 
 %
 The most striking differences between the species are mature fruit morphology and mating systems: peaches are harvested for their indehiscent fleshy mesocarp while almonds are harvested for the stony endocarp encased seeds obtained from within the leathery dehiscent mesocarp and exocarp. 
 %
@@ -46,8 +47,8 @@ But almond and peach also differ for other traits, such as life span, chilling r
 %
 The natural life span of almonds may exceed 100 years \citex,
 % http://www.european-trees.com/almond.html
-% literature sources not easy to locate, will continue to look
-% commercial life span of 20-25 years, but this may be due to use of peach/peach-derived rootstocks and/or almond bearing decline and replacement as a management practice
+% literature sources mostly deal with commercial/production lifespan
+% commercial: lifespan of 20-25 years, but this may be due to use of peach/peach-derived rootstocks and/or almond bearing decline and replacement as a management practice
 flowering initiation requires only 400-600 hours chilling \citep{alonso2005determination}, % versus peach <650-1050 /citep{dozier1990hydrogen}
 and less adventitious root generation \citex when compared to the peach life span of 25-30 years \citex, %commercial production life span only or "wild" too?
 600-1000 hours of required chilling \citex, %have maybe seen a bit lower
@@ -142,7 +143,7 @@ Trimmed reads were then aligned to the peach v1.0 reference \url{https://www.ros
 \\
 \emph{Diversity Evaluation}
 
-Initial estimated genotype likelihoods called with ANGSD \citep{korneliussen2014angsd}.
+Initial estimated genotype likelihoods called with ANGSD \citep{korneliussen2014angsd}. 
 %
 Inbreeding coefficients were estimated using \emph{ngsF} from the \emph{ngsTools} \citep{fumagalli2014ngstools} suite.
 %
@@ -154,7 +155,7 @@ Using ANGSD genotype likelihoods and posterior probabilities we calculated sever
 \\
 \emph{Population Comparisons}
 
-We treated peach and almond samples as belonging to two populations to understand population structure, assign population proportions, and determine population differentiation.
+We treated peach and almond samples as belonging to two populations to understand population structure, assign population proportions, and determine population differentiation. 
 % covar with ngsPopGen, admixture with NGSadmix, Fst with ANGSD
 % perhaps put the software with the specific analysis instead of intro sentence
 %
@@ -163,8 +164,8 @@ First we performed a principal component analysis (PCA) with \emph{ngsPopGen} \c
 %
 Next we used \emph{NGSadmix} \citep{skotte2013estimating} to assign almond and peach population proportions (\emph{K} = 2) to individuals. 
 %
-Proportion assignment accuracy was evaluated utilizing the sequence of a previously identified F1 peach-almond hybrid and a peach variety with known almond ancestry three generations prior in its pedigree. \jri{cool yes do that}
-% still need to perform using the peach with introgressed almond
+Utilizing the sequence of a previously identified F1 peach-almond hybrid and a peach variety with known almond ancestry in its pedigree three generations prior we evaluated proportion assignment accuracy. \jri{cool yes do that}
+% RUNNING
 %
 Finally, we examined population differentiation using F$_{ST}$ as determined by ANGSD.
 \\
@@ -182,11 +183,11 @@ Gene ontology (GO) analysis of these loci was performed using  the singular enri
 %BEGIN TABLE
 \begin{center}
 \begin{longtable}{lccll}
-\caption{\emph{P. dulcis}, \emph{P. persica} and related species used in analyses. \jri{are we using these related dudes? i would drop the source column in favor of maybe X-fold depth?} \dv{prob not using related dudes. had also thought about adding depth}} \label{samples} \\
+\caption{\emph{P. dulcis}, \emph{P. persica} and outgroup species used in analyses.} \label{samples} \\
 \hline \hline 
 \multicolumn{1}{l}{\textbf{Species}} &
 \multicolumn{1}{c}{\textbf{\emph{n}}} &
-\multicolumn{1}{c}{\textbf{Mean Depth}} &
+\multicolumn{1}{c}{\textbf{Avg. Depth}} &
 \multicolumn{1}{l}{\textbf{Source}} &
 \multicolumn{1}{l}{\textbf{Ref}}\\
 \hline 
@@ -196,7 +197,7 @@ Gene ontology (GO) analysis of these loci was performed using  the singular enri
 \hline
 \multicolumn{1}{l}{\textbf{Species}} &
 \multicolumn{1}{c}{\textbf{\emph{n}}} &
-\multicolumn{1}{c}{\textbf{Mean Depth}} &
+\multicolumn{1}{c}{\textbf{Avg. Depth}} &
 \multicolumn{1}{l}{\textbf{Source}} &
 \multicolumn{1}{l}{\textbf{Ref}} \\
 \hline 
@@ -209,22 +210,24 @@ Gene ontology (GO) analysis of these loci was performed using  the singular enri
 %
 \endlastfoot
 %
-	\emph{P. dulcis} &4 & &NCBI SRA &\citealt{koepke2013comparative}\\
-	\emph{P. dulcis} &1 & &RosBREED &RosBREED FTP$^{1}$\\
-	% RosBREED: ftp://ftp.bioinfo.wsu.edu/species/Prunus_persica/RosBREED_Illumina/
-	\emph{P. dulcis} &8 & &UC Berkeley &this study \\
-	\emph{P. dulcis} &1 & &BGI &this study\\
-	\emph{P. persica} &10 & &NCBI SRA &\citealt{verde2013high} \\
-	\emph{P. persica} &3 & &NCBI SRA &\citealt{ahmad2011whole} \\
-	\emph{P. persica} &18 & &RosBREED &RosBREED FTP$^{1}$ \\
-	\emph{P. persica} &1 & &BGI &this study \\
+	\emph{P. dulcis} &4 &7.76 &NCBI SRA &\citealt{koepke2013comparative}\\
+	\emph{P. dulcis} &1 &2.20 &RosBREED &RosBREED$^{1}$\\
+	\emph{P. dulcis} &8 &17.43 &UC Berkeley &this study$^{2}$\\
+	\emph{P. dulcis} &1 &34.59 &BGI &this study$^{2}$\\
+	\emph{P. persica} &10 &19.13 &NCBI SRA &\citealt{verde2013high} \\
+	\emph{P. persica} &3 &13.78 &NCBI SRA &\citealt{ahmad2011whole} \\
+	\emph{P. persica} &18 &1.53 &RosBREED &RosBREED$^{1}$ \\
+	\emph{P. persica} &1 &37.36 &BGI &this study$^{2}$\\
 	% ABC funded resequencing (performed at BGI)
-	\emph{P. fenzliana} &1 & &BGI &this study\\
+%	\emph{P. fenzliana} &1 & &BGI &this study\\
 	% UCD,ABC
-	\emph{P. ferganensis} &1 & &NCBI SRA &\citealt{verde2013high}\\
-	\emph{P. cerasifera} &1 & &BGI &this study\\ \hline \hline
+%	\emph{P. ferganensis} &1 & &NCBI SRA &\citealt{verde2013high}\\
+	\emph{P. cerasifera} &1 &35.02 &BGI &this study\\ \hline \hline
 	% outgroup
 	\multicolumn{5}{l}{$^{1}$ \url{ftp://ftp.bioinfo.wsu.edu/www.rosbreed.org/resequencing/Prunus_persica/}}
+	\multicolumn{5}{l}{$^{2}$ newly resequenced}
+
+	% OR ftp://ftp.bioinfo.wsu.edu/species/Prunus_persica/RosBREED_Illumina/
 \end{longtable}
 \end{center}
 % END TABLE
@@ -234,17 +237,17 @@ Gene ontology (GO) analysis of these loci was performed using  the singular enri
 \section*{Results}
 \subsection*{Quality Control and Mapping}
 
-Depth and alignment from SAMtools using depth and flagstat subprograms \citep{li2009sequence} determined a mean mapped sequence depth of 10.710, which ranged from 1.138 to 37.358 (Figure \ref{fig:depth}).
-%should separate out for our sequenced stuff and all else
-% with outgroup and "progenitor" sequences
-% mean mapped sequence depth of 11.719, which ranged from 1.138 to 37.358
+Depth and alignment from SAMtools using depth and flagstat subprograms \citep{li2009sequence} determined a mean mapped sequence depth of 10.71, which ranged from 1.14 to 37.36 (Table \ref{sampledetails}, Figure \ref{fig:depth}). 
+%
+Genomes resequenced in this study had an average depth of 22.40, ranging from 14.47 to 37.36, while public sequence depths averaged 7.92 and ranged from 1.14 to 35.40.
+% only domesticates and outgroup
 % mean mapped persica was 8.917, ranged from 1.138 to 35.358
 % mean mapped dulcis was 14.808, ranged from 2.196 to 34.593
 %
-% custom scripts used for initial processing of data or to extract data for downstream use - deposit to github repo, add URL
+% deposit scripts for data processing or extraction - deposit to github repo, add URL
 %
 %
-\subsection*{Peach and Almond Diversity and Population Comparisons}
+\subsection*{Diversity and Population Comparisons}
 
 Nucleotide diversity ($\theta_{\pi}$) was higher in almond than peach, with genome-wide means of 0.0186 and 0.0035, respectively. 
 %
@@ -255,7 +258,7 @@ Neutrality tests: Tajima's D, Fay and Wu's H, and Zeng's E
 For the admixture results individuals were clearly assigned to either peach or almond populations (Figure \ref{fig:admix}). 
 %
 The previously identified peach-almond F1 hybrid was assigned as 0.4758 dulcis and 0.5242 persica, while the peach with introgressed almond ancestry was assigned as \X dulcis and \X persica.
-%TBD
+%TBD - RUNNING...
 %
 
 F$_{ST}$: unweighted 0.029449; weighted 0.668699 \jri{wait what? that big a difference just due to weighting?} \dv{yup, as we've discussed in meetings; naive estimation based on pi was approximately 0.4}
@@ -275,17 +278,17 @@ In the 5\% quantile dulcis and persica had 1325 and 1340 genes of interest, resp
 \section*{Discussion}
 %The what did we just learn, what does it all mean, and other stuff section
 %Well, here are my crappy thoughts
-Prior genome scans of peach found low levels of genetic diversity \citep{verde2013high} compared to its wild relatives.
+Prior genome scans of peach found low levels of genetic diversity \citep{verde2013high} compared to its wild relatives, \emph{P. kansuensis}, \emph{P. mira}, and \emph{P. davidiana}.
 %\citep{cao2014comparative} - no wild relatives
 %Genome-wide nucleotide diversity in persica and wild peaches (Verde et al. 2013)
 % persica 0.0015 (ranged from 0.0011 to 0.0022)
 % kansuensis 0.0008 (autogamous)
 % davidiana 0.0048 (allogamous)
 % mira 0.0013 (autogamous)
-% N.B. only single samples of each was used
-The only outcrossing wild peach species, \emph{P. davidiana} is also considered closely affiliate %poor wording, more like an intermediate between persica and dulcis
-with P. dulcis, but has 3X the nucleotide diversity of P. persica 
-% is it phylogenetically close?
+% N.B. only single samples of each species used
+The only outcrossing wild peach species, \emph{P. davidiana} is also considered closely affiliated %poor wording, more like an intermediate between persica and dulcis
+with P. dulcis, but has approximately 3X the nucleotide diversity of P. persica 
+% how phylogenetically close?
 \citep{verde2013high} or half of dulcis compared to persica. 
 % has highest pi of the wild peaches but is lower than dulcis
 % supposedly only SI wild peach
