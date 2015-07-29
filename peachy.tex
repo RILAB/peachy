@@ -239,7 +239,7 @@ Gene ontology (GO) analysis of these loci was performed using  the singular enri
 
 Depth and alignment from SAMtools using depth and flagstat subprograms \citep{li2009sequence} determined a mean mapped sequence depth of 10.71, which ranged from 1.14 to 37.36 (Table \ref{sampledetails}, Figure \ref{fig:depth}). 
 %
-Genomes resequenced in this study had an average depth of 22.40, ranging from 14.47 to 37.36, while the depth of public sequences were lower at an average depth of 7.92 ranging from 1.14 to 35.40.
+Genomes resequenced in this study had an average depth of 22.40, ranging from 14.47 to 37.36, while the depth of public sequences had an average depth of 7.92 ranging from 1.14 to 35.40.
 % only domesticates and outgroup
 % mean mapped persica was 8.917, ranged from 1.138 to 35.358
 % mean mapped dulcis was 14.808, ranged from 2.196 to 34.593
@@ -248,18 +248,24 @@ Genomes resequenced in this study had an average depth of 22.40, ranging from 14
 %
 \subsection*{Diversity and Population Comparisons}
 
+Inbreeding: almond less inbred (average near zero, couple outliers - lower coverage), peach average approximately .25-.30.
+%
 Both diversity statistics indicated that almond was more diverse than peach, with genome-wide average $\theta_{\pi}$ of 0.0186 and 0.0035, respectively, and $\theta_{W}$ of \X and \X, respectively.
 %
 Mean per chromosome $\theta_{\pi}$ ranged from 0.0163 to 0.0219 in dulcis, and from 0.0028 to 0.0047 in persica.
-%
-% Where were there interesting signals? many? few? What overlaps with departures from neutrality?
+% Are there interesting signals? Quantity? Where? Are there any interesting genes/loci?
 %
 Neutrality tests: Tajima's D, Fay and Wu's H, and Zeng's E
-% genome average, overlapping regions?
-
+% Genome averages? Are there interesting signals? Quantity? Where? Are there any interesting genes/loci?
+% Do any of the diversity statistics and neutrality tests overlap? Where? Are there any interesting genes/loci?
+%
 For the admixture results individuals were clearly assigned to either peach or almond populations (Figure \ref{fig:admix}). 
 %
 The previously identified peach-almond F1 hybrid was assigned as 0.4758 dulcis and 0.5242 persica, while the peach with introgressed almond ancestry was assigned as \X dulcis and \X persica.
+%If samples are in the same order as the list of BAM files...
+%PD15 Nonpareil 0.99999999282605944728 0.00000000717394056482
+% however, PD15 is same as other dulcis in previous test without PP12
+%PP12 F8,1-42 0.00000000100000000000 0.99999999900000002828 (almond, peach; no different than rest of peaches) this seems odd for something with almond in pedigree only hmmmm...
 %TBD - RUNNING...
 %
 
@@ -588,6 +594,142 @@ Resequencing funded by the Henry A. Jastro Research Fellowship was used the Vinc
 	\multicolumn{5}{l}{$^{5}$ \url{ftp://ftp.bioinfo.wsu.edu/www.rosbreed.org/resequencing/Prunus_persica/}}\\
 	\multicolumn{5}{l}{\textbf{Abbreviations:} UCD - University of California, Davis; USDA NCGR - United States}\\
 	\multicolumn{5}{l}{Department of Agriculture National Clonal Germplasm Repository}
+\end{longtable}
+\end{center}
+%
+\pagebreak
+% SHARED GENES
+%
+\begin{center}
+\begin{longtable}{llll}
+\caption{List of genes with low Zeng's E score shared between \emph{P. dulcis} and \emph{P. persica}} \label{sampledetails} \\
+\hline \hline
+\multicolumn{1}{l}{\textbf{Gene ID}} &
+\multicolumn{1}{l}{\textbf{Annotation}} &
+\multicolumn{1}{l}{\textbf{1\%}} &
+\multicolumn{1}{l}{\textbf{5\%}}\\
+\hline 
+\endfirsthead
+
+\multicolumn{4}{r}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline 
+\multicolumn{1}{l}{\textbf{Gene ID}} &
+\multicolumn{1}{l}{\textbf{Annotation}} &
+\multicolumn{1}{l}{\textbf{1\%}} &
+\multicolumn{1}{l}{\textbf{5\%}} \\ \hline 
+\endhead
+%
+\hline \multicolumn{4}{r}{{Continued on next page}} \\ \hline \hline
+\endfoot
+\hline \hline
+\endlastfoot
+%INCOMPLETE
+%BRILLIANT IDEA - PREPARE IN EXCEL, WITH CELL DIVITERS, SAVE AS TEXT, COPY/PASTE
+% ANNOTATIONS ALSO IN EXCEL FORMAT
+% keep Zeng score? Sort by score? Note if 1% & 5% differently (for example, X and -)
+	ppa000871m & &Y & \\
+	ppa000889m & &Y & \\
+	ppa001014m & &Y & \\
+	ppa001036m & &Y & \\
+	ppa001110m & &Y & \\
+	ppa001502m & &Y & \\
+	ppa001871m & &Y & \\
+	ppa001991m & &Y & \\
+	ppa002987m & &Y & \\
+	ppa002993m & &Y & \\
+	ppa004447m & &Y & \\
+	ppa004835m & &Y & \\
+	ppa007516m & &Y & \\
+	ppa009103m & &Y & \\
+	ppa009748m & &Y & \\
+	ppa011268m & &Y & \\
+	ppa011644m & &Y & \\
+	ppa014905m & &Y & \\
+	ppa016366m & &Y & \\
+	ppa017140m & &Y & \\
+	ppa017272m & &Y & \\
+	ppa017672m & &Y & \\
+	ppa018012m & &Y & \\
+	ppa018553m & &Y & \\
+	ppa019924m & &Y & \\
+	ppa021180m & &Y & \\
+	ppa021962m & &Y & \\
+	ppa022880m & &Y & \\
+	ppa025136m & &Y & \\
+	ppa000008m & & &Y \\
+	ppa000009m & & &Y \\
+	ppa000017m & & &Y \\
+	ppa000033m & & &Y \\
+	ppa000042m & & &Y \\
+	ppa000051m & & &Y \\
+	ppa000060m & & &Y \\
+	ppa000069m & & &Y \\
+	ppa000087m & & &Y \\
+	ppa000098m & & &Y \\
+	ppa000128m & & &Y \\
+	ppa000151m & & &Y \\
+	ppa000152m & & &Y \\
+	ppa000208m & & &Y \\
+	ppa000218m & & &Y \\
+	ppa000246m & & &Y \\
+	ppa000270m & & &Y \\
+	ppa000282m & & &Y \\
+	ppa000293m & & &Y \\
+	ppa000320m & & &Y \\
+	ppa000328m & & &Y \\
+	ppa000332m & & &Y \\
+	ppa000333m & & &Y \\
+	ppa000344m & & &Y \\
+	ppa000366m & & &Y \\
+	ppa000395m & & &Y \\
+	ppa000438m & & &Y \\
+	ppa000473m & & &Y \\
+	ppa000474m & & &Y \\
+	ppa000499m & & &Y \\
+	ppa000506m & & &Y \\
+	ppa000507m & & &Y \\
+	ppa000518m & & &Y \\
+	ppa000595m & & &Y \\
+	ppa000613m & & &Y \\
+	ppa000615m & & &Y \\
+	ppa000618m & & &Y \\
+	ppa000624m & & &Y \\
+	ppa000654m & & &Y \\
+	ppa000734m & & &Y \\
+	ppa000759m & & &Y \\
+	ppa000819m & & &Y \\
+	ppa000823m & & &Y \\
+	ppa000871m & & &Y \\
+	ppa000874m & & &Y \\
+	ppa000889m & & &Y \\
+	ppa000975m & & &Y \\
+	ppa001014m & & &Y \\
+	ppa001036m & & &Y \\
+	ppa001053m & & &Y \\
+	ppa001110m & & &Y \\
+	ppa001188m & & &Y \\
+	ppa001194m & & &Y \\
+	ppa001204m & & &Y \\
+	ppa001205m & & &Y \\
+	ppa001210m & & &Y \\
+	ppa001244m & & &Y \\
+	ppa001253m & & &Y \\
+	ppa001256m & & &Y \\
+	ppa001327m & & &Y \\
+	ppa001349m & & &Y \\
+	ppa001502m & & &Y \\
+	ppa001528m & & &Y \\
+	ppa001533m & & &Y \\
+	ppa001731m & & &Y \\
+	ppa001784m & & &Y \\
+	ppa001850m & & &Y \\
+	ppa001871m & & &Y \\
+	ppa001884m & & &Y \\
+	ppa001963m & & &Y \\
+	ppa001991m & & &Y \\
+	ppa002066m & & &Y \\
+	ppa002090m & & &Y \\
+	ppa002162m & & &Y \\
 \end{longtable}
 \end{center}
 %\endsupplement
