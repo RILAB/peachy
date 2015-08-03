@@ -98,9 +98,9 @@ Identification of candidate domestication loci will provide an opportunity to de
 \subsection*{Samples}
 We analyzed a total of 14 almond and 32 peach genomes, including both public and newly resequenced data (Table \ref{samples}). 
 %
-For this study we resequenced nine \emph{P. dulcis}, one \emph{P. persica}, one closely related species, \emph{P. fenzliana}, and one plum, \emph{P. cerasifera}, as outgroup species for analysis.
+For this study we resequenced nine \emph{P. dulcis}, one \emph{P. persica}, and one plum, \emph{P. cerasifera}, as outgroup species for analysis.
 %
-Fresh leaves and dormant cuttings collected from several sources (reference 1 in Table \ref{sampledetails}) and either desiccated with silica or refrigerated, respectively, followed by DNA isolation using a modified CTAB method \citep{doyle1987rapid}.
+Fresh leaves and dormant cuttings collected from multiple sources (reference 1 in Table \ref{sampledetails}) and either desiccated with silica or refrigerated, respectively, followed by DNA isolation using a modified CTAB method \citep{doyle1987rapid}.
 %
 Paired-end 100bp sequences were generated for all samples on an Illumina HiSeq 2000. 
 %
@@ -108,18 +108,19 @@ Of these samples, eight \emph{P. dulcis} were sequenced at the Vincent J. Coates
 DNA of the remaining four samples was submitted to BGI (Shenzen, China) for library preparation and sequencing at their facility.
 % In the 'we sequenced' paragraph you need to provide PE 100, where they were sequenced, what average depth, and a citation for library prep (or if we paid someone to prep libraries)
 %
-
-In-house sequencing library preparation first requires quantifying the samples using Quanti-iT Picogreen dsDNA assay (Invitrogen, Life Technologies) and then fragmenting 1 $\mu$g of DNA with a Bioruptor (Diagenode) for \X cycles of 30 seconds ON and 30 seconds OFF per cycle. 
+% library prep section below seems awkward and out of place...
+In-house sequencing library preparation requires quantifying the samples with Quanti-iT Picogreen dsDNA assay (Invitrogen, Life Technologies) and then fragmenting 1 $\mu$g of DNA with a Bioruptor (Diagenode) for \X cycles of 30 seconds ON and 30 seconds OFF per cycle. 
 %
-Resulting DNA fragment ends were repaired with NEBNext End Repair (New England BioLabs) followed by the addition of deoxyadenosine triphosphate to the 3-prime ends using Klenow Fragment (New England BioLabs). 
+Resulting DNA fragment ends are then repaired with NEBNext End Repair (New England BioLabs) followed by the addition of deoxyadenosine triphosphate to the 3-prime ends with Klenow Fragment (New England BioLabs). 
 %
-Illumina TrueSeq barcoded adapters (Affymetrix) were added with the Quick Ligase Kit (New England BioLabs). 
+Barcoded Illumina TrueSeq adapters (Affymetrix) were ligated to the A-tailed fragments with Quick Ligase (New England BioLabs). 
 %
-Between each enzymatic step the DNA was washed with sera-mags speed beads(Fisher Scientific). 
+DNA was washed with sera-mags speed beads (Fisher Scientific) between each enzymatic step.  
+%
+% The resulting libraries were initially quantified with Qubit and sized with BioAnalyzer on a DNA HiSensitivity chip at UCD. 
+% The libraries were then sent to UCB for qPCR quantification, multiplexing, and sequencing on a single lane of Illumina HiSeq 2500. 
 %
 Finally the eight \emph{P. dulcis} samples were multiplexed and sequenced in 1 lane of HiSeq2500 (Berkeley, Qb3) for 100 paired-end base reads
-% The resulting libraries were initially quantified with Qubit and sized with BioAnalyzer on a DNA HiSensitivity chip at UCD. 
-%The libraries were then sent to UCB for qPCR quantification, pooling, and sequencing on a single lane of Illumina HiSeq 2000. 
 
 Additionally, we utilized five resequenced \emph{P. dulcis} genomes from public sources, four from \citealt{koepke2013comparative} %(?)
 the NCBI Sequence Read Archive (SRA) and one from the RosBREED group (\url{www.rosbreed.org}). 
@@ -217,22 +218,22 @@ We analyzed these loci for gene ontology (GO) using the singular enrichment anal
 %
 \endlastfoot
 %
-	\emph{P. dulcis} &4 &7.76 &NCBI SRA &\citealt{koepke2013comparative}\\
+	\emph{P. dulcis} &4 &7.76 &NCBI SRA &\citealp{koepke2013comparative}\\
 	\emph{P. dulcis} &1 &2.20 &RosBREED &RosBREED$^{1}$\\
 	\emph{P. dulcis} &8 &17.43 &UC Berkeley &this study$^{2}$\\
 	\emph{P. dulcis} &1 &34.59 &BGI &this study$^{2}$\\
-	\emph{P. persica} &10 &19.13 &NCBI SRA &\citealt{verde2013high} \\
-	\emph{P. persica} &3 &13.78 &NCBI SRA &\citealt{ahmad2011whole} \\
+	\emph{P. persica} &10 &19.13 &NCBI SRA &\citealp{verde2013high} \\
+	\emph{P. persica} &3 &13.78 &NCBI SRA &\citealp{ahmad2011whole} \\
 	\emph{P. persica} &18 &1.53 &RosBREED &RosBREED$^{1}$ \\
 	\emph{P. persica} &1 &37.36 &BGI &this study$^{2}$\\
 	% ABC funded resequencing (performed at BGI)
 %	\emph{P. fenzliana} &1 & &BGI &this study\\
 	% UCD,ABC
 %	\emph{P. ferganensis} &1 & &NCBI SRA &\citealt{verde2013high}\\
-	\emph{P. cerasifera} &1 &35.02 &BGI &this study\\ \hline \hline
+	\emph{P. cerasifera} &1 &35.02 &BGI &this study$^{2}$\\ \hline \hline
 	% outgroup
 	\multicolumn{5}{l}{$^{1}$ \url{ftp://ftp.bioinfo.wsu.edu/www.rosbreed.org/resequencing/Prunus_persica/}}\\
-	\multicolumn{5}{l}{$^{2}$ newly resequenced}
+	\multicolumn{5}{l}{$^{2}$ newly resequenced sample(s)}
 	% OR ftp://ftp.bioinfo.wsu.edu/species/Prunus_persica/RosBREED_Illumina/
 \end{longtable}
 \end{center}
