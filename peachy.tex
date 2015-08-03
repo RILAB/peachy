@@ -100,24 +100,31 @@ We analyzed a total of 14 almond and 32 peach genomes, including both public and
 %
 For this study we resequenced nine \emph{P. dulcis}, one \emph{P. persica}, one closely related species, \emph{P. fenzliana}, and one plum, \emph{P. cerasifera}, as outgroup species for analysis.
 %
-Fresh leaves and dormant cuttings collected from several sources (reference 1 in Table \ref{sampledetails}) and either desiccated with silica or refrigerated, respectively, followed by DNA isolation. 
-%
-DNA extraction followed a modified CTAB method \citep{doyle1987rapid}.
+Fresh leaves and dormant cuttings collected from several sources (reference 1 in Table \ref{sampledetails}) and either desiccated with silica or refrigerated, respectively, followed by DNA isolation using a modified CTAB method \citep{doyle1987rapid}.
 %
 Paired-end 100bp sequences were generated for all samples on an Illumina HiSeq 2000. 
 %
-Of these samples, eight \emph{P. dulcis} were sequenced at the Vincent J. Coates Genomics Sequencing Laboratory at UC Berkeley from libraries prepared in our laboratory following \citex. 
-%Anne's library prep <- need reference or details
-%sheared X cycles for X seconds per cycle with a Bioruptor; end repair, adapter ligation (with TruSeq barcodes), amplification; plus clean up and size selection along the way
-% The resulting libraries were initially quantified with Qubit and sized with BioAnalyzer on a DNA HiSensitivity chip at UCD. 
-%They libraries were then sent to UCB for qPCR quantification, pooling, and sequencing on a single lane of Illumina HiSeq 2000. 
+Of these samples, eight \emph{P. dulcis} were sequenced at the Vincent J. Coates Genomics Sequencing Laboratory at UC Berkeley from libraries prepared in our laboratory following an in-house protocol. 
 DNA of the remaining four samples was submitted to BGI (Shenzen, China) for library preparation and sequencing at their facility.
 % In the 'we sequenced' paragraph you need to provide PE 100, where they were sequenced, what average depth, and a citation for library prep (or if we paid someone to prep libraries)
 %
-Additionally, we utilized five resequenced \emph{P. dulcis} genomes from public sources, four from \citealt{koepke2013comparative} %(?)
-the NCBI Sequence Read Archive (SRA) and one from the RosBREED group (\url{www.rosbreed.org}).
+
+In-house sequencing library preparation first requires quantifying the samples using Quanti-iT Picogreen dsDNA assay (Invitrogen, Life Technologies) and then fragmenting 1 $\mu$g of DNA with a Bioruptor (Diagenode) for \X cycles of 30 seconds ON and 30 seconds OFF per cycle. 
 %
-We further downloaded thirty-one resequenced \emph{P. persica}, thirteen from the NCBI SRA (ten from \citealt{verde2013high} and three from \citealt{ahmad2011whole}) and eighteen from RosBREED.
+Resulting DNA fragment ends were repaired with NEBNext End Repair (New England BioLabs) followed by the addition of deoxyadenosine triphosphate to the 3-prime ends using Klenow Fragment (New England BioLabs). 
+%
+Illumina TrueSeq barcoded adapters (Affymetrix) were added with the Quick Ligase Kit (New England BioLabs). 
+%
+Between each enzymatic step the DNA was washed with sera-mags speed beads(Fisher Scientific). 
+%
+Finally the eight \emph{P. dulcis} samples were multiplexed and sequenced in 1 lane of HiSeq2500 (Berkeley, Qb3) for 100 paired-end base reads
+% The resulting libraries were initially quantified with Qubit and sized with BioAnalyzer on a DNA HiSensitivity chip at UCD. 
+%The libraries were then sent to UCB for qPCR quantification, pooling, and sequencing on a single lane of Illumina HiSeq 2000. 
+
+Additionally, we utilized five resequenced \emph{P. dulcis} genomes from public sources, four from \citealt{koepke2013comparative} %(?)
+the NCBI Sequence Read Archive (SRA) and one from the RosBREED group (\url{www.rosbreed.org}). 
+%
+We further downloaded thirty-one resequenced \emph{P. persica}, thirteen from the NCBI SRA (ten from \citealp{verde2013high} and three from \citealp{ahmad2011whole}) and eighteen from RosBREED.
 %
 %One wild peach species, \emph{P. ferganensis}, was publicly available from NCBI SRA \citep{verde2013high}. \jri{are we using this guy?} \dv{you suggested including it, but doesn't seem likely that it will be used}
 %
@@ -126,14 +133,13 @@ We further downloaded thirty-one resequenced \emph{P. persica}, thirteen from th
 
 % recheck this range
 %
-All FASTQ files were trimmed of remnant adapter sequences using Scythe \url{https://github.com/vsbuffalo/scythe} and then further trimmed using base quality with Sickle \url{https://github.com/najoshi/sickle}. 
+All FASTQ files were trimmed of remnant adapter sequences using Scythe (\url{github.com/vsbuffalo/scythe}) and then further trimmed using base quality with Sickle (\url{github.com/najoshi/sickle}). 
 %
-Trimmed reads were then aligned to the peach v1.0 reference \url{https://www.rosaceae.org/species/prunus_persica/genome_v1.0} using BWA-MEM  \citep{li2013aligning} with a minimum seed length of 10 and internal seed length of 2.85.
+Trimmed reads were then aligned to the peach v1.0 reference (\url{www.rosaceae.org}) using BWA-MEM  \citep{li2013aligning} with a minimum seed length of 10 and internal seed length of 2.85.
 % using -k 10 -r 2.85 parameters
 % -k INT		minimum seed length [19]
 % -r FLOAT	look for internal seeds inside a seed longer than {-k} * FLOAT [1.5]
-% internal seed length remains the same as default parameters
-% picked this up from P. Morrell
+% overall seed length remains the same as default; picked this up from P. Morrell
 \\
 %\emph{SNP calling}
 % Only if going to use them
@@ -179,7 +185,7 @@ Only windows with $>100$ bp were used for analysis; average values over particul
 %
 Putatively selected genes were identified by finding the 1\% and 5\% empirical quantiles of Zeng's E statistic \citep{zeng2006statistical}.
 %
-Gene ontology (GO) analysis of these loci was performed using  the singular enrichment analysis tool and \emph{P. persica} protein IDs at the AgriGO website (\url{http://bioinfo.cau.edu.cn/agriGO/}).
+We analyzed these loci for gene ontology (GO) using the singular enrichment analysis tool and \emph{P. persica} protein IDs at the AgriGO website (\url{http://bioinfo.cau.edu.cn/agriGO/}).
 %
 %BEGIN TABLE
 \begin{center}
