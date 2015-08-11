@@ -35,7 +35,7 @@
 \section*{Introduction}
 %BACKGROUND ON SPECIES
 
-\emph{Prunus} is a large genus in the family Rosaceae with approximately two hundred species, including multiple domesticated crops, such as almond, apricot, cherry, peach, and plum \citep{rehder1940manual}.
+\emph{Prunus} is a large genus in the family Rosaceae with approximately two hundred species, including multiple domesticated crops, such as almond, apricot, cherry, peach, and plum \citep{rehder1940manual, potter2011prunus}.
 % approx 200 species shi2013phylogeny, citing rehder1940manual <- check out
 % non-referenced 430 species in Wikipedia
 %
@@ -46,14 +46,24 @@ The most striking differences between the species are mature fruit morphology an
 %
 But almond and peach also differ for other traits, such as life span, chilling requirement, and adventitious root generation.
 %
-The natural life span of almonds may exceed 100 years \citex,
-% http://www.european-trees.com/almond.html
-% literature sources mostly deal with commercial/production lifespan
+The natural life span of almonds may exceed 100 years \citep{gradziel2011origin},
+% though no reference to a primary source in this review
+% most literature sources describe commercial/production lifespan
 % commercial: lifespan of 20-25 years, but this may be due to use of peach/peach-derived rootstocks and/or almond bearing decline and replacement as a management practice
-flowering initiation requires only 400-600 hours chilling \citep{alonso2005determination}, % versus peach <650-1050 /citep{dozier1990hydrogen}
-and less adventitious root generation \citex when compared to the peach life span of 25-30 years \citex, %commercial production life span only or "wild" too?
-600-1000 hours of required chilling \citex, %have maybe seen a bit lower
+flowering initiation requires only 400-600 hours chilling \citep{alonso2005determination}, 
+% versus peach <650-1050 /citep{dozier1990hydrogen}
+% perhaps it is actually lower considering the low chill peach cultivars
+% look for additional sources
+and poor adventitious root generation \citex when compared to the peach life span of 25-30 years \citex, 
+%commercial production life span only or "wild" too?
+600-1000 hours of required chilling \citex,
+% can be far lower for low-chill varieties, approx. as low as 50, but more in the 100-450 hours range 
+% Scorza & Okie (scorza1991peaches) state low chill are 150-500 hours, and most temperate are 650-950 hours
+% high chill varieties are up to 1050-1100 hours
+% 
+%
 and good adventitious rooting ability \citex. 
+%chilling: qtl at distal end of LG1 had highest contribution to phenotypic variance in chilling (Bielenberg et al. 2004, referenced in Genetics, Genomics, and Breeding of Stone Fruits, chp 6)
 %
 Additionally, while \emph{Prunus} species generally exhibit gametophytic self-incompatibility, peach is fully self-compatible.
 
@@ -64,7 +74,7 @@ The few obvious traits associated with almond domestication are reduced toxicity
 %
 However, traits not typically associated with domestication but common to both, such as precocity, or solely with peach, such as relative ease of adventitious rooting, may have also been deliberately or incidentally selected during domestication. 
 %
-Unfortunately, efforts to identify wild progenitors of almond and peach by examining species relationships within the subgenus \emph{Amygdalus} have had mixed results \citep{verde2013high, aradhya2004molecular, zeinalabedini2010origin, mowrey1990isozyme, browicz1996genus, ladizinsky1999origin, bassi20081}. 
+Unfortunately, efforts to identify wild progenitors of almond and peach by examining species relationships within the subgenus \emph{Amygdalus} have had mixed results \citep{mowrey1990isozyme, browicz1996genus, ladizinsky1999origin, aradhya2004molecular, bassi20081, zeinalabedini2010origin, verde2013high}. 
 %
 Given the uncertainty in identifying wild progenitors and the difficulties associated with long generation times, investigation of domestication using crossing experiments is impractical for almond and peach.
 %
@@ -110,7 +120,7 @@ DNA of the remaining four samples was submitted to BGI (Shenzen, China) for libr
 % In the 'we sequenced' paragraph you need to provide PE 100, where they were sequenced, what average depth, and a citation for library prep (or if we paid someone to prep libraries)
 
 % library prep section below seems awkward and out of place...
-In-house sequencing library preparation requires quantifying the samples with Quanti-iT Picogreen dsDNA assay (Invitrogen, Life Technologies) and then fragmenting 1 $\mu$g of DNA with a Bioruptor (Diagenode) for \X cycles of 30 seconds ON and 30 seconds OFF per cycle. 
+In-house sequencing library preparation requires quantifying the samples with Quanti-iT Picogreen dsDNA assay (Invitrogen, Life Technologies) and then fragmenting 1 $\mu$g of DNA with a Bioruptor (Diagenode) for \dv{11} cycles of 30 seconds ON and 30 seconds OFF per cycle. 
 %
 Resulting DNA fragment ends are then repaired with NEBNext End Repair (New England BioLabs) followed by the addition of deoxyadenosine triphosphate to the 3-prime ends with Klenow Fragment (New England BioLabs). 
 %
@@ -173,13 +183,13 @@ We treated peach and almond samples as belonging to two populations to understan
 % covar with ngsPopGen, admixture with NGSadmix, Fst with ANGSD
 % perhaps put the software with the specific analysis instead of intro sentence
 %
-First we performed a principal component analysis (PCA) with \emph{ngsPopGen} \citex to determine whether there was any underlying population structure.
+First we performed a principal component analysis (PCA) with \emph{ngsPopGen} \citep{fumagalli2014ngstools} to determine whether there was any underlying population structure.
 %might show clear distinction between groups, possibly some overlap
 %
 Next we used \emph{NGSadmix} \citep{skotte2013estimating} to assign almond and peach population proportions (\emph{K} = 2) to individuals. 
 %
-We evaluated proportion assignment accuracy utilizing the sequence of a previously identified F1 peach-almond hybrid and a peach variety with almond ancestry three generations prior in its pedigree. 
-%
+We evaluated proportion assignment accuracy utilizing the sequence of a previously identified F1 peach-almond hybrid and a peach variety with almond ancestry in its pedigree four generations prior. 
+% Gradziel, via Martinez-Garcia pers comm
 Finally, we examined population differentiation using F$_{ST}$ as determined by ANGSD.
 %1 kb windows, 200 bp steps
 \\
@@ -298,7 +308,7 @@ Twenty-nine of those genes, or approximately 11\%, are shared between dulcis and
 %
 In the 5\% quantile dulcis and persica had 1325 and 1340 genes of interest, respectively, with 286 shared.
 %
-\dv{There is not nearly enough in this section... add information about interesting loci; describe the most interesting, or those that are known; a supplementary table; example figures of overlap of $\pi$, Tajima's D, Fay & Wu's H, Zeng's E, and/or Fst for interesting areas, especially regions where signals are similar to regions like S-locus}
+\dv{There is not nearly enough in this section... add information about interesting loci; describe the most interesting, or those that are known; a supplementary table; example figures of overlap of $\pi$, Tajima's D, Fay \& Wu's H, Zeng's E, and/or Fst for interesting areas, especially regions where signals are similar to regions like S-locus}
 % 
 %
 \section*{Discussion}
@@ -327,18 +337,20 @@ However, we found \emph{P. dulcis} to have double this level of nucleotide diver
 Considering their similar lengths of domestication, this finding suggests that mating system has had a greater impact on the reduction of peach genetic diversity than domestication.
 % except the possible life span difference, except P. mira has been reported to live ~100 years \citep{bassi20081} or chapter 2 of same book, seem to recall there was no citation for the time period
 %
-While this difference between peach and almond has been known from analyses using multiple marker systems [e.g., isozyme \citep{mowrey1990isozyme}, microsatellite \citex, and AFLP \citep{aradhya2004molecular} markers], this study marks the first simultaneous whole genome comparisons using multiple individuals from both species.
+While this difference in diversity between peach and almond has been known from analyses using multiple marker systems [e.g., isozyme \citep{mowrey1990isozyme, byrne1990isozyme}, microsatellite \citep{martinez2003extended}, and AFLP \citep{aradhya2004molecular} markers], this study marks the first simultaneous whole genome comparisons using multiple individuals from both species.
+%
 %
 Therefore this study does support previous studies as having been good estimations of nucleotide diversity. 
 
 % \jri{are there candidates for the S locus? can we at least zoom in on the arm to see if there are obvious sweeps (low diversity, negative E, high Fst between species)?}
+\dv{broadly recap the findings, but more importantly their significance and what they bring to the understanding of domestication in tree crops}
+%
 We found \X genes of interest in peach and \X in almond from the 1\% and 5\% quartile ranges, with \X shared.
 %
-Peach and almond also share more genes of interest in common than expected due to random chance.\\
+Peach and almond also share more genes of interest in common than expected due to random chance.
 % Simple Chi-square puts probability near zero
-d
 
-One of the main questions regarding domestication of perennial crops, particularly tree crops, is its genetic basis \citep{miller2011forest}. %and distinguishing it from other factors such as life history, hybridization, vegetative propagation
+One of the primary questions regarding domestication of perennial crops, particularly tree crops, is its genetic basis \citep{miller2011forest}. %and distinguishing it from other factors such as life history, hybridization, vegetative propagation
 %
 Here we have examined two closely related domesticated tree species with alternate mating systems in an attempt to tease apart the genomic signatures of domestication and mating system in order to better understand these processes in perennial species.
 %
@@ -442,12 +454,12 @@ Resequencing funded by the Henry A. Jastro Research Fellowship was used the Vinc
 \end{figure}
 %
 \begin{center}
-\begin{longtable}{lllllc}
+\begin{longtable}{llrllc}
 \caption{P. dulcis, P. persica and related species used in analysis.} \label{sampledetails} \\
 \hline \hline
 \multicolumn{1}{l}{\multirow{2}{1.5cm}{\textbf{Sample ID}}} &
-\multicolumn{1}{l}{\multirow{2}{4cm}{\textbf{Accession and/or Cultivar}}} &
-\multicolumn{1}{l}{\textbf{Avg. Depth}} &
+\multicolumn{1}{l}{\multirow{2}{3.5cm}{\textbf{Accession and/or Cultivar}}} &
+\multicolumn{1}{c}{\textbf{Depth}} &
 \multicolumn{1}{l}{\textbf{Origin}} &
 \multicolumn{1}{l}{\textbf{Source}} &
 \multicolumn{1}{c}{\textbf{Ref}}\\ \\
@@ -457,8 +469,8 @@ Resequencing funded by the Henry A. Jastro Research Fellowship was used the Vinc
 \multicolumn{6}{r}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
 \hline 
 \multicolumn{1}{l}{\multirow{2}{1.5cm}{\textbf{Sample ID}}} &
-\multicolumn{1}{l}{\multirow{2}{4cm}{\textbf{Accession and/or Cultivar}}} &
-\multicolumn{1}{l}{\textbf{Avg. Depth}} &
+\multicolumn{1}{l}{\multirow{2}{3.5cm}{\textbf{Accession and/or Cultivar}}} &
+\multicolumn{1}{c}{\textbf{Depth}} &
 \multicolumn{1}{l}{\textbf{Origin}} &
 \multicolumn{1}{l}{\textbf{Source}} &
 \multicolumn{1}{c}{\textbf{Ref}} \\ \\ \hline 
@@ -525,10 +537,12 @@ Resequencing funded by the Henry A. Jastro Research Fellowship was used the Vinc
 	%
 	PP09 &F$_{1}$ Contender $\times$ Ambra &15.57 &Italy &SRR502997 &3\\
 	% peach x nectarine both P. persica
+	%
 	PP10 &Earligold &35.40 &USA &
 	\multirow{2}{1cm}{SRR502996, SRR502995} &3\\
-	%  
+	%
 	\\
+	%
 	PP11 &Bolero &22.42 &Italy &SRR501836 &3\\
 	%
 	% PP12 &F8,1-42 &11.88 &USA &SRR068361 &4\\
@@ -608,15 +622,17 @@ Resequencing funded by the Henry A. Jastro Research Fellowship was used the Vinc
 	% some variety history at
 	% http://gapeaches.org/about-us/father-of-the-ga-peach-industry/
 	\\
-	\multicolumn{6}{l}{Other \emph{Prunus} species}  \\
+	\multicolumn{6}{l}{Other \emph{P. cerasifera}}  \\
+%	\multicolumn{6}{l}{Other \emph{Prunus} species}  \\
 	% Almond Board resequencing (performed at BGI)
-	PF01 &\emph{P. fenzliana} &33.80 &\emph{unk.} &UCD &1\\
+%	PF01 &\emph{P. fenzliana} &33.80 &\emph{unk.} &UCD &1\\
 	% UCD,ABC
-	PG01 &\emph{P. ferganensis} &12.76 &Fergana Valley &
-	\multirow{2}{1cm}{SRR502999, SRR502998} &3\\
-	\\
-	PC01 &\emph{P. cerasifera} DPRU 0579, Myrobalan &35.02 &USA &USDA NCGR &1\\ \hline \hline
+%	PG01 &\emph{P. ferganensis} &12.76 &Fergana Valley &
+%	\multirow{2}{1cm}{SRR502999, SRR502998} &3\\
+%	\\
+	PC01 & DPRU 0579, Myrobalan &35.02 &USA &USDA NCGR &1\\
 	%outgroup
+ \hline \hline
 	%
 	%NCBI SRA
 	%note that the SRR IDs are from NCBI SRA
