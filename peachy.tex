@@ -35,24 +35,35 @@
 \section*{Introduction}
 %BACKGROUND ON SPECIES
 
-\emph{Prunus} is a large genus in the family Rosaceae with approximately two hundred species, including multiple domesticated crops, such as almond, apricot, cherry, peach, and plum \citep{rehder1940manual}.
+\emph{Prunus} is a large genus in the family Rosaceae with approximately two hundred species, including multiple domesticated crops, such as almond, apricot, cherry, peach, and plum \citep{rehder1940manual, potter2011prunus}.
 % approx 200 species shi2013phylogeny, citing rehder1940manual <- check out
 % non-referenced 430 species in Wikipedia
 %
-Peach [\emph{P. persica} (Mill.) D. A. Webb] and almond [\emph{P. dulcis} (L.) Batsch] are sibling species found within the subgenus \emph{Amygdalus} with many similarities, including early fruit development, perenniality, precocity, genome organization \citep{arus2012peach}, and genome size \citep{baird1994estimating}. 
+Peach [\emph{P. persica} (Mill.) D. A. Webb] and almond [\emph{P. dulcis} (L.) Batsch] are sibling species found within the subgenus \emph{Amygdalus} sharing many morphological and physiological similarities, including perenniality, precocity, genome organization \citep{arus2012peach}, and genome size \citep{baird1994estimating}. 
+% what did I mean by "early fruit development, "
 %
 The most striking differences between the species are mature fruit morphology and mating systems: peaches are harvested for their indehiscent fleshy mesocarp while almonds are harvested for the stony endocarp encased seeds obtained from within the leathery dehiscent mesocarp and exocarp. 
 %
 But almond and peach also differ for other traits, such as life span, chilling requirement, and adventitious root generation.
 %
-The natural life span of almonds may exceed 100 years \citex,
-% http://www.european-trees.com/almond.html
-% literature sources mostly deal with commercial/production lifespan
+The natural life span of almonds may exceed 100 years \citep{gradziel2011origin},
+% though no reference to a primary source in this review
+% most literature sources describe commercial/production lifespan
 % commercial: lifespan of 20-25 years, but this may be due to use of peach/peach-derived rootstocks and/or almond bearing decline and replacement as a management practice
-flowering initiation requires only 400-600 hours chilling \citep{alonso2005determination}, % versus peach <650-1050 /citep{dozier1990hydrogen}
-and less adventitious root generation \citex when compared to the peach life span of 25-30 years \citex, %commercial production life span only or "wild" too?
-600-1000 hours of required chilling \citex, %have maybe seen a bit lower
+flowering initiation requires only 400-600 hours chilling \citep{alonso2005determination}, 
+% versus peach <650-1050 /citep{dozier1990hydrogen}
+% perhaps it is actually lower considering the low chill peach cultivars
+% look for additional sources
+and poor adventitious root generation \citex when compared to the peach life span of 25-30 years \citex, 
+%commercial production life span only or "wild" too?
+600-1000 hours of required chilling \citex,
+% can be far lower for low-chill varieties, approx. as low as 50, but more in the 100-450 hours range 
+% Scorza & Okie (scorza1991peaches) state low chill are 150-500 hours, and most temperate are 650-950 hours
+% high chill varieties are up to 1050-1100 hours
+% 
+%
 and good adventitious rooting ability \citex. 
+%chilling: qtl at distal end of LG1 had highest contribution to phenotypic variance in chilling (Bielenberg et al. 2004, referenced in Genetics, Genomics, and Breeding of Stone Fruits, chp 6)
 %
 Additionally, while \emph{Prunus} species generally exhibit gametophytic self-incompatibility, peach is fully self-compatible.
 
@@ -63,7 +74,7 @@ The few obvious traits associated with almond domestication are reduced toxicity
 %
 However, traits not typically associated with domestication but common to both, such as precocity, or solely with peach, such as relative ease of adventitious rooting, may have also been deliberately or incidentally selected during domestication. 
 %
-Unfortunately, efforts to identify wild progenitors of almond and peach by examining species relationships within the subgenus \emph{Amygdalus} have had mixed results \citep{verde2013high, aradhya2004molecular, zeinalabedini2010origin, mowrey1990isozyme, browicz1996genus, ladizinsky1999origin, bassi20081}. 
+Unfortunately, efforts to identify wild progenitors of almond and peach by examining species relationships within the subgenus \emph{Amygdalus} have had mixed results \citep{mowrey1990isozyme, browicz1996genus, ladizinsky1999origin, aradhya2004molecular, bassi20081, zeinalabedini2010origin, verde2013high}. 
 %
 Given the uncertainty in identifying wild progenitors and the difficulties associated with long generation times, investigation of domestication using crossing experiments is impractical for almond and peach.
 %
@@ -91,49 +102,59 @@ Understanding the impact of mating system on almond and peach evolutionary genom
 %
 Identification of candidate domestication loci will provide an opportunity to determine which loci in almond and peach were under selection, if any are in common, and to identify similarities or differences when compared to annual crops.
 %
-\dv{Depending on eventual audience, the potential breeding applications may be important to mention}
-%
 \section*{Materials and Methods}
 %
 \subsection*{Samples}
 We analyzed a total of 14 almond and 32 peach genomes, including both public and newly resequenced data (Table \ref{samples}). 
 %
-For this study we resequenced nine \emph{P. dulcis}, one \emph{P. persica}, one closely related species, \emph{P. fenzliana}, and one plum, \emph{P. cerasifera}, as outgroup species for analysis.
+For this study we resequenced nine \emph{P. dulcis}, one \emph{P. persica}, and one plum, \emph{P. cerasifera}, as outgroup species for analysis.
 %
-Fresh leaves and dormant cuttings collected from several sources (reference 1 in Table \ref{sampledetails}) and either desiccated with silica or refrigerated, respectively, followed by DNA isolation. 
-%
-DNA extraction followed a modified CTAB method \citep{doyle1987rapid}.
+Fresh leaves and dormant cuttings collected from multiple sources (reference 1 in Table \ref{sampledetails}) and either desiccated with silica or refrigerated, respectively, followed by DNA isolation using a modified CTAB method \citep{doyle1987rapid}.
 %
 Paired-end 100bp sequences were generated for all samples on an Illumina HiSeq 2000. 
 %
-Of these samples, eight \emph{P. dulcis} were sequenced at the Vincent J. Coates Genomics Sequencing Laboratory at UC Berkeley from libraries prepared in our laboratory following \citex. 
-%Anne's library prep <- need reference or details
-%sheared X cycles for X seconds per cycle with a Bioruptor; end repair, adapter ligation (with TruSeq barcodes), amplification; plus clean up and size selection along the way
-% The resulting libraries were initially quantified with Qubit and sized with BioAnalyzer on a DNA HiSensitivity chip at UCD. 
-%They libraries were then sent to UCB for qPCR quantification, pooling, and sequencing on a single lane of Illumina HiSeq 2000. 
+Of these samples, eight \emph{P. dulcis} were sequenced at the Vincent J. Coates Genomics Sequencing Laboratory at UC Berkeley from libraries prepared in our laboratory following an in-house protocol. 
 DNA of the remaining four samples was submitted to BGI (Shenzen, China) for library preparation and sequencing at their facility.
 % In the 'we sequenced' paragraph you need to provide PE 100, where they were sequenced, what average depth, and a citation for library prep (or if we paid someone to prep libraries)
+
+% library prep section below seems awkward and out of place...
+In-house sequencing library preparation requires quantifying the samples with Quanti-iT Picogreen dsDNA assay (Invitrogen, Life Technologies) and then fragmenting 1 $\mu$g of DNA with a Bioruptor (Diagenode) for \dv{11} cycles of 30 seconds ON and 30 seconds OFF per cycle. 
 %
+Resulting DNA fragment ends are then repaired with NEBNext End Repair (New England BioLabs) followed by the addition of deoxyadenosine triphosphate to the 3-prime ends with Klenow Fragment (New England BioLabs). 
+%
+Barcoded Illumina TrueSeq adapters (Affymetrix) were ligated to the A-tailed fragments with Quick Ligase (New England BioLabs). 
+%
+DNA was washed with sera-mags speed beads (Fisher Scientific) between each enzymatic step.  
+%
+Resulting libraries were quantified with Qubit (Life Technologies) and sized using a  BioAnalyzer DNA 12000 chip (Agilent Technologies) at UC Davis. 
+%
+The eight \emph{P. dulcis} sample libraries prepared in-house were sent to UC Berkeley (Berkeley, Qb3), multiplexed based on qPCR quantification, and paired-end sequenced to 100 bp in each direction on a single lane of a HiSeq2500 (Illumina).
+
 Additionally, we utilized five resequenced \emph{P. dulcis} genomes from public sources, four from \citealt{koepke2013comparative} %(?)
-the NCBI Sequence Read Archive (SRA) and one from the RosBREED group (\url{www.rosbreed.org}).
+the NCBI Sequence Read Archive (SRA) and one from the RosBREED group (\url{www.rosbreed.org}). 
 %
-We further downloaded thirty-one resequenced \emph{P. persica}, thirteen from the NCBI SRA (ten from \citealt{verde2013high} and three from \citealt{ahmad2011whole}) and eighteen from RosBREED.
+We further downloaded thirty-one resequenced \emph{P. persica}, thirteen from the NCBI SRA (ten from \citealp{verde2013high} and three from \citealp{ahmad2011whole}) and eighteen from RosBREED.
 %
 %One wild peach species, \emph{P. ferganensis}, was publicly available from NCBI SRA \citep{verde2013high}. \jri{are we using this guy?} \dv{you suggested including it, but doesn't seem likely that it will be used}
 %
 \subsection*{Analysis}
 \emph{Sequencing, Quality Control, and Mapping}
 
-% recheck this range
+Sequences downloaded from RosBREED required additional pre-processing to match forward and reverse FASTQ file reads.
+%supplementary methods for details?
+%Pre-processing: concatenate the four lines per read ID for forward and reverse, use the ID prefix find the intersect, select the reads in each file with those prefixes, and finally decatenate (is that a word?) the reads into proper FASTQ files
 %
-All FASTQ files were trimmed of remnant adapter sequences using Scythe \url{https://github.com/vsbuffalo/scythe} and then further trimmed using base quality with Sickle \url{https://github.com/najoshi/sickle}. 
+The resulting FASTQ files were then processed in the manner described below.
 %
-Trimmed reads were then aligned to the peach v1.0 reference \url{https://www.rosaceae.org/species/prunus_persica/genome_v1.0} using BWA-MEM  \citep{li2013aligning} with a minimum seed length of 10 and internal seed length of 2.85.
+All FASTQ files were trimmed of remnant adapter sequences using Scythe (\url{github.com/vsbuffalo/scythe}) and then further trimmed using base quality with Sickle (\url{github.com/najoshi/sickle}). 
+%
+Trimmed reads were then aligned to the peach v1.0 reference (\url{www.rosaceae.org}) using BWA-MEM \citep{li2013aligning} with a minimum seed length of 10 and internal seed length of 2.85.
 % using -k 10 -r 2.85 parameters
-% -k INT		minimum seed length [19]
+% -k INT	minimum seed length [19]
 % -r FLOAT	look for internal seeds inside a seed longer than {-k} * FLOAT [1.5]
-% internal seed length remains the same as default parameters
-% picked this up from P. Morrell
+% overall seed length remains the same as default; picked this up from P. Morrell
+%
+Using SAMtools and the SAMtools flagstat subprogram \citep{li2009sequence} we determined the depth for all genome sequence alignments.
 \\
 %\emph{SNP calling}
 % Only if going to use them
@@ -162,15 +183,15 @@ We treated peach and almond samples as belonging to two populations to understan
 % covar with ngsPopGen, admixture with NGSadmix, Fst with ANGSD
 % perhaps put the software with the specific analysis instead of intro sentence
 %
-First we performed a principal component analysis (PCA) with \emph{ngsPopGen} \citex to determine whether there was any underlying population structure.
+First we performed a principal component analysis (PCA) with \emph{ngsPopGen} \citep{fumagalli2014ngstools} to determine whether there was any underlying population structure.
 %might show clear distinction between groups, possibly some overlap
 %
 Next we used \emph{NGSadmix} \citep{skotte2013estimating} to assign almond and peach population proportions (\emph{K} = 2) to individuals. 
 %
-Utilizing the sequence of a previously identified F1 peach-almond hybrid and a peach variety with known almond ancestry in its pedigree three generations prior we evaluated proportion assignment accuracy. 
-%\jri{cool yes do that} - RUNNING
-%
+We evaluated proportion assignment accuracy utilizing the sequence of a previously identified F1 peach-almond hybrid and a peach variety with almond ancestry in its pedigree four generations prior. 
+% Gradziel, via Martinez-Garcia pers comm
 Finally, we examined population differentiation using F$_{ST}$ as determined by ANGSD.
+%1 kb windows, 200 bp steps
 \\
 \\
 \emph{Identification of Selected Loci}
@@ -181,7 +202,12 @@ Only windows with $>100$ bp were used for analysis; average values over particul
 %
 Putatively selected genes were identified by finding the 1\% and 5\% empirical quantiles of Zeng's E statistic \citep{zeng2006statistical}.
 %
-Gene ontology (GO) analysis of these loci was performed using  the singular enrichment analysis tool and \emph{P. persica} protein IDs at the AgriGO website (\url{http://bioinfo.cau.edu.cn/agriGO/}).
+%
+We analyzed these loci for gene ontology (GO) using the singular enrichment analysis tool and \emph{P. persica} protein IDs at the AgriGO website (\url{http://bioinfo.cau.edu.cn/agriGO/}).
+%
+%Determing shared loci and significance
+% evaluation of gene annotations and any already suspected or known from function or location (Table S2?)
+% overlap of pi, neutrality tests
 %
 %BEGIN TABLE
 \begin{center}
@@ -213,22 +239,22 @@ Gene ontology (GO) analysis of these loci was performed using  the singular enri
 %
 \endlastfoot
 %
-	\emph{P. dulcis} &4 &7.76 &NCBI SRA &\citealt{koepke2013comparative}\\
+	\emph{P. dulcis} &4 &7.76 &NCBI SRA &\citealp{koepke2013comparative}\\
 	\emph{P. dulcis} &1 &2.20 &RosBREED &RosBREED$^{1}$\\
 	\emph{P. dulcis} &8 &17.43 &UC Berkeley &this study$^{2}$\\
 	\emph{P. dulcis} &1 &34.59 &BGI &this study$^{2}$\\
-	\emph{P. persica} &10 &19.13 &NCBI SRA &\citealt{verde2013high} \\
-	\emph{P. persica} &3 &13.78 &NCBI SRA &\citealt{ahmad2011whole} \\
+	\emph{P. persica} &10 &19.13 &NCBI SRA &\citealp{verde2013high} \\
+	\emph{P. persica} &3 &13.78 &NCBI SRA &\citealp{ahmad2011whole} \\
 	\emph{P. persica} &18 &1.53 &RosBREED &RosBREED$^{1}$ \\
 	\emph{P. persica} &1 &37.36 &BGI &this study$^{2}$\\
 	% ABC funded resequencing (performed at BGI)
 %	\emph{P. fenzliana} &1 & &BGI &this study\\
 	% UCD,ABC
 %	\emph{P. ferganensis} &1 & &NCBI SRA &\citealt{verde2013high}\\
-	\emph{P. cerasifera} &1 &35.02 &BGI &this study\\ \hline \hline
+	\emph{P. cerasifera} &1 &35.02 &BGI &this study$^{2}$\\ \hline \hline
 	% outgroup
 	\multicolumn{5}{l}{$^{1}$ \url{ftp://ftp.bioinfo.wsu.edu/www.rosbreed.org/resequencing/Prunus_persica/}}\\
-	\multicolumn{5}{l}{$^{2}$ newly resequenced}
+	\multicolumn{5}{l}{$^{2}$ newly resequenced sample(s)}
 	% OR ftp://ftp.bioinfo.wsu.edu/species/Prunus_persica/RosBREED_Illumina/
 \end{longtable}
 \end{center}
@@ -239,25 +265,24 @@ Gene ontology (GO) analysis of these loci was performed using  the singular enri
 \section*{Results}
 %\subsection*{Quality Control and Mapping}
 
-Depth and alignment from SAMtools using depth and flagstat subprograms \citep{li2009sequence} determined a mean mapped sequence depth of 10.71, which ranged from 1.14 to 37.36 (Table \ref{sampledetails}, Figure \ref{fig:depth}). 
+The aligned sequences had a mean mapped sequence depth of 10.71, which ranged from 1.14 to 37.36 (Table \ref{sampledetails}, Figure \ref{fig:depth}). %update depth figure, make supplementary
 %
 Genomes resequenced in this study had an average depth of 22.40, ranging from 14.47 to 37.36, while the depth of public sequences had an average depth of 7.92 ranging from 1.14 to 35.40.
-% only domesticates and outgroup
-% mean mapped persica was 8.917, ranged from 1.138 to 35.358
-% mean mapped dulcis was 14.808, ranged from 2.196 to 34.593
-% deposit scripts for data processing or extraction - deposit to github repo, add URL
 %
+Depth of all analyzed \emph{P. persica} sequences averaged 8.917 (1.138 to 35.358) while all \emph{P. dulcis} sequences averaged 14.808 (2.196 to 34.593).
+% deposit scripts for data processing or extraction - deposit to github repo, add URL
 %
 \subsection*{Diversity and Population Comparisons}
 
-Inbreeding: almond less inbred (average near zero, couple outliers - lower coverage), peach average approximately .25-.30.
+Inbreeding values for almond and peach averaged 0.0275 0.3131 with ranges of 0.0030 to 0.2720 and 0.0040 to 0.8730, respectively.
+%almond less inbred (average near zero, couple outliers - lower coverage), peach average approximately .25-.30.
 %
 Both diversity statistics indicated that almond was more diverse than peach, with genome-wide average $\theta_{\pi}$ of 0.0186 and 0.0035, respectively, and $\theta_{W}$ of \X and \X, respectively. %are these expected levels?
 %
 Mean per chromosome $\theta_{\pi}$ ranged from 0.0163 to 0.0219 in dulcis, and from 0.0028 to 0.0047 in persica.
 % Are there interesting signals? Quantity? Where? Are there any interesting genes/loci?
 %
-Neutrality tests: Tajima's D, Fay and Wu's H, and Zeng's E
+Neutrality tests: Tajima's D, Fay and Wu's H, and Zeng's E \dv{yo, me! do this here!}
 % Genome averages? Are there interesting signals? Quantity? Where? Are there any interesting genes/loci?
 % Do any of the diversity statistics and neutrality tests overlap? Where? Are there any interesting genes/loci?
 %
@@ -265,13 +290,15 @@ For the admixture results individuals were clearly assigned to either peach or a
 %
 The previously identified peach-almond F1 hybrid was assigned as 0.4758 dulcis and 0.5242 persica, while the peach with introgressed almond ancestry was assigned as \X dulcis and \X persica.
 %If samples are in the same order as the list of BAM files...
-%PD15 Nonpareil 0.99999999282605944728 0.00000000717394056482
-% however, PD15 is same as other dulcis in previous test without PP12
-%PP12 F8,1-42 0.00000000100000000000 0.99999999900000002828 (almond, peach; no different than rest of peaches) this seems odd for something with almond in pedigree only hmmmm...
+%PD15 Nonpareil is now 0.99999999282605944728 0.00000000717394056482
+% whereas it was the same as other dulcis in previous test without PP12
+%PP12 F8,1-42 0.00000000100000000000 0.99999999900000002828 (almond, peach; no different than rest of peaches) this seems odd for something with almond in pedigree only a few generations back
 %TBD - RUNNING...
 %
 
-F$_{ST}$: unweighted 0.029449; weighted 0.668699 \jri{wait what? that big a difference just due to weighting?} \dv{yup, as we've discussed in meetings; your naive estimation based on pi was approximately 0.4, Malli's Fst for almond/peach based on AFLP was 0.446 \citep{aradhya2004molecular}}
+F$_{ST}$: unweighted 0.029449; weighted 0.668699; difference between them is whether it is the average of the ratio or ratio of $\Sigma$(numerator) and $\Sigma$(denominator).
+
+% \jri{wait what? that big a difference just due to weighting?} \dv{yup, as we've discussed in meetings; your naive estimation based on pi was approximately 0.4, Malli's Fst for almond/peach based on AFLP was 0.446 \citep{aradhya2004molecular}}
 %
 \subsection*{Selected Loci and Gene Ontology}
 Of the 27256 genes on chromosomes one through eight, dulcis and persica had 265 and 268 genes, respectively, in the 1\% quantile. 
@@ -281,17 +308,16 @@ Twenty-nine of those genes, or approximately 11\%, are shared between dulcis and
 %
 In the 5\% quantile dulcis and persica had 1325 and 1340 genes of interest, respectively, with 286 shared.
 %
-% There is not nearly enough in this section...
-% Add information about interesting loci, probably need a supplementary table
-% Describe the most interesting, or those 
 
-%EG SI locus and selection!
-
+\dv{There is not nearly enough in this section... add information about interesting loci; describe the most interesting, or those that are known; a supplementary table; example figures of overlap of $\pi$, Tajima's D, Fay \& Wu's H, Zeng's E, and/or Fst for interesting areas, especially regions where signals are similar to regions like S-locus}
+% 
 %
 \section*{Discussion}
 %The what did we just learn, what does it all mean, and other stuff section
 %Well, here are my crappy thoughts
-Prior genome scans of peach found low levels of genetic diversity \citep{verde2013high} compared to its wild relatives, \emph{P. kansuensis}, \emph{P. mira}, and \emph{P. davidiana}.
+Prior genome scans of peach by \cite{verde2013high} found low levels of genetic diversity compared to its wild relatives, \emph{P. kansuensis}, \emph{P. mira}, and \emph{P. davidiana}. 
+%so what?
+%
 %\citep{cao2014comparative} - no wild relatives
 %Genome-wide nucleotide diversity in persica and wild peaches (Verde et al. 2013)
 % persica 0.0015 (ranged from 0.0011 to 0.0022)
@@ -299,28 +325,48 @@ Prior genome scans of peach found low levels of genetic diversity \citep{verde20
 % davidiana 0.0048 (allogamous)
 % mira 0.0013 (autogamous)
 % N.B. only single samples of each species used
-The only outcrossing wild peach species, \emph{P. davidiana}, is also considered closely affiliated %poor wording, more like an intermediate between persica and dulcis
-with P. dulcis. However, it had approximately 3X the nucleotide diversity of P. persica \citep{verde2013high} or half of the diversity of dulcis compared to persica that we found. 
-% davidiana has highest pi of the wild peaches but is lower than dulcis
+%
+%\citealp{koepke2013comparative} looked at significant SNPs but not popgen stats with same public almond sequence data, cherry, and peach reference
+%
+Of these wild peach species, \emph{P. davidiana} is the only outcrossing one thus having a closer affinity with \emph{P. dulcis} \citep{aradhya2004molecular}. \dv{cite others regarding davidiana relationship to dulcis} 
+%poor wording, more like peach with almond tendencies
+%
+\cite{verde2013high} found that \emph{P. davidiana} had the greatest nucleotide diversity of the species examined, approximately 3X the nucleotide diversity of \emph{P. persica}.
+%
+However, we found \emph{P. dulcis} to have double this level of nucleotide diversity confirming it is far more genetically diverse than any peach species.
 % supposedly only SI wild peach
-Considering their similar lengths of domestication, this finding suggests that mating system has a greater impact on the reduction of peach genetic diversity than domestication.
-% except the possible life span difference, except P. mira has been reported to live ~100 years \citep{bassi20081} or chapter 2 of same book, seem to recall there was no citation for the number
+Considering their similar lengths of domestication, this finding suggests that mating system has had a greater impact on the reduction of peach genetic diversity than domestication.
+% except the possible life span difference, except P. mira has been reported to live ~100 years \citep{bassi20081} or chapter 2 of same book, seem to recall there was no citation for the time period
 %
-While this difference between peach and almond has been known from analyses using multiple marker systems [e.g., isozyme \citep{mowrey1990isozyme}, microsatellite \citex, and AFLP \citep{aradhya2004molecular} markers], this study marks the first whole genome comparison.
+While this difference in diversity between peach and almond has been known from analyses using multiple marker systems [e.g., isozyme \citep{mowrey1990isozyme, byrne1990isozyme}, microsatellite \citep{martinez2003extended}, and AFLP \citep{aradhya2004molecular} markers], this study marks the first simultaneous whole genome comparisons using multiple individuals from both species.
 %
-Shows that previous studies were good estimations. 
-%Almonds genomes are cooler than peaches:
-As expected, given its self-compatibility, the genome-wide mean nucleotide diversity in peach is lower than almond. \jri{are there candidates for the S locus? can we at least zoom in on the arm to see if there are obvious sweeps (low diversity, negative E, high Fst between species)?}
+%
+Therefore this study does support previous studies as having been good estimations of nucleotide diversity. 
 
-Peach and almond also share more genes of interest in common than expected due to random chance.\\
+% \jri{are there candidates for the S locus? can we at least zoom in on the arm to see if there are obvious sweeps (low diversity, negative E, high Fst between species)?}
+\dv{broadly recap the findings, but more importantly their significance and what they bring to the understanding of domestication in tree crops, almonds, peaches}
+\dv{there are expected differences, such as at the S-locus. What else is expected? Sweet/bitter kernel locus: less diverse in dulcis than persica; Caveats: it is dominant allele so may be in het state in some individuals sampled; there is no selection for sweet allele in peach, if one is present in species, possibly normal (background) or v low diversity (if fixed b/c adaptive or something) at locus. Flower color: generally pink in persica and white in almond (white likely ancestral b/c most common color across Prunus) so lower or higher diversity in peach compared with almond? Some variability is present in peach flower color (e.g., light pink to deep pink or nearly red). is it fixed in almond? What if anything was unexpected, whether in shared or unshared loci, and does it make sense?}
+%
+We found \X genes of interest in peach and \X in almond from the 1\% and 5\% quartile ranges, with \X shared.
+%
+Peach and almond also share more genes of interest in common than expected due to random chance.
 % Simple Chi-square puts probability near zero
+%
+Interesting they differed in genes related to/important for \X processes in peach and \X processes in almond.
+%
+These unshared, but still important, genes are likely to account for the differentiation of these closely related domesticated species.
+% poor writing
 
-One of the main questions regarding domestication of perennial crops, particularly tree crops, is its genetic basis \citep{miller2011forest}. %and distinguishing it from other factors such as life history, hybridization, vegetative propagation
+One of the primary questions regarding domestication of perennial crops, particularly tree crops, is its genetic basis \citep{miller2011forest}. %and distinguishing it from other factors such as life history, hybridization, vegetative propagation
 %
 Here we have examined two closely related domesticated tree species with alternate mating systems in an attempt to tease apart the genomic signatures of domestication and mating system in order to better understand these processes in perennial species.
 %
+\dv{so what did we find? how does it differ, if it does, from what we might expect in annual species?}
+%
 Potential uses of information: identify diversity in loci within germplasm collection(s), MAS (particularly juvenile selection), further investigate non-annotated loci of interest to determine function (if any)
 %
+%
+\dv{Potential breeding application of information}
 %
 %Peach Dissemination Records
 % Persia 332 BC, Rome 79 AD, France 530 to 784 AD, & Americas 16th c Spain/England
@@ -419,186 +465,193 @@ Resequencing funded by the Henry A. Jastro Research Fellowship was used the Vinc
 \end{figure}
 %
 \begin{center}
-\begin{longtable}{llllc}
+\begin{longtable}{llrllc}
 \caption{P. dulcis, P. persica and related species used in analysis.} \label{sampledetails} \\
 \hline \hline
-\multicolumn{1}{l}{\textbf{Sample ID}} &
-\multicolumn{1}{l}{\textbf{Accession and/or Cultivar}} &
+\multicolumn{1}{l}{\multirow{2}{1.5cm}{\textbf{Sample ID}}} &
+\multicolumn{1}{l}{\multirow{2}{3.5cm}{\textbf{Accession and/or Cultivar}}} &
+\multicolumn{1}{c}{\textbf{Depth}} &
 \multicolumn{1}{l}{\textbf{Origin}} &
 \multicolumn{1}{l}{\textbf{Source}} &
-\multicolumn{1}{c}{\textbf{Ref}}\\
+\multicolumn{1}{c}{\textbf{Ref}}\\ \\
 \hline 
 \endfirsthead
 
-\multicolumn{5}{r}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
-\hline \multicolumn{1}{l}{\textbf{Sample ID}} &
-\multicolumn{1}{l}{\textbf{Accession and/or Cultivar}} &
+\multicolumn{6}{r}{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline 
+\multicolumn{1}{l}{\multirow{2}{1.5cm}{\textbf{Sample ID}}} &
+\multicolumn{1}{l}{\multirow{2}{3.5cm}{\textbf{Accession and/or Cultivar}}} &
+\multicolumn{1}{c}{\textbf{Depth}} &
 \multicolumn{1}{l}{\textbf{Origin}} &
 \multicolumn{1}{l}{\textbf{Source}} &
-\multicolumn{1}{c}{\textbf{Ref}} \\ \hline 
+\multicolumn{1}{c}{\textbf{Ref}} \\ \\ \hline 
 \endhead
 %
-\hline \multicolumn{5}{r}{{Continued on next page}} \\ \hline \hline
+\hline \multicolumn{6}{r}{{Continued on next page}} \\ \hline \hline
 \endfoot
 %
 \endlastfoot
 %
-	\multicolumn{5}{l}{\emph{P. dulcis}}  \\
-	%PD01 &DPRU 2578.2 & &NCGR &this study\\
+	\multicolumn{6}{l}{\emph{P. dulcis}}  \\
+	%PD01 &DPRU 2578.2 &30.46 &NCGR &this study\\
 	% Almond Board resequencing (BGI)
 	% Not included because it appears to be possible F1 of peach x almond (or reverse)
-	PD02 &‘Tardy Nonpareil’ &USA &UCD &1\\
+	PD02 &‘Tardy Nonpareil’ &34.59 &USA &UCD &1\\
 	%Almond Board resequencing (BGI)
-	PD03 &DPRU 1791.3, BE-1609 &Turkey &USDA NCGR &1\\
+	PD03 &DPRU 1791.3, BE-1609 &17.93 &Turkey &USDA NCGR &1\\
 	%Jastro resequencing (performed at UC Berkeley)
-	PD04 &DPRU 2374.12 &Iran &NCGR &1\\
+	PD04 &DPRU 2374.12 &16.77 &Iran &NCGR &1\\
 	%Jastro resequencing (performed at UC Berkeley)
-	PD05 &DPRU 1456.4, Badam &Pakistan &USDA NCGR &1\\
+	PD05 &DPRU 1456.4, Badam &15.90 &Pakistan &USDA NCGR &1\\
 	%Jastro resequencing (performed at UC Berkeley)
-	PD06 &DPRU 2301, Tuono &Italy &USDA NCGR &1\\
+	PD06 &DPRU 2301, Tuono &17.23 &Italy &USDA NCGR &1\\
 	%Jastro resequencing (performed at UC Berkeley)
-	PD07 &DPRU 1462.2 &Pakistan &USDA NCGR &1\\
+	PD07 &DPRU 1462.2 &19.38 &Pakistan &USDA NCGR &1\\
 	%Jastro resequencing (performed at UC Berkeley)
-	PD08 &DPRU 1207.2 &Uzbekistan &USDA NCGR &1\\
+	PD08 &DPRU 1207.2 &14.47 &Uzbekistan &USDA NCGR &1\\
 	%Jastro resequencing (performed at UC Berkeley)
-	PD09 &DPRU 2331.9 &China &USDA NCGR &1\\
+	PD09 &DPRU 2331.9 &17.17 &China &USDA NCGR &1\\
 	%Jastro resequencing (performed at UC Berkeley)
-	PD10 &DPRU 0210, Languedoc &France &USDA NCGR &1\\
+	PD10 &DPRU 0210, Languedoc &20.63 &France &USDA NCGR &1\\
 	%Jastro resequencing (performed at UC Berkeley)
-	PD11 &S3067 &Spain &SRR765861 &2\\
+	PD11 &S3067 &6.64 &Spain &SRR765861 &2\\
 	% resequenced at WSU by Amit Dhingra
-	PD12 &D05-187 &Spain &SRR765850 &2\\
+	PD12 &D05-187 &4.72 &Spain &SRR765850 &2\\
 	% resequenced at WSU by Amit Dhingra
-	PD13 &Lauranne &Spain &SRR765838 &2\\
+	PD13 &Lauranne &13.00 &Spain &SRR765838 &2\\
 	% resequenced at WSU by Amit Dhingra
-	PD14 &Ramillete &Spain &SRR765679 &2\\
+	PD14 &Ramillete &6.69 &Spain &SRR765679 &2\\
 	% resequenced at WSU by Amit Dhingra
-	PD15 &Nonpareil & USA&RosBREED &5\\
+	PD15 &Nonpareil &2.20 & USA&RosBREED &5\\
 	\\
-	\multicolumn{5}{l}{\emph{P. persica}}  \\ % format italics
-	%PP01 &Lovell &USA &SRR502985 &3\\
+	\multicolumn{6}{l}{\emph{P. persica}}  \\ % format italics
+	%PP01 &Lovell &81.14 &USA &SRR502985 &3\\
 	% resequenced doubled haploid
-	PP02 &Yumyeong &Korea &SRR502994 &3\\
-	PP03 &Shenzhou Mitao &N China &
+	PP02 &Yumyeong &22.37 &Korea &SRR502994 &3\\
+	PP03 &Shenzhou Mitao &11.19 &N China &
 	\multirow{2}{1cm}{SRR502993, SRR502992} &3\\
 	%honey peach
 	\\
-	PP04 &Sahua Hong Pantao &S China &
+	PP04 &Sahua Hong Pantao &14.46 &S China &
 	\multirow{2}{1cm}{SRR502991, SRR502990} &3\\
 	%flat peach
 	\\
-	PP05 &Quetta &Pakistan &
+	PP05 &Quetta &12.64 &Pakistan &
 	\multirow{2}{1cm}{SRR502989, SRR502987} &3\\
 	\\
-	PP06 &Oro A &Brazil &SRR502986 &3\\
+	PP06 &Oro A &25.78 &Brazil &SRR502986 &3\\
 	%
-	PP07 &IF7310828 &Italy &
+	PP07 &IF7310828 &12.75 &Italy &
 	\multirow{2}{2cm}{SRR503001, SRR503000} &3\\
 	\\
-	PP08 &GF305 &France &SRR502983 &3\\
+	PP08 &GF305 &18.68 &France &SRR502983 &3\\
 	%
-	PP09 &F$_{1}$ Contender $\times$ Ambra &Italy &SRR502997 &3\\
+	PP09 &F$_{1}$ Contender $\times$ Ambra &15.57 &Italy &SRR502997 &3\\
 	% peach x nectarine both P. persica
-	PP10 &Earligold &USA &
-	\multirow{2}{1cm}{SRR502996, SRR502995} &3\\
-	%  
-	\\
-	PP11 &Bolero &Italy &SRR501836 &3\\
 	%
-	% PP12 &F8,1-42 &USA &SRR068361 &4\\
+	PP10 &Earligold &35.40 &USA &
+	\multirow{2}{1cm}{SRR502996, SRR502995} &3\\
+	%
+	\\
+	%
+	PP11 &Bolero &22.42 &Italy &SRR501836 &3\\
+	%
+	% PP12 &F8,1-42 &11.88 &USA &SRR068361 &4\\
 	% Nonpareil almond in pedigree
 	% use for introgression investigation
-	PP13 &Georgia Belle &USA &SRR068359 &4\\
+	PP13 &Georgia Belle &13.13 &USA &SRR068359 &4\\
 	%
-	PP14 &Dr. Davis &USA &SRR068360 &4\\
+	PP14 &Dr. Davis &14.44 &USA &SRR068360 &4\\
 	%
-	PP15 &Lovell &USA &UCD &1\\
+	PP15 &Lovell &37.36 &USA &UCD &1\\
 	% originally a canning variety selected ~1882
 	% currently used as rootstock and/or control for disease screening
 	% FPS, ABC
 	% duplicate cultivar, BGI sequenced at higher depth
-	PP16 &DPRU 1190, Admiral Dewey&USA &RosBREED &5\\
+	PP16 &DPRU 1190, Admiral Dewey &1.61 &USA &RosBREED &5\\
 	% aka PI 673525; introduced 1899
-	PP17 &Babcock &USA &RosBREED &5\\
+	PP17 &Babcock &1.74 &USA &RosBREED &5\\
 	% introduced 1897
-	PP18 &Bolinha &Brazil &RosBREED &5\\
+	PP18 &Bolinha &1.91 &Brazil &RosBREED &5\\
 	% released 1985
 	% parentage: prob OP Aldrighi
 	% (Raseira et al. 1992;
 	% http://hortsci.ashspublications.org/content/27/11/1154.full.pdf)
 	% considered resistant to brown rot (Monilinia fructicola); low chill
-	PP19 &DPRU 2142, Carman &USA &RosBREED &5\\
+	PP19 &DPRU 2142, Carman &1.34 &USA &RosBREED &5\\
 	% Planted 1889 from OP seed (unknown variety) by J. W. Stubenrauch, Mexia, TX
 	% data entry error listed as Carmen in GRIN; PI book has Carman
 	% http://sun.ars-grin.gov:8080/npgs_public/prodweb.pdf0?in_vol=33&in_suffix=&in_page=052
 	% PI 673586; cultivar original PI 34673 assigned 1912
-	PP20 &Chinese Cling&China &RosBREED &5\\
+	PP20 &Chinese Cling &1.28 &China &RosBREED &5\\
 	%introduced 1850; founder several cultivars
-	PP21 &Diamante&Brazil &RosBREED &5\\
+	PP21 &Diamante &1.85 &Brazil &RosBREED &5\\
 	%predominant canning cultivar in Brazil per Okie (year & pub TBD)
-	PP22 &Dixon&USA &RosBREED &5\\
+	PP22 &Dixon &1.28 &USA &RosBREED &5\\
 	% Introduced in 1956
 	% http://www.google.com/patents/USPP13911
 	% early cling peach
-	%PP23 &Dr. Davis& &RosBREED &5\\
+	%PP23 &Dr. Davis &1.23 &USA &RosBREED &5\\
 	% duplicate cultivar
-	PP24 &DPRU 0589, Early Crawford &USA &RosBREED &5\\
+	PP24 &DPRU 0589, Early Crawford &1.98 &USA &RosBREED &5\\
 	%introduced before 1832
-	PP25 &Elberta&USA &RosBREED &5\\
+	PP25 &Elberta &1.26 &USA &RosBREED &5\\
 	%introduced ~1889; OP sdlg of 'Chinese Cling’
-	PP26 &Florida Prince P138&USA &RosBREED &5\\
+	PP26 &Florida Prince P138 &1.48 &USA &RosBREED &5\\
 	%low chill cultivar; introduced in 2009
-	%PP27 &Georgia Bell&USA &RosBREED &5\\
+	%PP27 &Georgia Bell &3.89 &USA &RosBREED &5\\
 	%(aka ‘Georgia Belle’ and ‘Belle of Georgia’
 	% introduced ~1875; OP sdlg of Chinese Cling)
 	% duplicate cultivar
-	PP28 &JH Hale&USA &RosBREED &5\\
+	PP28 &JH Hale &1.73 &USA &RosBREED &5\\
 	%male sterile; introduced 1912
-	%PP29 &Lovell &USA &RosBREED &5\\
-	PP30 &Mayflower&USA &RosBREED &5\\
+	%PP29 &Lovell &2.68 &USA &RosBREED &5\\
+	PP30 &Mayflower &1.14 &USA &RosBREED &5\\
 	%introduced 1909
-	PP31 &Nemaguard &USA &RosBREED &5\\
+	PP31 &Nemaguard &1.58 &USA &RosBREED &5\\
 	%rootstock; rumored to have P. davidiana in pedigree
-	PP32 &O'Henry &USA &RosBREED &5\\
+	PP32 &O'Henry &1.82 &USA &RosBREED &5\\
 	%plant patent 2.964 1/27/1970; OP sdlg Merrill Bonanza; discovered 1960
-	PP33 &Okinawa &Japan &RosBREED &5\\
+	PP33 &Okinawa &1.55 &Japan &RosBREED &5\\
 	% Sharpe 1957
 	% http://fshs.org/proceedings-o/1957-vol-70/320-322%20%28SHARPE%29.pdf
 	% from 1953 seed lot, different seedlings
 	% unsure if only one of these is what is now called 'Okinawa'
 	% has nematode resistance
 	% used in hybrid combination with Harrow's Blood (F2s) as rootstock
-	PP34 &Oldmixon Free &USA &RosBREED &5\\
+	PP34 &Oldmixon Free &1.99 &USA &RosBREED &5\\
 	% introduced 1832
 	% Sir John Oldmixon in the mid 18th century wrote of peach in the Carolinas (Hedrick p50)
-	PP35 &Rio Oso Gem &USA &RosBREED &5\\
+	PP35 &Rio Oso Gem &1.21 &USA &RosBREED &5\\
 	% introduced 1933
 	% developed in Rio Oso, California, Sierra Nevada foothills
 	% https://www.slowfoodusa.org/ark-item/rio-oso-gem-peach
-	PP36 &DPRU 2179, Slappey &USA &RosBREED &5\\
+	PP36 &DPRU 2179, Slappey &1.24 &USA &RosBREED &5\\
 	% aka ‘Slappy’ in GRIN; introduced 1903
-	PP37 &DPRU 0941, St. John Yellow &USA &RosBREED &5\\
+	PP37 &DPRU 0941, St. John Yellow &1.14 &USA &RosBREED &5\\
 	% introduced 1860s
 	% some variety history at
 	% http://gapeaches.org/about-us/father-of-the-ga-peach-industry/
 	\\
-	\multicolumn{5}{l}{Other \emph{Prunus} species}  \\
+	\multicolumn{6}{l}{Other \emph{P. cerasifera}}  \\
+%	\multicolumn{6}{l}{Other \emph{Prunus} species}  \\
 	% Almond Board resequencing (performed at BGI)
-	PF01 &\emph{P. fenzliana} &\emph{unk.} &UCD &1\\
+%	PF01 &\emph{P. fenzliana} &33.80 &\emph{unk.} &UCD &1\\
 	% UCD,ABC
-	PG01 &\emph{P. ferganensis} &Fergana Valley &
-	\multirow{2}{1cm}{SRR502999, SRR502998} &3\\
-	\\
-	PC01 &\emph{P. cerasifera} DPRU 0579, Myrobalan &USA &USDA NCGR &1\\ \hline \hline
+%	PG01 &\emph{P. ferganensis} &12.76 &Fergana Valley &
+%	\multirow{2}{1cm}{SRR502999, SRR502998} &3\\
+%	\\
+	PC01 & DPRU 0579, Myrobalan &35.02 &USA &USDA NCGR &1\\
 	%outgroup
+ \hline \hline
 	%
 	%NCBI SRA
 	%note that the SRR IDs are from NCBI SRA
 	%GDR/RosBREED (ftp://ftp.bioinfo.wsu.edu/species/Prunus_persica/RosBREED_Illumina/)
-	\multicolumn{5}{l}{\textbf{References:} $^{1}$ this study; $^{2}$ \citealp{koepke2013comparative}; $^{3}$ \citealp{verde2013high}; $^{4}$ \citealp{ahmad2011whole};}\\
-	\multicolumn{5}{l}{$^{5}$ \url{ftp://ftp.bioinfo.wsu.edu/www.rosbreed.org/resequencing/Prunus_persica/}}\\
-	\multicolumn{5}{l}{\textbf{Abbreviations:} UCD - University of California, Davis; USDA NCGR - United States}\\
-	\multicolumn{5}{l}{Department of Agriculture National Clonal Germplasm Repository}
+	\multicolumn{6}{l}{\textbf{References:} $^{1}$ this study; $^{2}$ \citealp{koepke2013comparative}; $^{3}$ \citealp{verde2013high}; $^{4}$ \citealp{ahmad2011whole};}\\
+	\multicolumn{6}{l}{$^{5}$ \url{ftp://ftp.bioinfo.wsu.edu/www.rosbreed.org/resequencing/Prunus_persica/}}\\
+	\multicolumn{6}{l}{\textbf{Abbreviations:} UCD - University of California, Davis; USDA NCGR - United States}\\
+	\multicolumn{6}{l}{Department of Agriculture National Clonal Germplasm Repository}
 \end{longtable}
 \end{center}
 %
@@ -632,35 +685,6 @@ Resequencing funded by the Henry A. Jastro Research Fellowship was used the Vinc
 %BRILLIANT IDEA - PREPARE IN EXCEL, WITH CELL DIVITERS, SAVE AS TEXT, COPY/PASTE
 % ANNOTATIONS ALSO IN EXCEL FORMAT
 % keep Zeng score? Sort by score? Note if 1% & 5% differently (for example, X and -)
-	ppa000871m & &Y & \\
-	ppa000889m & &Y & \\
-	ppa001014m & &Y & \\
-	ppa001036m & &Y & \\
-	ppa001110m & &Y & \\
-	ppa001502m & &Y & \\
-	ppa001871m & &Y & \\
-	ppa001991m & &Y & \\
-	ppa002987m & &Y & \\
-	ppa002993m & &Y & \\
-	ppa004447m & &Y & \\
-	ppa004835m & &Y & \\
-	ppa007516m & &Y & \\
-	ppa009103m & &Y & \\
-	ppa009748m & &Y & \\
-	ppa011268m & &Y & \\
-	ppa011644m & &Y & \\
-	ppa014905m & &Y & \\
-	ppa016366m & &Y & \\
-	ppa017140m & &Y & \\
-	ppa017272m & &Y & \\
-	ppa017672m & &Y & \\
-	ppa018012m & &Y & \\
-	ppa018553m & &Y & \\
-	ppa019924m & &Y & \\
-	ppa021180m & &Y & \\
-	ppa021962m & &Y & \\
-	ppa022880m & &Y & \\
-	ppa025136m & &Y & \\
 	ppa000008m & & &Y \\
 	ppa000009m & & &Y \\
 	ppa000017m & & &Y \\
@@ -704,37 +728,15 @@ Resequencing funded by the Henry A. Jastro Research Fellowship was used the Vinc
 	ppa000759m & & &Y \\
 	ppa000819m & & &Y \\
 	ppa000823m & & &Y \\
-	ppa000871m & & &Y \\
+	ppa000871m & &Y &Y \\
 	ppa000874m & & &Y \\
-	ppa000889m & & &Y \\
+	ppa000889m & &Y &Y \\
 	ppa000975m & & &Y \\
-	ppa001014m & & &Y \\
-	ppa001036m & & &Y \\
+	ppa001014m & &Y &Y \\
+	ppa001036m & &Y &Y \\
 	ppa001053m & & &Y \\
-	ppa001110m & & &Y \\
+	ppa001110m & &Y &Y \\
 	ppa001188m & & &Y \\
-	ppa001194m & & &Y \\
-	ppa001204m & & &Y \\
-	ppa001205m & & &Y \\
-	ppa001210m & & &Y \\
-	ppa001244m & & &Y \\
-	ppa001253m & & &Y \\
-	ppa001256m & & &Y \\
-	ppa001327m & & &Y \\
-	ppa001349m & & &Y \\
-	ppa001502m & & &Y \\
-	ppa001528m & & &Y \\
-	ppa001533m & & &Y \\
-	ppa001731m & & &Y \\
-	ppa001784m & & &Y \\
-	ppa001850m & & &Y \\
-	ppa001871m & & &Y \\
-	ppa001884m & & &Y \\
-	ppa001963m & & &Y \\
-	ppa001991m & & &Y \\
-	ppa002066m & & &Y \\
-	ppa002090m & & &Y \\
-	ppa002162m & & &Y \\
 \end{longtable}
 \end{center}
 %\endsupplement
